@@ -27,6 +27,7 @@ export const navigation = {
   signInButton: {
     label_zh: 'Sign In',
     label_en: 'Sign In',
+    url: 'https://app.brandgo.global/login',
   },
 };
 

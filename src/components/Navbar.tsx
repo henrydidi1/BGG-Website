@@ -81,7 +81,9 @@ export default function Navbar({ lang, onLangChange }: NavbarProps) {
 
               {/* Sign In Button */}
               <motion.a
-                href="#pricing"
+                href={navigation.signInButton.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="hidden sm:flex relative px-5 py-2 text-sm font-semibold text-white rounded-lg overflow-hidden group"
@@ -148,7 +150,9 @@ export default function Navbar({ lang, onLangChange }: NavbarProps) {
                 </motion.a>
               ))}
               <motion.a
-                href="#pricing"
+                href={navigation.signInButton.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setIsOpen(false)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
