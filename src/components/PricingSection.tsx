@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useMemo } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { pricingSection } from '@/config/siteContent';
 
@@ -12,15 +12,23 @@ export default function PricingSection({ lang }: PricingSectionProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, margin: '-10%' });
 
-  // Generate particle data with useMemo to avoid hydration mismatch
-  // useMemo with empty deps runs once on mount (client-side only)
-  const particles = useMemo(() => {
-    return [...Array(30)].map((_, i) => ({
-      initialX: Math.random() * 100 + '%',
-      initialY: Math.random() * 100 + '%',
-      animateY: [Math.random() * 100 + '%', Math.random() * 100 + '%'],
-      duration: 5 + Math.random() * 5,
-    }));
+  // Generate particle data only on client-side to avoid hydration mismatch
+  const [particles, setParticles] = useState<Array<{
+    initialX: string;
+    initialY: string;
+    animateY: string[];
+    duration: number;
+  }>>([]);
+
+  useEffect(() => {
+    setParticles(
+      [...Array(30)].map(() => ({
+        initialX: Math.random() * 100 + '%',
+        initialY: Math.random() * 100 + '%',
+        animateY: [Math.random() * 100 + '%', Math.random() * 100 + '%'],
+        duration: 5 + Math.random() * 5,
+      }))
+    );
   }, []);
 
   return (
