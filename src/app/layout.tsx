@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   description: "No guesswork. Only compute. AI-powered cross-border marketing, global content strategy, and fractional CMO services.",
   keywords: ["AI marketing", "global expansion", "cross-border", "fractional CMO", "BrandGo.Global"],
   authors: [{ name: "BrandGo.Global Studio" }],
+  icons: {
+    icon: '/icon.png?v=3',
+  },
   openGraph: {
     title: "BrandGo.Global | AI-Driven Global Growth Studio",
     description: "No guesswork. Only compute.",
@@ -32,9 +35,6 @@ interface LayoutProps {
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
-      <head>
-        <link rel="icon" href="/logo-yellow.png" type="image/png" />
-      </head>
       <body className="min-h-full flex flex-col bg-[#0A0A0A]">
         {children}
       </body>
