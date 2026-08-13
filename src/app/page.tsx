@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 // ==========================================
 // 1. 中英双语内容字典 (卡片内拉长对比版)
@@ -9,15 +10,15 @@ const dict = {
     nav: { radar: "GoRadar AI™", services: "SERVICES", protocol: "PROTOCOL", cases: "CASES", about: "ABOUT", pricing: "PRICING", faq: "FAQ", contact: "CONTACT", signin: "SIGN IN" },
     hero: { 
       title: "MARKET RADAR: ON.\nGUESSWORK: OFF.", 
-      subtitle: "Powered by our proprietary GoRadar AI™.\nWe uncover hidden market opportunities, craft data-driven marketing strategies, and acquire high-value clients globally." 
+      subtitle: "Powered by our proprietary GoRadar\u00A0AI™.\nWe uncover hidden market opportunities, craft data-driven strategies,\nand acquire high-value clients globally." 
     },
-    marquee: "✳ GoRadar AI™ ✳ STRATEGY ✳ CONTENT STUDIO ✳ PERFORMANCE ADS ✳ ",
+    marquee: ["GoRadar AI™", "STRATEGY", "CONTENT STUDIO", "PERFORMANCE ADS"],
     services: {
       title: "CORE SERVICES:\nTHE 3-ENGINE SYSTEM",
       desc: "Transforming compute power into global market share. Here is our execution roadmap.",
       s1: { 
         title: "GoRadar AI™ SYSTEM", 
-        desc: "Our proprietary market intelligence engine. We don't guess the market; we compute it. Click to look under the hood.",
+        desc: "Our proprietary market intelligence engine.\nWe don't guess the market; we compute it.",
         btnOpen: "EXPLORE THE RADAR ↘",
         btnClose: "CLOSE TERMINAL ✕",
         features: [
@@ -28,7 +29,7 @@ const dict = {
       },
       s2: { 
         title: "GLOBAL CONTENT", 
-        desc: "AI-enhanced cultural storytelling that breaks borders. Dominating TikTok, Instagram, Facebook, Xiaohongshu (RED), and YouTube.",
+        desc: "AI-enhanced cultural storytelling that breaks borders.\nDominating TikTok, Instagram, YouTube, and RED.",
         bullets: [
           "Viral Creative & UGC Production",
           "Cross-Cultural Localization",
@@ -39,7 +40,7 @@ const dict = {
       },
       s3: { 
         title: "PERFORMANCE ADS", 
-        desc: "Precision media buying executed like a quantitative portfolio. We ruthlessly scale budgets and optimize conversion funnels.",
+        desc: "Precision media buying executed like a quantitative portfolio.\nWe ruthlessly scale budgets and optimize conversion funnels.",
         bullets: [
           "Search Intent Capture (Google/LinkedIn)",
           "Social Lead Gen & Sales (Meta/TikTok)",
@@ -50,11 +51,19 @@ const dict = {
       },
     },
     protocol: {
-      title: "THE 90-DAY PROTOCOL",
-      p1: { tag: "PHASE 01: WEEK 1", title: "AUDIT & STRATEGY", desc: "We analyze your previous data, competitors, and technical setup using GoRadar AI™ to build a bulletproof roadmap." },
-      p2: { tag: "PHASE 02: WEEK 2-3", title: "CREATIVE ENGINE & SETUP", desc: "Developing high-converting ad copies, creative briefs, and iron-clad tracking (GA4/GTM/CAPI)." },
-      p3: { tag: "PHASE 03: MONTH 1", title: "LAUNCH & AGGRESSIVE TESTING", desc: "Initial campaigns launch. We test dozens of audience and creative combinations to find proven winners." },
-      p4: { tag: "PHASE 04: MONTH 2-3+", title: "SCALE & SUSTAINABLE GROWTH", desc: "Doubling down on what works. Scaling budgets while maintaining target ROAS and expanding to new channels." },
+      title: "THE 90-DAY ROADMAP",
+      intro: {
+        title: "WHY DO WE NEED 90 DAYS?",
+        reasons: [
+          { title: "NO FAKE PROMISES", desc: "AI ad models and cross-cultural trust require 30-45 days of data feeding. Anyone promising 'week-one virality' is burning your brand equity." },
+          { title: "ZERO BLACK BOXES", desc: "Our roadmap is precise to the week. From audits to asset launches, you track every hard deliverable. You know exactly where your money goes." },
+          { title: "DATA-BACKED SCALING", desc: "We spend small in the first 30 days on high-frequency A/B testing. We then heavily fund the proven high-ROI models in the next 60 days to minimize risk." }
+        ]
+      },
+      p1: { tag: "PHASE 01: WEEK 1", title: "AUDIT & STRATEGY", desc: "Plug into the GoRadar AI™ Dashboard. We audit your past wasted spend, reverse-engineer competitor blindspots, and deliver your GTM Strategy Blueprint." },
+      p2: { tag: "PHASE 02: WEEK 2-3", title: "CREATIVE & TRACKING SETUP", desc: "Deploy pixel-perfect tracking (GA4/Meta CAPI) before spending a dime. We simultaneously deliver 30+ cross-cultural high-converting visual assets." },
+      p3: { tag: "PHASE 03: MONTH 1", title: "LAUNCH & AGGRESSIVE TESTING", desc: "Initiate live campaigns. We high-frequency test audience and creative combinations, forcefully feed the AI algorithms, and lock in your first high-ROI model." },
+      p4: { tag: "PHASE 04: MONTH 2-3+", title: "SCALE & DOMINATE", desc: "Kill underperforming ads. We allocate 80% of the budget to proven winner models, scaling exponentially while strictly capping your CPA redline." }
     },
     cases: {
       title: "BATTLE-TESTED WINS",
@@ -85,7 +94,7 @@ const dict = {
     },
     about: {
       title: "WE HATE VANITY METRICS.",
-      manifesto: "Too many agencies hide behind 'impressions' and 'likes.' You can't deposit clicks at the bank.\n\nWe act as an extension of your growth team. We speak your language: cross-border supply chains, net margins, CAC, and LTV.",
+      manifesto: "Too many agencies hide behind 'impressions' and 'likes'.\nYou can't deposit clicks at the bank.\n\nWe act as an extension of your growth team.\nWe speak your language: Supply Chains, Net Margins, CAC, and LTV.",
       stat: "10+ YEARS",
       statDesc: "CROSS-BORDER FRONTLINE EXPERIENCE",
       teamTitle: "THE MINDS BEHIND THE MACHINE",
@@ -93,12 +102,12 @@ const dict = {
       member1: {
         name: "YUSHENG YANG",
         role: "CO-FOUNDER",
-        desc: "Over a decade of frontline experience in core brand strategy and scaling B2B/D2C cross-border supply chains. The strategic architect behind the GoRadar AI™ system."
+        desc: "Holding a BSc in Accounting & Finance from Lancaster University and a Master's from the University of Warwick, Yusheng brings over a decade of frontline experience scaling B2B/D2C cross-border supply chains. As a GTM strategist and the architect behind GoRadar AI™, he bridges European business acumen with Asian manufacturing power. Outside the war room, he is a competitive ultra-trail runner, applying the discipline of endurance sports to long-term business growth."
       },
       member2: {
         name: "WARREN GOLDSMITH",
         role: "HEAD OF DIGITAL",
-        desc: "Imperial College Business School alumni with 8 years of hardcore digital marketing expertise. The mastermind behind our precision media buying and AI-driven conversion funnels."
+        desc: "A British native with a BSc from UCL and an MSc from Imperial College Business School, Warren brings 8 years of hardcore digital performance expertise. He is the mastermind behind our precision media buying and AI-driven conversion funnels. Treating ad spend like a quantitative hedge fund, he leverages his rigorous financial background to ruthlessly optimize for maximum ROI."
       }
     },
     pricing: {
@@ -206,7 +215,7 @@ const dict = {
     contact: { 
       status: "● RADAR SYSTEM: READY",
       title: "CLAIM YOUR\nFREE AUDIT.", 
-      subtitle: "Stop guessing. Let GoRadar AI™ scan your market blindspots. Drop your details below and our strategists will initiate the diagnostic.",
+      subtitle: "Stop guessing.\nLet GoRadar AI™ scan your market blindspots.\nDrop your details below to initiate the diagnostic.",
       form: {
         name: "YOUR NAME",
         website: "BRAND URL / WEBSITE",
@@ -221,15 +230,15 @@ const dict = {
     nav: { radar: "GoRadar AI™", services: "核心服务", protocol: "增长协议", cases: "实战复盘", about: "关于我们", pricing: "订阅报价", faq: "常见问题", contact: "联络终端", signin: "战情室登录" },
     hero: { 
       title: "雷达全开。\n告别盲猜。", 
-      subtitle: "以自研 GoRadar AI™ 为核心武器。\n我们挖掘隐秘市场机会、制定数据驱动营销方案，助您在全球高效获取高净值客户。" 
+      subtitle: "以自研 GoRadar\u00A0AI™ 为核心武器。\n我们为您挖掘隐秘市场机会、\n制定数据驱动战略，\n并在全球范围内高效收割高净值客户。" 
     },
-    marquee: "✳ GoRadar AI™ ✳ AI 数据战略 ✳ 全球内容工作室 ✳ 算力投流中心 ✳ ",
+    marquee: ["GoRadar AI™", "AI 数据战略", "全球内容工作室", "算力投流中心"],
     services: {
       title: "核心服务：\n三位一体增长引擎",
       desc: "将算力转化为全球市场份额，以下是我们的硬核交付清单。",
       s1: { 
         title: "GoRadar AI™ 战情系统", 
-        desc: "我们全域营销策略的底层大脑。拒绝盲目试错，用算力锁定胜局。点击查看系统架构。",
+        desc: "我们全域营销策略的底层大脑。\n拒绝盲目试错，用算力锁定胜局。",
         btnOpen: "展开雷达系统 ↘",
         btnClose: "收起雷达面板 ✕",
         features: [
@@ -240,7 +249,7 @@ const dict = {
       },
       s2: { 
         title: "全球内容工作室", 
-        desc: "打破文化壁垒的视觉叙事。基于本地化洞察，全面主导主流社媒平台的品牌声量与心智占领。",
+        desc: "打破文化壁垒的跨国视觉叙事。\n基于本土洞察，全面主导主流社媒心智。",
         bullets: [
           "爆款短视频策划与海外 UGC 摄制",
           "多语种跨文化深度本地化包装",
@@ -251,7 +260,7 @@ const dict = {
       },
       s3: { 
         title: "算力投流中心", 
-        desc: "如同管理量化基金般操盘全域广告。在 Google、Meta、TikTok 与 LinkedIn 进行极速测品与预算放大。",
+        desc: "如同管理量化基金般操盘全域广告。\n极速测品、放大预算，对转化漏斗进行极限优化。",
         bullets: [
           "精准收割高意向搜索与企业端线索",
           "社交媒体信息流爆单与询盘转化",
@@ -262,11 +271,19 @@ const dict = {
       },
     },
     protocol: {
-      title: "90 天全局增长协议",
-      p1: { tag: "第一阶段: 第1周", title: "审计与战略蓝图", desc: "依托 GoRadar AI™ 深度剖析历史数据与竞品盲区，打造无懈可击的出海战略基建。" },
-      p2: { tag: "第二阶段: 第2-3周", title: "创意引擎与数据追踪", desc: "规模化量产高转化广告创意资产，并完成极其严密的全域数据追踪部署。" },
-      p3: { tag: "第三阶段: 第1个月", title: "启动与极速测品", desc: "开启初始实弹投放。极速测试数十组人群与创意组合，靠算力锁定高 ROI 爆款模型。" },
-      p4: { tag: "第四阶段: 第2-3个月+", title: "放大与可持续爆发", desc: "重仓赢家组合。在严控目标 ROAS 的前提下指数级放大预算，拓展全渠道流量版图。" },
+      title: "90 天增长路线图",
+      intro: {
+        title: "为什么我们需要 90 天？",
+        reasons: [
+          { title: "拒绝虚假承诺", desc: "海外 AI 广告模型的深度学习与跨文化信任建立，客观上需要 30-45 天的数据喂养。任何承诺'首周爆单'的机构都在透支您的品牌。" },
+          { title: "告别黑盒操作", desc: "我们的路线图精确到周。从战略审计到素材上线，您能实时看到每一个进度节点的硬核交付物，钱花得明明白白。" },
+          { title: "算力测品，利润放大", desc: "前 30 天花小钱进行高频 A/B 测试排除错误选项；后 60 天重仓砸向被验证的高 ROI 模型，将您的风险降到最低。" }
+        ]
+      },
+      p1: { tag: "第一阶段: 第1周", title: "审计与战略蓝图", desc: "接入 GoRadar AI™ 战情大屏。排查历史浪费漏洞，反向扒取头部竞品流量盲区，输出《全域出海 GTM 战略坐标报告》。" },
+      p2: { tag: "第二阶段: 第2-3周", title: "创意引擎与追踪基建", desc: "在花掉您第一分钱广告费之前，完成全域像素级精准埋点 (GA4/CAPI)。同步交付首批 30+ 组跨文化高转化视觉素材。" },
+      p3: { tag: "第三阶段: 第1个月", title: "启动与极速测品", desc: "启动首轮实弹投放。高频测试受众标签与视觉素材，淘汰劣质模型，强制喂养 AI 算法，跑通首个高 ROI 获客模型。" },
+      p4: { tag: "第四阶段: 第2-3个月+", title: "重仓放大与全局统治", desc: "关停无效消耗，将 80% 的预算重仓砸向被数据验证的'赢家模型'。在严控 CAC（获客成本）红线的前提下，指数级放大预算。" }
     },
     cases: {
       title: "硬核实战复盘",
@@ -297,7 +314,7 @@ const dict = {
     },
     about: {
       title: "我们鄙视虚荣指标。",
-      manifesto: "太多代运营公司躲在「曝光量」和「点赞数」背后。但你没法把「点击量」存进银行。\n\n我们是您增长团队的算力外脑。我们只谈您关心的核心商业指标：跨境供应链、净利润率、获客成本 (CAC) 与生命周期价值 (LTV)。",
+      manifesto: "太多代运营躲在「曝光量」和「点赞数」背后。\n但您没法把「点击量」存进银行。\n\n我们是您增长团队的算力外脑。\n我们只谈核心商业指标：跨境供应链、净利润率、CAC 与 LTV。",
       stat: "10+ 年",
       statDesc: "跨境出海与供应链一线操盘经验",
       teamTitle: "幕后大脑",
@@ -305,12 +322,12 @@ const dict = {
       member1: {
         name: "YUSHENG YANG",
         role: "联合创始人",
-        desc: "拥有十余年核心品牌战略与重型跨境供应链出海操盘经验。主导多场千万级战役，GoRadar AI™ 系统的核心战略架构师。"
+        desc: "拥有兰卡斯特大学会计与金融学士及华威大学硕士学位，积累了十余年亚洲核心供应链与品牌出海操盘经验。作为资深 GTM 战略专家与 GoRadar AI™ 的底层架构师，他深谙中欧商业文化差异。业余时间，他是一名活跃于国际赛事的硬核超马越野跑者，将极限耐力的长期主义完美融入商业增长。"
       },
       member2: {
         name: "WARREN GOLDSMITH",
         role: "数字营销负责人",
-        desc: "帝国理工学院商学院校友，拥有 8 年硬核数字营销操盘经验。统筹精准媒介购买与 AI 转化漏斗的核心幕后大脑。"
+        desc: "英国籍高管，拥有伦敦大学学院 (UCL) 学士与帝国理工商学院硕士学位。作为拥有 8 年硬核实战经验的数字营销操盘手，Warren 是统筹精准媒介购买与 AI 转化漏斗的幕后大脑。他将严谨的英式金融逻辑带入流量市场，如同管理量化对冲基金般，以极度冷酷的数据算力榨干每一分预算的 ROI。"
       }
     },
     pricing: {
@@ -418,7 +435,7 @@ const dict = {
     contact: { 
       status: "● 雷达系统：准备就绪",
       title: "申请免费\n品牌诊断。", 
-      subtitle: "停止盲目试错。让 GoRadar AI™ 深度扫描您的流量盲区。留下您的联系方式，我们的战略大脑将立刻为您启动全域诊断。",
+      subtitle: "停止盲目试错。\n让 GoRadar\u00A0AI™ 深度扫描您的流量盲区。\n留下信息，我们的战略大脑将即刻为您启动诊断。",
       form: {
         name: "您的姓名",
         website: "独立站 / 品牌网址",
@@ -432,7 +449,7 @@ const dict = {
 };
 
 export default function Page() {
-  const [lang, setLang] = useState<'en' | 'zh'>('en');
+  const [lang, setLang] = useState<'en' | 'zh'>('zh');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [radarExpanded, setRadarExpanded] = useState(false); 
   const [showSla, setShowSla] = useState(false);
@@ -442,14 +459,22 @@ export default function Page() {
   return (
     <main className="bg-[#0A0A0A] min-h-screen text-white font-sans selection:bg-[#E5FF00] selection:text-black">
       <style dangerouslySetInnerHTML={{__html: `
-        @keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-50%); } }
-        .animate-marquee-custom { display: flex; width: 200%; animation: marquee 20s linear infinite; }
+        @keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-100%); } }
       `}} />
 
       {/* ==================== 1. HERO 实力宣言区 ==================== */}
       <section className="bg-[#E5FF00] text-black min-h-[90vh] px-6 md:px-8 py-8 flex flex-col justify-between">
-        <nav className="flex items-center justify-between w-full">
-          <span className="text-2xl font-black uppercase tracking-tighter">BrandGo.Global</span>
+        <nav className="flex items-start justify-between w-full">
+          <a href="/" className="flex items-center">
+            <Image 
+              src="/LOGO-BLACK.png" 
+              alt="BrandGo.Global" 
+              width={160} 
+              height={160} 
+              className="w-24 h-24 md:w-32 md:h-32 object-contain"
+              priority
+            />
+          </a>
           <div className="hidden lg:flex items-center gap-6 xl:gap-8">
             <a href="#radar" className="text-sm font-bold tracking-tight hover:opacity-70">{t.nav.radar}</a>
             <a href="#services" className="text-sm font-bold tracking-tight hover:opacity-70">{t.nav.services}</a>
@@ -479,13 +504,13 @@ export default function Page() {
           </div>
         </nav>
         
-        <div className="flex-1 flex flex-col md:flex-row items-start md:items-end justify-between gap-8 mt-16 md:mt-0">
-          <div className="md:w-[70%]">
+        <div className="flex-1 flex flex-col md:flex-row items-start md:items-end justify-between gap-8 mt-24 md:mt-32 pt-10">
+          <div className="md:w-[70%] pb-4 md:pb-8">
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter leading-[0.9] whitespace-pre-line">
               {t.hero.title}
             </h1>
           </div>
-          <div className="md:w-[30%] md:pb-6">
+          <div className="md:w-[40%] md:pb-6">
             <p className="text-lg md:text-xl font-bold leading-tight text-black whitespace-pre-line">
               {t.hero.subtitle}
             </p>
@@ -501,13 +526,23 @@ export default function Page() {
 
       {/* ==================== 2. MARQUEE 无限跑马灯 ==================== */}
       <section id="radar" className="bg-[#0A0A0A] text-[#E5FF00] py-6 border-y border-white/20 overflow-hidden">
-        <div className="animate-marquee-custom">
-          <span className="text-xl md:text-2xl font-bold tracking-tight w-1/2 flex justify-around">
-            {t.marquee}
-          </span>
-          <span className="text-xl md:text-2xl font-bold tracking-tight w-1/2 flex justify-around">
-            {t.marquee}
-          </span>
+        <div className="flex overflow-hidden relative w-full">
+          <div className="flex shrink-0 w-max items-center animate-[marquee_20s_linear_infinite] gap-16 px-8">
+            {t.marquee.map((item, i) => (
+              <React.Fragment key={i}>
+                <span className="text-xl md:text-2xl font-bold tracking-tight whitespace-nowrap">{item}</span>
+                <span className="text-xl md:text-2xl font-bold">✳</span>
+              </React.Fragment>
+            ))}
+          </div>
+          <div className="flex shrink-0 w-max items-center animate-[marquee_20s_linear_infinite] gap-16 px-8">
+            {t.marquee.map((item, i) => (
+              <React.Fragment key={i}>
+                <span className="text-xl md:text-2xl font-bold tracking-tight whitespace-nowrap">{item}</span>
+                <span className="text-xl md:text-2xl font-bold">✳</span>
+              </React.Fragment>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -533,7 +568,7 @@ export default function Page() {
                 {t.services.s1.title}
               </h3>
             </div>
-            <p className="text-base md:text-lg text-gray-400 font-medium leading-relaxed max-w-2xl mb-2">
+            <p className="text-base md:text-lg text-gray-400 font-medium leading-relaxed max-w-2xl mb-2 whitespace-pre-line">
               {t.services.s1.desc}
             </p>
             
@@ -563,13 +598,13 @@ export default function Page() {
           {[t.services.s2, t.services.s3].map((s, idx) => (
             <div key={idx} className="border-b border-white/20 py-16 flex flex-col gap-6">
               <div className="flex items-center gap-6 mb-2">
-                <span className="text-2xl font-black text-gray-600 tracking-tighter">[ 0{idx + 2} ]</span>
+                <span className="text-2xl font-black text-[#E5FF00] tracking-tighter">[ 0{idx + 2} ]</span>
                 <h3 className="text-3xl md:text-4xl font-black tracking-tight text-white">
                   {s.title}
                 </h3>
               </div>
               
-              <p className="text-base md:text-lg text-gray-400 font-medium leading-relaxed max-w-2xl mb-2">
+              <p className="text-base md:text-lg text-gray-400 font-medium leading-relaxed max-w-2xl mb-2 whitespace-pre-line">
                 {s.desc}
               </p>
               
@@ -598,27 +633,47 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ==================== 4. THE 90-DAY PROTOCOL 时间线 ==================== */}
+      {/* ==================== 4. THE 90-DAY PROTOCOL (ROADMAP) ==================== */}
       <section id="protocol" className="bg-[#0A0A0A] text-white px-6 md:px-8 py-32 border-t border-white/20">
-        <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-20">
-          {t.protocol.title}
-        </h2>
-        
-        <div className="max-w-4xl ml-2 md:ml-8 border-l-4 border-white/20">
-          {[t.protocol.p1, t.protocol.p2, t.protocol.p3, t.protocol.p4].map((phase, idx) => (
-            <div key={idx} className="relative pl-10 md:pl-16 pb-20 last:pb-0">
-              <div className="absolute -left-[10px] top-0 size-4 bg-[#E5FF00]"></div>
-              <div className="bg-[#E5FF00] text-black px-3 py-1 text-xs md:text-sm font-bold uppercase inline-block mb-4">
-                {phase.tag}
-              </div>
-              <h3 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-4 text-white">
-                {phase.title}
-              </h3>
-              <p className="text-gray-400 text-base md:text-lg font-medium leading-relaxed max-w-2xl">
-                {phase.desc}
-              </p>
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-16">
+            {t.protocol.title}
+          </h2>
+          
+          {/* Intro / Benefits Grid */}
+          <div className="mb-24">
+            <h3 className="text-2xl md:text-3xl font-black tracking-tight mb-8 text-[#E5FF00]">
+              {t.protocol.intro.title}
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {t.protocol.intro.reasons.map((reason, idx) => (
+                <div key={idx} className="bg-[#111] border-t-4 border-[#E5FF00] p-8">
+                  <h4 className="text-xl font-black mb-4">{reason.title}</h4>
+                  <p className="text-gray-400 text-sm md:text-base font-bold leading-relaxed">
+                    {reason.desc}
+                  </p>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Timeline */}
+          <div className="max-w-4xl ml-2 md:ml-8 border-l-4 border-white/20">
+            {[t.protocol.p1, t.protocol.p2, t.protocol.p3, t.protocol.p4].map((phase, idx) => (
+              <div key={idx} className="relative pl-10 md:pl-16 pb-20 last:pb-0">
+                <div className="absolute -left-[10px] top-0 size-4 bg-[#E5FF00]"></div>
+                <div className="bg-[#E5FF00] text-black px-3 py-1 text-xs md:text-sm font-bold uppercase inline-block mb-4">
+                  {phase.tag}
+                </div>
+                <h3 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-4 text-white">
+                  {phase.title}
+                </h3>
+                <p className="text-gray-400 text-base md:text-lg font-medium leading-relaxed max-w-2xl whitespace-pre-line">
+                  {phase.desc}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -860,7 +915,7 @@ export default function Page() {
             <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-[0.9] mb-8 whitespace-pre-line">
               {t.contact.title}
             </h2>
-            <p className="text-xl md:text-2xl font-bold leading-relaxed max-w-md">
+            <p className="text-xl md:text-2xl font-bold leading-relaxed max-w-lg whitespace-pre-line">
               {t.contact.subtitle}
             </p>
           </div>

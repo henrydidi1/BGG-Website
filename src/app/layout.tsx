@@ -33,7 +33,7 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <head>
-        <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+        <link rel="icon" href="/logo-yellow.png" type="image/png" />
       </head>
       <body className="min-h-full flex flex-col bg-[#0A0A0A]">
         {children}
