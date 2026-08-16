@@ -1,13 +1,15 @@
 "use client";
 import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
+import Header from '@/components/Header';
 
 // ==========================================
 // 1. 中英双语内容字典 (卡片内拉长对比版)
 // ==========================================
 const dict = {
   en: {
-    nav: { radar: "GoRadar AI™", services: "SERVICES", protocol: "PROTOCOL", cases: "CASES", about: "ABOUT", pricing: "PRICING", faq: "FAQ", contact: "CONTACT", signin: "SIGN IN" },
+    nav: { goradar: "GoRadar AI", services: "Services", cases: "Cases", pricing: "Pricing", faq: "FAQ", contact: "Contact", signin: "Sign In", langSwitch: "中" },
     hero: { 
       title: "MARKET RADAR: ON.\nGUESSWORK: OFF.", 
       subtitle: "Powered by our proprietary GoRadar\u00A0AI™.\nWe uncover hidden market opportunities, craft data-driven strategies,\nand acquire high-value clients globally." 
@@ -224,10 +226,11 @@ const dict = {
         submit: "INITIATE RADAR SCAN ↘"
       }
     },
-    footer: { left: "© 2026 BRANDGO.GLOBAL STUDIO", right: "DISTRIBUTED GLOBALLY. EXECUTED PRECISELY." }
+    footer: { left: "© 2026 BrandGo.Global STUDIO", right: "DISTRIBUTED GLOBALLY. EXECUTED PRECISELY." },
+    mobile: { openMenu: "Open navigation menu", closeMenu: "Close navigation menu" }
   },
   zh: {
-    nav: { radar: "GoRadar AI™", services: "核心服务", protocol: "增长协议", cases: "实战复盘", about: "关于我们", pricing: "订阅报价", faq: "常见问题", contact: "联络终端", signin: "战情室登录" },
+    nav: { goradar: "GoRadar AI", services: "服务", cases: "案例", pricing: "定价", faq: "常见问题", contact: "联系我们", signin: "登录", langSwitch: "EN" },
     hero: { 
       title: "雷达全开。\n告别盲猜。", 
       subtitle: "以自研 GoRadar\u00A0AI™ 为核心武器。\n我们为您挖掘隐秘市场机会、\n制定数据驱动战略，\n并在全球范围内高效收割高净值客户。" 
@@ -444,7 +447,8 @@ const dict = {
         submit: "启动雷达扫描 ↘"
       }
     },
-    footer: { left: "© 2026 BRANDGO.GLOBAL STUDIO", right: "全球分布式协作。极致精准执行。" }
+    footer: { left: "© 2026 BrandGo.Global STUDIO", right: "全球分布式协作。极致精准执行。" },
+    mobile: { openMenu: "打开导航菜单", closeMenu: "关闭导航菜单" }
   }
 };
 
@@ -462,46 +466,29 @@ export default function Page() {
         @keyframes marquee { 0% { transform: translateX(0%); } 100% { transform: translateX(-100%); } }
       `}} />
 
+      <Header
+        lang={lang}
+        setLang={setLang}
+        t={{
+          brand: "BrandGo.Global",
+          nav: t.nav,
+          mobile: t.mobile,
+        }}
+      />
+
       {/* ==================== 1. HERO 实力宣言区 ==================== */}
-      <section className="bg-[#E5FF00] text-black min-h-[90vh] px-6 md:px-8 py-8 flex flex-col justify-between">
+      <section id="hero" data-section-theme="yellow" className="bg-[#E5FF00] text-black min-h-[90vh] px-6 md:px-8 py-8 flex flex-col justify-between">
         <nav className="flex items-start justify-between w-full">
-          <a href="/" className="flex items-center">
-            <Image 
-              src="/LOGO-BLACK.png" 
-              alt="BrandGo.Global" 
-              width={160} 
-              height={160} 
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/LOGO-BLACK.png"
+              alt="BrandGo.Global"
+              width={160}
+              height={160}
               className="w-24 h-24 md:w-32 md:h-32 object-contain"
               priority
             />
-          </a>
-          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
-            <a href="#radar" className="text-sm font-bold tracking-tight hover:opacity-70">{t.nav.radar}</a>
-            <a href="#services" className="text-sm font-bold tracking-tight hover:opacity-70">{t.nav.services}</a>
-            <a href="#protocol" className="text-sm font-bold tracking-tight hover:opacity-70">{t.nav.protocol}</a>
-            <a href="#cases" className="text-sm font-bold tracking-tight hover:opacity-70">{t.nav.cases}</a>
-            <a href="#about" className="text-sm font-bold tracking-tight hover:opacity-70">{t.nav.about}</a>
-            <a href="#pricing" className="text-sm font-bold tracking-tight hover:opacity-70">{t.nav.pricing}</a>
-            <a href="#faq" className="text-sm font-bold tracking-tight hover:opacity-70">{t.nav.faq}</a>
-            <a href="#contact" className="text-sm font-bold tracking-tight hover:opacity-70">{t.nav.contact}</a>
-            
-            <button 
-              onClick={() => setLang(lang === 'en' ? 'zh' : 'en')}
-              className="text-sm font-black tracking-tight hover:opacity-70 transition-opacity bg-black/10 px-3 py-1 rounded-full"
-            >
-              {lang === 'en' ? '中' : 'EN'}
-            </button>
-            
-            <a 
-              href="https://app.brandgo.global"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={lang === 'en' ? 'Sign in to BrandGo Global' : '登录 BrandGo Global'}
-              className="bg-black text-[#E5FF00] px-5 py-2 rounded-full text-sm font-bold hover:bg-zinc-800 transition-colors"
-            >
-              {t.nav.signin}
-            </a>
-          </div>
+          </Link>
         </nav>
         
         <div className="flex-1 flex flex-col md:flex-row items-start md:items-end justify-between gap-8 mt-24 md:mt-32 pt-10">
@@ -524,8 +511,11 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ==================== 2. MARQUEE 无限跑马灯 ==================== */}
-      <section id="radar" className="bg-[#0A0A0A] text-[#E5FF00] py-6 border-y border-white/20 overflow-hidden">
+      {/* ==================== 2. MARQUEE 无限跑马灯 (GoRadar 锚点) ==================== */}
+      {/* `<span id="radar">` 保留旧 #radar anchor 兼容，浏览器仍能滚动到同一 section 顶部。
+          不影响布局（空 inline 元素，0 尺寸）。*/}
+      <section id="goradar" data-section-theme="dark" className="bg-[#0A0A0A] text-[#E5FF00] py-6 border-y border-white/20 overflow-hidden">
+        <span id="radar" aria-hidden="true" />
         <div className="flex overflow-hidden relative w-full">
           <div className="flex shrink-0 w-max items-center animate-[marquee_20s_linear_infinite] gap-16 px-8">
             {t.marquee.map((item, i) => (
@@ -547,7 +537,7 @@ export default function Page() {
       </section>
 
       {/* ==================== 3. 核心三擎服务区 ==================== */}
-      <section id="services" className="bg-[#0A0A0A] text-white px-6 md:px-8 py-32 flex flex-col lg:flex-row gap-16 lg:gap-12">
+      <section id="services" data-section-theme="dark" className="bg-[#0A0A0A] text-white px-6 md:px-8 py-32 flex flex-col lg:flex-row gap-16 lg:gap-12">
         <div className="lg:w-[35%]">
           <div className="sticky top-24 h-fit">
             <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-[0.95] mb-6 whitespace-pre-line">
@@ -623,7 +613,7 @@ export default function Page() {
                 {s.kpis?.map((kpi, i) => (
                   <React.Fragment key={i}>
                     <span>{kpi}</span>
-                    {i < (s.kpis?.length ?? 0) - 1 && <span className="text-white/30">///</span>}
+                    {i < (s.kpis?.length ?? 0) - 1 && <span className="text-white/30">{"///"}</span>}
                   </React.Fragment>
                 ))}
               </div>
@@ -634,7 +624,7 @@ export default function Page() {
       </section>
 
       {/* ==================== 4. THE 90-DAY PROTOCOL (ROADMAP) ==================== */}
-      <section id="protocol" className="bg-[#0A0A0A] text-white px-6 md:px-8 py-32 border-t border-white/20">
+      <section id="protocol" data-section-theme="dark" className="bg-[#0A0A0A] text-white px-6 md:px-8 py-32 border-t border-white/20">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-16">
             {t.protocol.title}
@@ -678,7 +668,7 @@ export default function Page() {
       </section>
 
       {/* ==================== 5. CASES 实战复盘区 ==================== */}
-      <section id="cases" className="bg-[#E5FF00] text-black px-6 md:px-8 py-32 border-t border-black/20">
+      <section id="cases" data-section-theme="yellow" className="bg-[#E5FF00] text-black px-6 md:px-8 py-32 border-t border-black/20">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
           <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[0.95]">
             {t.cases.title}
@@ -691,11 +681,13 @@ export default function Page() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {t.cases.list.map((c, idx) => (
             <div key={idx} className="border border-black p-6 hover:bg-black hover:text-[#E5FF00] transition-all duration-300 group flex flex-col cursor-pointer">
-              <div className="w-full aspect-video mb-6 overflow-hidden bg-black">
-                <img 
-                  src={c.img} 
+              <div className="relative w-full aspect-video mb-6 overflow-hidden bg-black">
+                <Image
+                  src={c.img}
                   alt={c.title}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500 opacity-90 group-hover:opacity-100"
+                  fill
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500 opacity-90 group-hover:opacity-100"
                 />
               </div>
               <div className="text-xs font-black uppercase border border-current px-2 py-1 self-start mb-6">
@@ -716,7 +708,7 @@ export default function Page() {
       </section>
 
       {/* ==================== 6. ABOUT 宣言与团队区 ==================== */}
-      <section id="about" className="bg-[#0A0A0A] text-white px-6 md:px-8 py-32 border-t border-white/20">
+      <section id="about" data-section-theme="dark" className="bg-[#0A0A0A] text-white px-6 md:px-8 py-32 border-t border-white/20">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-12 mb-32 max-w-7xl mx-auto">
           <div className="lg:w-[60%]">
             <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-8">{t.about.title}</h2>
@@ -754,7 +746,7 @@ export default function Page() {
       </section>
 
       {/* ==================== 7. PRICING 订阅价格区 (带卡片内无限拉长对比) ==================== */}
-      <section id="pricing" className="bg-[#0A0A0A] px-6 md:px-8 py-32 border-t border-white/20">
+      <section id="pricing" data-section-theme="dark" className="bg-[#0A0A0A] px-6 md:px-8 py-32 border-t border-white/20">
         
         {/* 标题与季付提示 */}
         <div className="flex flex-col items-center justify-center text-center mb-16">
@@ -881,7 +873,7 @@ export default function Page() {
       </section>
 
       {/* ==================== 8. FAQ 区 ==================== */}
-      <section id="faq" className="bg-[#0A0A0A] text-white px-6 md:px-8 py-24 md:py-32 border-t border-white/20">
+      <section id="faq" data-section-theme="dark" className="bg-[#0A0A0A] text-white px-6 md:px-8 py-24 md:py-32 border-t border-white/20">
         <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-16">{t.faq.title}</h2>
         <div className="flex flex-col border-t border-white/20">
           {[t.faq.q1, t.faq.q2, t.faq.q3].map((item, idx) => (
@@ -904,7 +896,7 @@ export default function Page() {
       </section>
 
       {/* ==================== 9. CONTACT / 免费诊断表单 ==================== */}
-      <section id="contact" className="bg-[#E5FF00] text-black px-6 md:px-8 py-24 md:py-32 border-t-4 border-black">
+      <section id="contact" data-section-theme="yellow" className="bg-[#E5FF00] text-black px-6 md:px-8 py-24 md:py-32 border-t-4 border-black">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
           
           {/* 左侧：诱饵文案 */}
@@ -991,7 +983,7 @@ export default function Page() {
         </div>
       </section>
 
-      <footer className="bg-[#0A0A0A] text-white px-6 md:px-8 py-8 w-full border-t border-white/20">
+      <footer data-section-theme="dark" className="bg-[#0A0A0A] text-white px-6 md:px-8 py-8 w-full border-t border-white/20">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-bold uppercase tracking-tight text-gray-500">
           <span>{t.footer.left}</span>
           <span>{t.footer.right}</span>

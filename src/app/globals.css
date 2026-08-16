@@ -19,6 +19,32 @@ html {
   scrollbar-gutter: stable;
 }
 
+/* Sticky header offset so anchor jumps do not tuck section titles behind it.
+   Header is fixed and ~64-80px tall; we give sections a matching scroll-margin
+   so both desktop and mobile smooth-scroll land cleanly. */
+#goradar,
+#services,
+#protocol,
+#cases,
+#about,
+#pricing,
+#faq,
+#contact {
+  scroll-margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  #goradar,
+  #services,
+  #protocol,
+  #cases,
+  #about,
+  #pricing,
+  #faq,
+  #contact {
+    scroll-margin-top: 6rem;
+  }
+}
+
 body {
   background: var(--deep-black);
   color: var(--pure-white);
