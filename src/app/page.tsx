@@ -214,16 +214,19 @@ const dict = {
       q2: { q: "WHAT PLATFORMS DO YOU COVER?", a: "We execute full-funnel campaigns across Google, Meta (FB/IG), TikTok, LinkedIn, YouTube, and Xiaohongshu (RED)." },
       q3: { q: "WHY DO YOU REQUIRE QUARTERLY BILLING?", a: "AI algorithm maturity and cross-border marketing optimizations take time. The 90-day commitment ensures we build a robust, scalable conversion funnel rather than chasing short-term vanity clicks." }
     },
-    contact: { 
+    contact: {
       status: "● RADAR SYSTEM: READY",
-      title: "CLAIM YOUR\nFREE AUDIT.", 
+      title: "CLAIM YOUR\nFREE AUDIT.",
       subtitle: "Stop guessing.\nLet GoRadar AI™ scan your market blindspots.\nDrop your details below to initiate the diagnostic.",
       form: {
         name: "YOUR NAME",
         website: "BRAND URL / WEBSITE",
         email: "WORK EMAIL",
         social: "WHATSAPP / WECHAT",
-        submit: "INITIATE RADAR SCAN ↘"
+        submit: "INITIATE RADAR SCAN ↘",
+        submitting: "SUBMITTING…",
+        success: "Submission received.",
+        error: "Submission failed. Please try again.",
       }
     },
     footer: { left: "© 2026 BrandGo.Global STUDIO", right: "DISTRIBUTED GLOBALLY. EXECUTED PRECISELY." },
@@ -435,16 +438,19 @@ const dict = {
       q2: { q: "你们覆盖哪些营销平台？", a: "我们提供全漏斗营销执行，深度覆盖 Google, Meta (FB/IG), TikTok, LinkedIn, YouTube 以及小红书。" },
       q3: { q: "为什么要求按季度结算？", a: "跨国营销模型学习与高价值客户的转化需要客观的数据积累周期。90天的锁定期确保我们能为您跑通高 ROAS 转化闭环，而不是追求短期的虚假流量。" }
     },
-    contact: { 
+    contact: {
       status: "● 雷达系统：准备就绪",
-      title: "申请免费\n品牌诊断。", 
+      title: "申请免费\n品牌诊断。",
       subtitle: "停止盲目试错。\n让 GoRadar\u00A0AI™ 深度扫描您的流量盲区。\n留下信息，我们的战略大脑将即刻为您启动诊断。",
       form: {
         name: "您的姓名",
         website: "独立站 / 品牌网址",
         email: "工作邮箱",
         social: "WhatsApp / 微信号码",
-        submit: "启动雷达扫描 ↘"
+        submit: "启动雷达扫描 ↘",
+        submitting: "提交中…",
+        success: "提交成功，我们已收到您的信息。",
+        error: "提交失败，请稍后重试。",
       }
     },
     footer: { left: "© 2026 BrandGo.Global STUDIO", right: "全球分布式协作。极致精准执行。" },
@@ -452,13 +458,79 @@ const dict = {
   }
 };
 
+function normalizeWebsiteUrl(value: string): string {
+  const trimmed = value.trim();
+  return /^https?:\/\//i.test(trimmed) ? trimmed : `https://${trimmed}`;
+}
+
 export default function Page() {
   const [lang, setLang] = useState<'en' | 'zh'>('zh');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const [radarExpanded, setRadarExpanded] = useState(false); 
+  const [radarExpanded, setRadarExpanded] = useState(false);
   const [showSla, setShowSla] = useState(false);
 
   const t = dict[lang];
+
+  // ─── Contact form state ────────────────────────────────────
+  // Kept intentionally local — this form has four fields, no need
+  // for a library. The `companyWebsite2` field is a hidden
+  // honeypot: real users will leave it blank, bots often fill it.
+  type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
+  const [formValues, setFormValues] = useState({
+    name: '',
+    website: '',
+    email: '',
+    social: '',
+  });
+  const [honeypot, setHoneypot] = useState('');
+  const [formStatus, setFormStatus] = useState<FormStatus>('idle');
+  const [errorMessage, setErrorMessage] = useState<string>('');
+
+  const submitting = formStatus === 'submitting';
+
+  const handleFieldChange =
+    (key: keyof typeof formValues) =>
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      setFormValues((prev) => ({ ...prev, [key]: e.target.value }));
+    };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (submitting) return; // hard double-submit guard
+    setFormStatus('submitting');
+    setErrorMessage('');
+
+    const normalizedWebsite = normalizeWebsiteUrl(formValues.website);
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ...formValues,
+          website: normalizedWebsite,
+          companyWebsite2: honeypot,
+        }),
+      });
+      if (!res.ok) {
+        setFormStatus('error');
+        setErrorMessage(t.contact.form.error);
+        return;
+      }
+      // Success: clear fields and lock the form visually via state.
+      setFormStatus('success');
+      setFormValues({ name: '', website: '', email: '', social: '' });
+      setHoneypot('');
+    } catch {
+      setFormStatus('error');
+      setErrorMessage(t.contact.form.error);
+    }
+  };
+
+  const resetForm = () => {
+    setFormStatus('idle');
+    setErrorMessage('');
+  };
 
   return (
     <main className="bg-[#0A0A0A] min-h-screen text-white font-sans selection:bg-[#E5FF00] selection:text-black">
@@ -914,18 +986,25 @@ export default function Page() {
 
           {/* 右侧：粗野主义硬核表单 */}
           <div className="lg:w-[55%] w-full">
-            <form className="flex flex-col gap-8" onSubmit={(e) => e.preventDefault()}>
-              
+            <form
+              className="flex flex-col gap-8"
+              onSubmit={handleSubmit}
+              noValidate={false}
+            >
+
               {/* 姓名 */}
               <div className="flex flex-col gap-3">
                 <label className="text-sm font-black uppercase tracking-widest text-black/70">
                   {t.contact.form.name}
                 </label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   required
-                  className="w-full border-4 border-black bg-transparent px-6 py-5 text-2xl font-black focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20" 
-                  placeholder="John Doe" 
+                  disabled={submitting}
+                  value={formValues.name}
+                  onChange={handleFieldChange('name')}
+                  className="w-full border-4 border-black bg-transparent px-6 py-5 text-2xl font-black focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20 disabled:opacity-60 disabled:cursor-not-allowed"
+                  placeholder="John Doe"
                 />
               </div>
 
@@ -934,11 +1013,15 @@ export default function Page() {
                 <label className="text-sm font-black uppercase tracking-widest text-black/70">
                   {t.contact.form.website}
                 </label>
-                <input 
-                  type="url" 
+                <input
+                  type="text"
+                  inputMode="url"
                   required
-                  className="w-full border-4 border-black bg-transparent px-6 py-5 text-2xl font-black focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20" 
-                  placeholder="www.yourbrand.com" 
+                  disabled={submitting}
+                  value={formValues.website}
+                  onChange={handleFieldChange('website')}
+                  className="w-full border-4 border-black bg-transparent px-6 py-5 text-2xl font-black focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20 disabled:opacity-60 disabled:cursor-not-allowed"
+                  placeholder="www.yourbrand.com"
                 />
               </div>
 
@@ -948,34 +1031,98 @@ export default function Page() {
                    <label className="text-sm font-black uppercase tracking-widest text-black/70">
                      {t.contact.form.email}
                    </label>
-                   <input 
-                     type="email" 
+                   <input
+                     type="email"
                      required
-                     className="w-full border-4 border-black bg-transparent px-6 py-5 text-xl font-black focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20" 
-                     placeholder="hello@brand.com" 
+                     disabled={submitting}
+                     value={formValues.email}
+                     onChange={handleFieldChange('email')}
+                     className="w-full border-4 border-black bg-transparent px-6 py-5 text-xl font-black focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20 disabled:opacity-60 disabled:cursor-not-allowed"
+                     placeholder="hello@brand.com"
                    />
                  </div>
-                 
+
                  <div className="flex flex-col gap-3">
                    <label className="text-sm font-black uppercase tracking-widest text-black/70">
                      {t.contact.form.social}
                    </label>
-                   <input 
-                     type="text" 
+                   <input
+                     type="text"
                      required
-                     className="w-full border-4 border-black bg-transparent px-6 py-5 text-xl font-black focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20" 
-                     placeholder="+1 234 567 8900" 
+                     disabled={submitting}
+                     value={formValues.social}
+                     onChange={handleFieldChange('social')}
+                     className="w-full border-4 border-black bg-transparent px-6 py-5 text-xl font-black focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20 disabled:opacity-60 disabled:cursor-not-allowed"
+                     placeholder="+1 234 567 8900"
                    />
                  </div>
               </div>
 
-              {/* 提交按钮 */}
-              <button 
-                type="submit" 
-                className="mt-6 w-full bg-black text-[#E5FF00] border-4 border-black py-6 md:py-8 text-3xl md:text-4xl font-black uppercase tracking-tighter hover:bg-transparent hover:text-black transition-all duration-300 flex items-center justify-center gap-4 group"
+              {/* Honeypot — visually hidden, accessibility-hidden,
+                  real humans will not fill it. Sized to 0 so the
+                  flex `gap-8` does not insert extra spacing. */}
+              <div
+                aria-hidden="true"
+                style={{
+                  position: 'absolute',
+                  left: '-10000px',
+                  top: 'auto',
+                  width: 0,
+                  height: 0,
+                  overflow: 'hidden',
+                }}
               >
-                {t.contact.form.submit}
+                <label htmlFor="companyWebsite2">
+                  Company Website 2
+                  <input
+                    id="companyWebsite2"
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={honeypot}
+                    onChange={(e) => setHoneypot(e.target.value)}
+                  />
+                </label>
+              </div>
+
+              {/* 提交按钮 */}
+              <button
+                type="submit"
+                disabled={submitting}
+                aria-busy={submitting}
+                aria-live="polite"
+                className="mt-6 w-full bg-black text-[#E5FF00] border-4 border-black py-6 md:py-8 text-3xl md:text-4xl font-black uppercase tracking-tighter hover:bg-transparent hover:text-black transition-all duration-300 flex items-center justify-center gap-4 group disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:bg-black disabled:hover:text-[#E5FF00]"
+              >
+                {submitting ? t.contact.form.submitting : t.contact.form.submit}
               </button>
+
+              {/* Inline status feedback — announced via aria-live. */}
+              <div
+                aria-live="polite"
+                role="status"
+                className="min-h-[1.5rem] -mt-2"
+              >
+                {formStatus === 'success' && (
+                  <div className="bg-black text-[#E5FF00] border-4 border-black px-4 py-3 font-black uppercase tracking-tight flex items-center justify-between gap-4">
+                    <span>{t.contact.form.success}</span>
+                    <button
+                      type="button"
+                      onClick={resetForm}
+                      className="text-sm font-black uppercase tracking-widest underline underline-offset-4 hover:text-white"
+                    >
+                      {lang === 'zh' ? '再提交一次' : 'Submit another'}
+                    </button>
+                  </div>
+                )}
+                {formStatus === 'error' && (
+                  <div
+                    role="alert"
+                    className="bg-white text-black border-4 border-black px-4 py-3 font-black uppercase tracking-tight"
+                  >
+                    {errorMessage || t.contact.form.error}
+                  </div>
+                )}
+              </div>
 
             </form>
           </div>
