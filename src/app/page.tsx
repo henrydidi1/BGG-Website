@@ -21,8 +21,8 @@ const dict = {
       s1: {
         title: "GoRadar AI™ SYSTEM",
         desc: "Our proprietary market intelligence engine.\nWe don't guess the market; we compute it.",
-        btnOpen: "EXPLORE THE RADAR ↘",
-        btnClose: "CLOSE TERMINAL ✕",
+        btnOpen: "EXPLORE THE RADAR",
+        btnClose: "CLOSE TERMINAL",
         features: [
           { name: "COMPETITOR BLINDSPOT SCANNER", detail: "Real-time tracking of global competitors to identify untargeted, high-margin search keywords." },
           { name: "CROSS-BORDER DEMAND MATRIX", detail: "Algorithms that match local overseas search intent directly with your supply chain advantages." },
@@ -115,7 +115,7 @@ const dict = {
     pricing: {
       title: "PRICING PROTOCOL",
       subtitle: "TRANSPARENT RETAINERS",
-      note: "✳ Billed quarterly. 90-day minimum commitment for algorithm maturity.",
+      note: "Billed quarterly. 90-day minimum commitment for algorithm maturity.",
       btnExpand: "↓ VIEW FULL FEATURE COMPARISON",
       btnCollapse: "↑ HIDE FULL COMPARISON",
       includedText: "✓ INCLUDED",
@@ -131,7 +131,7 @@ const dict = {
             "Untapped Keywords Report"
           ],
           addon: "",
-          btn: "GET RADAR ACCESS ↗",
+          btn: "GET RADAR ACCESS",
           highlight: false
         },
         {
@@ -145,7 +145,7 @@ const dict = {
             "Bi-weekly War Room Sync"
           ],
           addon: "+$349/mo per extra platform",
-          btn: "START CORE ENGINE ↗",
+          btn: "START CORE ENGINE",
           highlight: true
         },
         {
@@ -160,7 +160,7 @@ const dict = {
             "24/7 Async War Room Access"
           ],
           addon: "",
-          btn: "HIRE YOUR CMO ↗",
+          btn: "HIRE YOUR CMO",
           highlight: false
         }
       ],
@@ -216,39 +216,29 @@ const dict = {
     },
     contact: {
       status: "● RADAR SYSTEM: READY",
-      title: "LET'S TALK\nABOUT YOUR GOALS.",
-      subtitle: "Tell us where you are and where you want to go.\nNo pressure, no commitment — just a real conversation\nwith our strategy team.",
+      title: "Let's talk about your growth.",
+      subtitle: "Leave your email and we'll get in touch.\nIf you'd like, you can tell us a little more.",
       form: {
-        name: "YOUR NAME",
+        name: "NAME",
         namePh: "John Doe",
         company: "COMPANY / BRAND",
         companyPh: "Your brand or company",
-        website: "BRAND WEBSITE (OPTIONAL)",
-        websitePh: "www.yourbrand.com",
+        website: "BRAND WEBSITE",
+        websitePh: "brand.com",
         email: "WORK EMAIL",
         emailPh: "hello@brand.com",
-        interestsLabel: "WHAT WOULD YOU LIKE TO KNOW?",
-        interestsRequiredHint: "Pick at least one.",
-        interests: [
-          { value: "goradar", label: "Learn about GoRadar AI" },
-          { value: "global-growth", label: "Get help growing overseas" },
-          { value: "existing-growth", label: "Improve what we're already doing" },
-          { value: "not-sure", label: "Not sure yet — let's talk" },
-        ],
-        wechat: "WECHAT ID (OPTIONAL)",
+        moreInfoLabel: "Tell us more (optional)",
+        wechat: "WECHAT ID",
         wechatPh: "wechat_handle",
-        whatsapp: "WHATSAPP (OPTIONAL)",
+        whatsapp: "WHATSAPP",
         whatsappPh: "+86 136 0000 0000",
-        message: "ANYTHING ELSE YOU'D LIKE US TO KNOW? (OPTIONAL)",
-        messagePh: "A few lines about your goals…",
-        submit: "START THE CONVERSATION ↘",
+        message: "WHAT WOULD YOU LIKE TO TALK ABOUT?",
+        messagePh: "Tell us briefly about your goal or what you're working through",
+        submit: "START THE CONVERSATION",
         submitting: "SUBMITTING…",
         success: "Submission received.",
         error: "Submission failed. Please try again.",
-        errorName: "Please enter your name.",
-        errorCompany: "Please enter your company or brand.",
         errorEmail: "Please enter a valid work email.",
-        errorInterests: "Pick at least one thing you'd like to know.",
       }
     },
     footer: { left: "© 2026 BrandGo.Global STUDIO", right: "DISTRIBUTED GLOBALLY. EXECUTED PRECISELY." },
@@ -267,8 +257,8 @@ const dict = {
       s1: {
         title: "GoRadar AI™ 战情系统",
         desc: "我们全域营销策略的底层大脑。\n拒绝盲目试错，用算力锁定胜局。",
-        btnOpen: "展开雷达系统 ↘",
-        btnClose: "收起雷达面板 ✕",
+        btnOpen: "展开雷达系统",
+        btnClose: "收起雷达面板",
         features: [
           { name: "竞品流量盲区扫描 (BLINDSPOT SCANNER)", detail: "全网抓取海外头部竞品数据，精准定位利润极高但被同行忽视的流量空隙与搜索词。" },
           { name: "跨境供应链需求矩阵 (DEMAND MATRIX)", detail: "将海外本土的真实搜索意图，与中国制造业/重履约产品的核心供应链优势进行算法匹配。" },
@@ -361,7 +351,7 @@ const dict = {
     pricing: {
       title: "订阅报价",
       subtitle: "按月透明计费，无隐形抽成",
-      note: "✳ 按季度结算预付。最低签约 90 天，保障跑通高转化模型。",
+      note: "按季度结算预付。最低签约 90 天，保障跑通高转化模型。",
       btnExpand: "↓ 展开完整服务细节对比",
       btnCollapse: "↑ 收起服务细节对比",
       includedText: "✓ 包含",
@@ -377,7 +367,7 @@ const dict = {
             "竞品高转化词库全盘扫描"
           ],
           addon: "",
-          btn: "获取雷达权限 ↗",
+          btn: "获取雷达权限",
           highlight: false
         },
         {
@@ -391,7 +381,7 @@ const dict = {
             "每双周战情室战略同步对焦会议"
           ],
           addon: "每增加一个渠道模块 +$349/月",
-          btn: "启动核心引擎 ↗",
+          btn: "启动核心引擎",
           highlight: true
         },
         {
@@ -406,7 +396,7 @@ const dict = {
             "进入 24/7 专属战情室极速响应"
           ],
           addon: "",
-          btn: "雇佣您的 CMO ↗",
+          btn: "雇佣您的 CMO",
           highlight: false
         }
       ],
@@ -462,39 +452,29 @@ const dict = {
     },
     contact: {
       status: "● 雷达系统：准备就绪",
-      title: "聊聊您的\n增长目标。",
-      subtitle: "告诉我们您现在在哪里，希望走向哪里。\n没有任何压力，也不绑定任何承诺——\n只是和我们的战略团队一次真诚的对话。",
+      title: "聊聊您的增长目标。",
+      subtitle: "留下邮箱，我们会联系您。\n如果愿意，也可以告诉我们更多。",
       form: {
-        name: "您的姓名",
+        name: "姓名",
         namePh: "请输入您的姓名",
-        company: "公司 / 品牌名称",
+        company: "公司 / 品牌",
         companyPh: "请输入您的公司或品牌名",
-        website: "品牌网址（选填）",
-        websitePh: "www.yourbrand.com",
+        website: "品牌网址",
+        websitePh: "brand.com",
         email: "工作邮箱",
         emailPh: "hello@brand.com",
-        interestsLabel: "您想了解什么？",
-        interestsRequiredHint: "至少选择 1 项。",
-        interests: [
-          { value: "goradar", label: "想先了解 GoRadar AI" },
-          { value: "global-growth", label: "想让我们帮品牌做海外增长" },
-          { value: "existing-growth", label: "已经在出海，想解决现在的问题" },
-          { value: "not-sure", label: "还不确定，先聊聊" },
-        ],
-        wechat: "微信号（选填）",
+        moreInfoLabel: "告诉我们更多（可选）",
+        wechat: "微信号",
         wechatPh: "请填写您的微信号",
-        whatsapp: "WhatsApp（选填）",
+        whatsapp: "WhatsApp",
         whatsappPh: "+86 136 0000 0000",
-        message: "还有什么想告诉我们？（选填）",
-        messagePh: "简单聊聊您当前的目标或困惑……",
-        submit: "开启对话 ↘",
+        message: "想和我们聊什么？",
+        messagePh: "简单告诉我们您的目标或目前遇到的问题",
+        submit: "开启对话",
         submitting: "提交中…",
         success: "提交成功，我们已收到您的信息。",
         error: "提交失败，请稍后重试。",
-        errorName: "请填写您的姓名。",
-        errorCompany: "请填写您的公司或品牌名。",
         errorEmail: "请填写有效的工作邮箱。",
-        errorInterests: "请至少选择 1 项您想了解的内容。",
       }
     },
     footer: { left: "© 2026 BrandGo.Global STUDIO", right: "全球分布式协作。极致精准执行。" },
@@ -513,7 +493,6 @@ interface FormValues {
   company: string;
   website: string;
   email: string;
-  interests: string[];
   wechat: string;
   whatsapp: string;
   message: string;
@@ -524,7 +503,6 @@ const EMPTY_FORM: FormValues = {
   company: "",
   website: "",
   email: "",
-  interests: [],
   wechat: "",
   whatsapp: "",
   message: ""
@@ -544,6 +522,7 @@ export default function Page() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [radarExpanded, setRadarExpanded] = useState(false);
   const [showSla, setShowSla] = useState(false);
+  const [showMoreInfo, setShowMoreInfo] = useState(false);
 
   const t = dict[lang];
 
@@ -556,10 +535,7 @@ export default function Page() {
   const [formStatus, setFormStatus] = useState<FormStatus>('idle');
   const [errorMessage, setErrorMessage] = useState<string>('');
   const [validationErrors, setValidationErrors] = useState<{
-    name?: string;
-    company?: string;
     email?: string;
-    interests?: string;
   }>({});
 
   // Hidden sourcePlan — never displayed in the UI, never inferred
@@ -597,11 +573,11 @@ export default function Page() {
   const submitting = formStatus === 'submitting';
 
   const handleFieldChange =
-    (key: Exclude<keyof FormValues, 'interests'>) =>
+    (key: keyof FormValues) =>
     (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
       setFormValues((prev) => ({ ...prev, [key]: e.target.value }));
-      // Clear the error for this field as the user edits it.
-      if (key === 'name' || key === 'company' || key === 'email') {
+      // Clear the email error as the user edits it.
+      if (key === 'email') {
         setValidationErrors((prev) => {
           if (!prev[key]) return prev;
           const next = { ...prev };
@@ -611,35 +587,12 @@ export default function Page() {
       }
     };
 
-  const toggleInterest = (value: string) => {
-    if (submitting) return;
-    setFormValues((prev) => {
-      const exists = prev.interests.includes(value);
-      const interests = exists
-        ? prev.interests.filter((v) => v !== value)
-        : [...prev.interests, value];
-      return { ...prev, interests };
-    });
-    setValidationErrors((prev) => {
-      if (!prev.interests) return prev;
-      const next = { ...prev };
-      delete next.interests;
-      return next;
-    });
-  };
-
   const validateBeforeSubmit = (): boolean => {
     const next: typeof validationErrors = {};
-    if (!formValues.name.trim()) next.name = t.contact.form.errorName;
-    if (!formValues.company.trim()) next.company = t.contact.form.errorCompany;
     const emailTrim = formValues.email.trim();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailTrim || !emailRegex.test(emailTrim)) {
       next.email = t.contact.form.errorEmail;
-    }
-    // At least one interest is required.
-    if (formValues.interests.length === 0) {
-      next.interests = t.contact.form.errorInterests;
     }
     setValidationErrors(next);
     return Object.keys(next).length === 0;
@@ -686,6 +639,7 @@ export default function Page() {
       setHoneypot('');
       setValidationErrors({});
       setSourcePlan('direct');
+      setShowMoreInfo(false);
     } catch {
       setFormStatus('error');
       setErrorMessage(t.contact.form.error);
@@ -699,21 +653,14 @@ export default function Page() {
 
   // ─── Pricing CTA handler ─────────────────────────────────────
   // 1. update sourcePlan
-  // 2. ensure the matching interest is selected (without removing
-  //    any interest the user may have already picked).
-  // 3. smooth scroll to #contact.
+  // 2. smooth scroll to #contact.
   //
   // We do NOT show plan name, price, or any "selected" confirmation —
   // this is a low-pressure consultation form, not a checkout.
   const handlePricingClick = useCallback(
-    (plan: SourcePlan, interest: string) => {
+    (plan: SourcePlan) => {
       setSourcePlan(plan);
-      setFormValues((prev) => {
-        if (prev.interests.includes(interest)) return prev;
-        return { ...prev, interests: [...prev.interests, interest] };
-      });
-      // Defer scroll to next frame so React can flush state
-      // (and so the chip becomes visibly selected as we scroll).
+      // Defer scroll to next frame so React can flush state.
       if (typeof window !== 'undefined') {
         window.requestAnimationFrame(() => {
           const el = document.getElementById('contact');
@@ -771,9 +718,11 @@ export default function Page() {
         </div>
 
         <div className="flex justify-end mt-12">
-          <button className="bg-black text-[#E5FF00] rounded-full size-20 md:size-24 flex items-center justify-center text-3xl md:text-4xl hover:bg-zinc-800 hover:scale-105 transition-all">
-            ↘
-          </button>
+          <a href="#goradar" className="bg-black text-[#E5FF00] rounded-full size-20 md:size-24 flex items-center justify-center hover:bg-zinc-800 hover:scale-105 transition-all">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="w-10 h-10 md:w-12 md:h-12">
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </a>
         </div>
       </section>
 
@@ -787,7 +736,11 @@ export default function Page() {
             {t.marquee.map((item, i) => (
               <React.Fragment key={i}>
                 <span className="text-xl md:text-2xl font-bold tracking-tight whitespace-nowrap">{item}</span>
-                <span className="text-xl md:text-2xl font-bold">✳</span>
+                <span className="text-xl md:text-2xl font-bold" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="currentColor" className="w-5 h-5 md:w-6 md:h-6">
+                    <path d="M8 0L10 6H16L11 10L13 16L8 12L3 16L5 10L0 6H6L8 0Z" />
+                  </svg>
+                </span>
               </React.Fragment>
             ))}
           </div>
@@ -795,7 +748,11 @@ export default function Page() {
             {t.marquee.map((item, i) => (
               <React.Fragment key={i}>
                 <span className="text-xl md:text-2xl font-bold tracking-tight whitespace-nowrap">{item}</span>
-                <span className="text-xl md:text-2xl font-bold">✳</span>
+                <span className="text-xl md:text-2xl font-bold" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" fill="currentColor" className="w-5 h-5 md:w-6 md:h-6">
+                    <path d="M8 0L10 6H16L11 10L13 16L8 12L3 16L5 10L0 6H6L8 0Z" />
+                  </svg>
+                </span>
               </React.Fragment>
             ))}
           </div>
@@ -830,9 +787,23 @@ export default function Page() {
 
             <button
               onClick={() => setRadarExpanded(!radarExpanded)}
-              className="self-start text-[#E5FF00] border border-[#E5FF00] px-4 py-2 text-sm font-black tracking-tight hover:bg-[#E5FF00] hover:text-black transition-colors"
+              className="self-start text-[#E5FF00] border border-[#E5FF00] px-4 py-2 text-sm font-black tracking-tight hover:bg-[#E5FF00] hover:text-black transition-colors inline-flex items-center gap-2"
             >
-              {radarExpanded ? t.services.s1.btnClose : t.services.s1.btnOpen}
+              <span>{radarExpanded ? t.services.s1.btnClose : t.services.s1.btnOpen}</span>
+              {!radarExpanded && (
+                <svg
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-4 h-4"
+                  aria-hidden="true"
+                >
+                  <path d="M3 3l10 10M6 13h7V6" />
+                </svg>
+              )}
             </button>
 
             {radarExpanded && (
@@ -867,7 +838,7 @@ export default function Page() {
               <ul className="flex flex-col gap-4 mb-4">
                 {s.bullets?.map((bullet, i) => (
                   <li key={i} className="flex items-start gap-4">
-                    <span className="text-[#E5FF00] font-black mt-0.5 leading-none text-xl">✳</span>
+                    <span className="mt-1 w-3 h-3 shrink-0 bg-[#E5FF00]" aria-hidden="true" />
                     <span className="font-bold text-base md:text-lg leading-tight">
                       {bullet}
                     </span>
@@ -1036,11 +1007,11 @@ export default function Page() {
             // which plan the user clicked.
             let onCta: () => void = () => {};
             if (idx === 0) {
-              onCta = () => handlePricingClick('radar', 'goradar');
+              onCta = () => handlePricingClick('radar');
             } else if (idx === 1) {
-              onCta = () => handlePricingClick('core-engine', 'global-growth');
+              onCta = () => handlePricingClick('core-engine');
             } else if (idx === 2) {
-              onCta = () => handlePricingClick('fractional-cmo', 'global-growth');
+              onCta = () => handlePricingClick('fractional-cmo');
             }
 
             return (
@@ -1079,7 +1050,7 @@ export default function Page() {
                 <ul className="mb-8 flex-1 space-y-5">
                   {tier.features.map((feat, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <span className="mt-0.5 font-black text-lg leading-none">✳</span>
+                      <span className="mt-1 w-2 h-2 shrink-0 bg-current" aria-hidden="true" />
                       <p className={`text-sm font-bold ${tier.highlight ? 'text-black/90' : 'text-white'}`}>
                         {feat}
                       </p>
@@ -1098,13 +1069,25 @@ export default function Page() {
                 <button
                   type="button"
                   onClick={onCta}
-                  className={`w-full py-5 text-lg font-black tracking-tight rounded-full transition-colors ${
+                  className={`w-full py-5 text-lg font-black tracking-tight rounded-full transition-colors flex items-center justify-center gap-2 ${
                     tier.highlight
                       ? 'bg-black text-[#E5FF00] hover:bg-zinc-800'
                       : 'bg-white text-black hover:bg-[#E5FF00]'
                   }`}
                 >
-                  {tier.btn}
+                  <span>{tier.btn}</span>
+                  <svg
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="w-4 h-4"
+                    aria-hidden="true"
+                  >
+                    <path d="M3 13L13 3M6 3h7v7" />
+                  </svg>
                 </button>
 
                 {/* ================= 卡片内无限拉长对比区 (In-Card Accordion) ================= */}
@@ -1166,7 +1149,12 @@ export default function Page() {
                 className="w-full py-8 flex items-start justify-between text-left gap-4 hover:text-[#E5FF00] transition-colors"
               >
                 <span className="text-xl md:text-2xl font-bold tracking-tight flex-1">{item.q}</span>
-                <span className={`text-2xl font-bold shrink-0 mt-1 transition-transform ${openFaq === idx ? 'rotate-90' : ''}`}>▶</span>
+                <span className={`shrink-0 mt-1 w-5 h-5 transition-transform duration-200 ${openFaq === idx ? 'rotate-45' : ''}`}>
+                  <svg viewBox="0 0 20 20" fill="currentColor" className="w-full h-full">
+                    <path fillRule="evenodd" d="M10 3a1 1 0 011 1v12a1 1 0 11-2 0V4a1 1 0 011-1z" clipRule="evenodd" />
+                    <path fillRule="evenodd" d="M3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd" />
+                  </svg>
+                </span>
               </button>
               {openFaq === idx && (
                 <div className="pb-8 text-gray-400 text-lg pr-12">
@@ -1183,7 +1171,7 @@ export default function Page() {
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
 
           {/* 左侧：对话邀约文案 */}
-          <div className="lg:w-[45%] sticky top-32">
+          <div className="lg:w-[45%] lg:sticky lg:top-32">
             <div className="inline-block border-2 border-black px-4 py-2 font-black uppercase tracking-widest text-xs md:text-sm mb-12 animate-pulse">
               {t.contact.status}
             </div>
@@ -1195,7 +1183,7 @@ export default function Page() {
             </p>
           </div>
 
-          {/* 右侧：粗野主义硬核表单 */}
+          {/* 右侧：简化表单 */}
           <div className="lg:w-[55%] w-full">
             <form
               className="flex flex-col gap-8"
@@ -1203,10 +1191,7 @@ export default function Page() {
               noValidate={false}
             >
 
-              {/* Hidden sourcePlan — never visible, never shown as
-                  a "selected package" badge. Default "direct" means
-                  the user landed on the form via header nav / scroll,
-                  not via a Pricing CTA. */}
+              {/* Hidden sourcePlan */}
               <input
                 type="hidden"
                 name="sourcePlan"
@@ -1214,97 +1199,7 @@ export default function Page() {
                 readOnly
               />
 
-              {/* 姓名 | 公司 / 品牌 (并排) */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="flex flex-col gap-3">
-                  <label
-                    htmlFor="contact-name"
-                    className="text-sm font-black uppercase tracking-widest text-black/70"
-                  >
-                    {t.contact.form.name}
-                  </label>
-                  <input
-                    id="contact-name"
-                    name="name"
-                    type="text"
-                    required
-                    disabled={submitting}
-                    value={formValues.name}
-                    onChange={handleFieldChange('name')}
-                    aria-invalid={Boolean(validationErrors.name)}
-                    aria-describedby={validationErrors.name ? 'contact-name-error' : undefined}
-                    className="w-full border-4 border-black bg-transparent px-6 py-5 text-2xl font-black focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20 disabled:opacity-60 disabled:cursor-not-allowed"
-                    placeholder={t.contact.form.namePh}
-                  />
-                  {validationErrors.name && (
-                    <p
-                      id="contact-name-error"
-                      role="alert"
-                      className="text-sm font-black uppercase tracking-tight text-black"
-                    >
-                      {validationErrors.name}
-                    </p>
-                  )}
-                </div>
-
-                <div className="flex flex-col gap-3">
-                  <label
-                    htmlFor="contact-company"
-                    className="text-sm font-black uppercase tracking-widest text-black/70"
-                    style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}
-                  >
-                    <span>{t.contact.form.company}</span>
-                    <span className="text-xs font-black normal-case tracking-normal text-black/50">
-                      *
-                    </span>
-                  </label>
-                  <input
-                    id="contact-company"
-                    name="company"
-                    type="text"
-                    required
-                    disabled={submitting}
-                    value={formValues.company}
-                    onChange={handleFieldChange('company')}
-                    aria-invalid={Boolean(validationErrors.company)}
-                    aria-describedby={validationErrors.company ? 'contact-company-error' : undefined}
-                    className="w-full border-4 border-black bg-transparent px-6 py-5 text-2xl font-black focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20 disabled:opacity-60 disabled:cursor-not-allowed"
-                    placeholder={t.contact.form.companyPh}
-                  />
-                  {validationErrors.company && (
-                    <p
-                      id="contact-company-error"
-                      role="alert"
-                      className="text-sm font-black uppercase tracking-tight text-black"
-                    >
-                      {validationErrors.company}
-                    </p>
-                  )}
-                </div>
-              </div>
-
-              {/* 品牌网址 (选填) — 仍走 normalizeWebsiteUrl */}
-              <div className="flex flex-col gap-3">
-                <label
-                  htmlFor="contact-website"
-                  className="text-sm font-black uppercase tracking-widest text-black/70"
-                >
-                  {t.contact.form.website}
-                </label>
-                <input
-                  id="contact-website"
-                  name="website"
-                  type="text"
-                  inputMode="url"
-                  disabled={submitting}
-                  value={formValues.website}
-                  onChange={handleFieldChange('website')}
-                  className="w-full border-4 border-black bg-transparent px-6 py-5 text-2xl font-black focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20 disabled:opacity-60 disabled:cursor-not-allowed"
-                  placeholder={t.contact.form.websitePh}
-                />
-              </div>
-
-              {/* 工作邮箱 (必填) */}
+              {/* 工作邮箱 (必填) — 放在最上面 */}
               <div className="flex flex-col gap-3">
                 <label
                   htmlFor="contact-email"
@@ -1336,121 +1231,159 @@ export default function Page() {
                 )}
               </div>
 
-              {/* 您想了解什么？— Multi-select chips, keyboard accessible */}
-              <fieldset
-                className="flex flex-col gap-3"
-                aria-describedby={validationErrors.interests ? 'contact-interests-error' : undefined}
+              {/* Tell us more disclosure */}
+              <button
+                type="button"
+                onClick={() => setShowMoreInfo(!showMoreInfo)}
+                aria-expanded={showMoreInfo}
+                aria-controls="contact-more-info"
+                disabled={submitting}
+                className="self-start text-sm font-black uppercase tracking-widest text-black/70 border-b border-black hover:text-black transition-colors disabled:opacity-60 disabled:cursor-not-allowed focus:outline-none focus-visible:underline"
               >
-                <legend className="text-sm font-black uppercase tracking-widest text-black/70">
-                  {t.contact.form.interestsLabel}
-                  <span className="ml-2 text-xs font-black uppercase tracking-normal text-black/50">
-                    {t.contact.form.interestsRequiredHint}
-                  </span>
-                </legend>
+                {t.contact.form.moreInfoLabel}
+                <span className="ml-2 inline-block w-4 h-4 align-middle">
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" className={`transition-transform duration-200 ${showMoreInfo ? 'rotate-45' : ''}`}>
+                    <line x1="8" y1="2" x2="8" y2="14" />
+                    <line x1="2" y1="8" x2="14" y2="8" />
+                  </svg>
+                </span>
+              </button>
+
+              {/* Optional fields — absent from the accessibility tree while collapsed */}
+              {showMoreInfo && (
                 <div
-                  role="group"
-                  aria-label={t.contact.form.interestsLabel}
-                  className="flex flex-wrap gap-3"
+                  id="contact-more-info"
+                  className="flex flex-col gap-8"
                 >
-                  {t.contact.form.interests.map((interest) => {
-                    const selected = formValues.interests.includes(interest.value);
-                    return (
-                      <button
-                        key={interest.value}
-                        type="button"
-                        role="checkbox"
-                        aria-checked={selected}
-                        disabled={submitting}
-                        onClick={() => toggleInterest(interest.value)}
-                        className={`px-5 py-3 text-base font-black uppercase tracking-tight border-4 border-black transition-all duration-150 focus:outline-none focus-visible:ring-4 focus-visible:ring-black/40 disabled:opacity-60 disabled:cursor-not-allowed ${
-                          selected
-                            ? 'bg-black text-[#E5FF00]'
-                            : 'bg-transparent text-black hover:bg-black/10'
-                        }`}
-                      >
-                        {interest.label}
-                      </button>
-                    );
-                  })}
-                </div>
-                {validationErrors.interests && (
-                  <p
-                    id="contact-interests-error"
-                    role="alert"
-                    className="text-sm font-black uppercase tracking-tight text-black"
-                  >
-                    {validationErrors.interests}
-                  </p>
-                )}
-              </fieldset>
+                {/* 姓名 | 公司 / 品牌 (并排) */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="flex flex-col gap-3">
+                    <label
+                      htmlFor="contact-name"
+                      className="text-sm font-black uppercase tracking-widest text-black/70"
+                    >
+                      {t.contact.form.name}
+                    </label>
+                    <input
+                      id="contact-name"
+                      name="name"
+                      type="text"
+                      disabled={submitting}
+                      value={formValues.name}
+                      onChange={handleFieldChange('name')}
+                      className="w-full border-4 border-black bg-transparent px-6 py-5 text-2xl font-black focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20 disabled:opacity-60 disabled:cursor-not-allowed"
+                      placeholder={t.contact.form.namePh}
+                    />
+                  </div>
 
-              {/* 微信号 | WhatsApp (并排, 都可选) */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="flex flex-col gap-3">
+                    <label
+                      htmlFor="contact-company"
+                      className="text-sm font-black uppercase tracking-widest text-black/70"
+                    >
+                      {t.contact.form.company}
+                    </label>
+                    <input
+                      id="contact-company"
+                      name="company"
+                      type="text"
+                      disabled={submitting}
+                      value={formValues.company}
+                      onChange={handleFieldChange('company')}
+                      className="w-full border-4 border-black bg-transparent px-6 py-5 text-2xl font-black focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20 disabled:opacity-60 disabled:cursor-not-allowed"
+                      placeholder={t.contact.form.companyPh}
+                    />
+                  </div>
+                </div>
+
+                {/* 品牌网址 */}
                 <div className="flex flex-col gap-3">
                   <label
-                    htmlFor="contact-wechat"
+                    htmlFor="contact-website"
                     className="text-sm font-black uppercase tracking-widest text-black/70"
                   >
-                    {t.contact.form.wechat}
+                    {t.contact.form.website}
                   </label>
                   <input
-                    id="contact-wechat"
-                    name="wechat"
+                    id="contact-website"
+                    name="website"
                     type="text"
-                    autoComplete="off"
+                    inputMode="url"
                     disabled={submitting}
-                    value={formValues.wechat}
-                    onChange={handleFieldChange('wechat')}
-                    className="w-full border-4 border-black bg-transparent px-6 py-5 text-xl font-black focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20 disabled:opacity-60 disabled:cursor-not-allowed"
-                    placeholder={t.contact.form.wechatPh}
+                    value={formValues.website}
+                    onChange={handleFieldChange('website')}
+                    className="w-full border-4 border-black bg-transparent px-6 py-5 text-2xl font-black focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20 disabled:opacity-60 disabled:cursor-not-allowed"
+                    placeholder={t.contact.form.websitePh}
                   />
                 </div>
 
+                {/* 微信号 | WhatsApp (并排) */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="flex flex-col gap-3">
+                    <label
+                      htmlFor="contact-wechat"
+                      className="text-sm font-black uppercase tracking-widest text-black/70"
+                    >
+                      {t.contact.form.wechat}
+                    </label>
+                    <input
+                      id="contact-wechat"
+                      name="wechat"
+                      type="text"
+                      autoComplete="off"
+                      disabled={submitting}
+                      value={formValues.wechat}
+                      onChange={handleFieldChange('wechat')}
+                      className="w-full border-4 border-black bg-transparent px-6 py-5 text-xl font-black focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20 disabled:opacity-60 disabled:cursor-not-allowed"
+                      placeholder={t.contact.form.wechatPh}
+                    />
+                  </div>
+
+                  <div className="flex flex-col gap-3">
+                    <label
+                      htmlFor="contact-whatsapp"
+                      className="text-sm font-black uppercase tracking-widest text-black/70"
+                    >
+                      {t.contact.form.whatsapp}
+                    </label>
+                    <input
+                      id="contact-whatsapp"
+                      name="whatsapp"
+                      type="text"
+                      autoComplete="off"
+                      inputMode="tel"
+                      disabled={submitting}
+                      value={formValues.whatsapp}
+                      onChange={handleFieldChange('whatsapp')}
+                      className="w-full border-4 border-black bg-transparent px-6 py-5 text-xl font-black focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20 disabled:opacity-60 disabled:cursor-not-allowed"
+                      placeholder={t.contact.form.whatsappPh}
+                    />
+                  </div>
+                </div>
+
+                {/* 留言 (选填, textarea) */}
                 <div className="flex flex-col gap-3">
                   <label
-                    htmlFor="contact-whatsapp"
+                    htmlFor="contact-message"
                     className="text-sm font-black uppercase tracking-widest text-black/70"
                   >
-                    {t.contact.form.whatsapp}
+                    {t.contact.form.message}
                   </label>
-                  <input
-                    id="contact-whatsapp"
-                    name="whatsapp"
-                    type="text"
-                    autoComplete="off"
-                    inputMode="tel"
+                  <textarea
+                    id="contact-message"
+                    name="message"
+                    rows={4}
                     disabled={submitting}
-                    value={formValues.whatsapp}
-                    onChange={handleFieldChange('whatsapp')}
-                    className="w-full border-4 border-black bg-transparent px-6 py-5 text-xl font-black focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20 disabled:opacity-60 disabled:cursor-not-allowed"
-                    placeholder={t.contact.form.whatsappPh}
+                    value={formValues.message}
+                    onChange={handleFieldChange('message')}
+                    className="w-full min-h-[7rem] max-h-64 border-4 border-black bg-transparent px-6 py-4 text-lg font-bold leading-relaxed focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20 disabled:opacity-60 disabled:cursor-not-allowed resize-y"
+                    placeholder={t.contact.form.messagePh}
                   />
                 </div>
-              </div>
+                </div>
+              )}
 
-              {/* 留言 (选填, textarea) */}
-              <div className="flex flex-col gap-3">
-                <label
-                  htmlFor="contact-message"
-                  className="text-sm font-black uppercase tracking-widest text-black/70"
-                >
-                  {t.contact.form.message}
-                </label>
-                <textarea
-                  id="contact-message"
-                  name="message"
-                  rows={4}
-                  disabled={submitting}
-                  value={formValues.message}
-                  onChange={handleFieldChange('message')}
-                  className="w-full min-h-[7rem] max-h-64 border-4 border-black bg-transparent px-6 py-4 text-lg font-bold leading-relaxed focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20 disabled:opacity-60 disabled:cursor-not-allowed resize-y"
-                  placeholder={t.contact.form.messagePh}
-                />
-              </div>
-
-              {/* Honeypot — visually hidden, accessibility-hidden,
-                  real humans will not fill it. Sized to 0 so the
-                  flex `gap-8` does not insert extra spacing. */}
+              {/* Honeypot */}
               <div
                 aria-hidden="true"
                 style={{
@@ -1483,10 +1416,15 @@ export default function Page() {
                 aria-live="polite"
                 className="mt-6 w-full bg-black text-[#E5FF00] border-4 border-black py-6 md:py-8 text-3xl md:text-4xl font-black uppercase tracking-tighter hover:bg-transparent hover:text-black transition-all duration-300 flex items-center justify-center gap-4 group disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:bg-black disabled:hover:text-[#E5FF00]"
               >
-                {submitting ? t.contact.form.submitting : t.contact.form.submit}
+                <span>{submitting ? t.contact.form.submitting : t.contact.form.submit}</span>
+                {!submitting && (
+                  <svg className="w-8 h-8 md:w-10 md:h-10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                )}
               </button>
 
-              {/* Inline status feedback — announced via aria-live. */}
+              {/* Inline status feedback */}
               <div
                 aria-live="polite"
                 role="status"
