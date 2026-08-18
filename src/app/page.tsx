@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Header from '@/components/Header';
@@ -10,16 +10,16 @@ import Header from '@/components/Header';
 const dict = {
   en: {
     nav: { goradar: "GoRadar AI", services: "Services", cases: "Cases", pricing: "Pricing", faq: "FAQ", contact: "Contact", signin: "Sign In", langSwitch: "中" },
-    hero: { 
-      title: "MARKET RADAR: ON.\nGUESSWORK: OFF.", 
-      subtitle: "Powered by our proprietary GoRadar\u00A0AI™.\nWe uncover hidden market opportunities, craft data-driven strategies,\nand acquire high-value clients globally." 
+    hero: {
+      title: "MARKET RADAR: ON.\nGUESSWORK: OFF.",
+      subtitle: "Powered by our proprietary GoRadar\u00A0AI™.\nWe uncover hidden market opportunities, craft data-driven strategies,\nand acquire high-value clients globally."
     },
     marquee: ["GoRadar AI™", "STRATEGY", "CONTENT STUDIO", "PERFORMANCE ADS"],
     services: {
       title: "CORE SERVICES:\nTHE 3-ENGINE SYSTEM",
       desc: "Transforming compute power into global market share. Here is our execution roadmap.",
-      s1: { 
-        title: "GoRadar AI™ SYSTEM", 
+      s1: {
+        title: "GoRadar AI™ SYSTEM",
         desc: "Our proprietary market intelligence engine.\nWe don't guess the market; we compute it.",
         btnOpen: "EXPLORE THE RADAR ↘",
         btnClose: "CLOSE TERMINAL ✕",
@@ -29,8 +29,8 @@ const dict = {
           { name: "AI AUDIENCE SIMULATOR", detail: "Simulates ad performance across demographics before you spend a single dollar on media buying." }
         ]
       },
-      s2: { 
-        title: "GLOBAL CONTENT", 
+      s2: {
+        title: "GLOBAL CONTENT",
         desc: "AI-enhanced cultural storytelling that breaks borders.\nDominating TikTok, Instagram, YouTube, and RED.",
         bullets: [
           "Viral Creative & UGC Production",
@@ -40,8 +40,8 @@ const dict = {
         ],
         kpis: ["KPI: ENGAGEMENT RATE", "KPI: BRAND IMPRESSION"]
       },
-      s3: { 
-        title: "PERFORMANCE ADS", 
+      s3: {
+        title: "PERFORMANCE ADS",
         desc: "Precision media buying executed like a quantitative portfolio.\nWe ruthlessly scale budgets and optimize conversion funnels.",
         bullets: [
           "Search Intent Capture (Google/LinkedIn)",
@@ -76,7 +76,7 @@ const dict = {
           title: "BREAKING THE EUROPEAN TRUST BARRIER",
           metric: "380% ROI",
           desc: "Built a zero-to-one high-converting infrastructure for heavy-duty compressed furniture. Transitioned their global image from 'cheap factory' to 'premium lifestyle choice'.",
-          img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" 
+          img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80"
         },
         {
           tag: "D2C / CONSUMER ELECTRONICS",
@@ -216,17 +216,39 @@ const dict = {
     },
     contact: {
       status: "● RADAR SYSTEM: READY",
-      title: "CLAIM YOUR\nFREE AUDIT.",
-      subtitle: "Stop guessing.\nLet GoRadar AI™ scan your market blindspots.\nDrop your details below to initiate the diagnostic.",
+      title: "LET'S TALK\nABOUT YOUR GOALS.",
+      subtitle: "Tell us where you are and where you want to go.\nNo pressure, no commitment — just a real conversation\nwith our strategy team.",
       form: {
         name: "YOUR NAME",
-        website: "BRAND URL / WEBSITE",
+        namePh: "John Doe",
+        company: "COMPANY / BRAND",
+        companyPh: "Your brand or company",
+        website: "BRAND WEBSITE (OPTIONAL)",
+        websitePh: "www.yourbrand.com",
         email: "WORK EMAIL",
-        social: "WHATSAPP / WECHAT",
-        submit: "INITIATE RADAR SCAN ↘",
+        emailPh: "hello@brand.com",
+        interestsLabel: "WHAT WOULD YOU LIKE TO KNOW?",
+        interestsRequiredHint: "Pick at least one.",
+        interests: [
+          { value: "goradar", label: "Learn about GoRadar AI" },
+          { value: "global-growth", label: "Get help growing overseas" },
+          { value: "existing-growth", label: "Improve what we're already doing" },
+          { value: "not-sure", label: "Not sure yet — let's talk" },
+        ],
+        wechat: "WECHAT ID (OPTIONAL)",
+        wechatPh: "wechat_handle",
+        whatsapp: "WHATSAPP (OPTIONAL)",
+        whatsappPh: "+86 136 0000 0000",
+        message: "ANYTHING ELSE YOU'D LIKE US TO KNOW? (OPTIONAL)",
+        messagePh: "A few lines about your goals…",
+        submit: "START THE CONVERSATION ↘",
         submitting: "SUBMITTING…",
         success: "Submission received.",
         error: "Submission failed. Please try again.",
+        errorName: "Please enter your name.",
+        errorCompany: "Please enter your company or brand.",
+        errorEmail: "Please enter a valid work email.",
+        errorInterests: "Pick at least one thing you'd like to know.",
       }
     },
     footer: { left: "© 2026 BrandGo.Global STUDIO", right: "DISTRIBUTED GLOBALLY. EXECUTED PRECISELY." },
@@ -234,16 +256,16 @@ const dict = {
   },
   zh: {
     nav: { goradar: "GoRadar AI", services: "服务", cases: "案例", pricing: "定价", faq: "常见问题", contact: "联系我们", signin: "登录", langSwitch: "EN" },
-    hero: { 
-      title: "雷达全开。\n告别盲猜。", 
-      subtitle: "以自研 GoRadar\u00A0AI™ 为核心武器。\n我们为您挖掘隐秘市场机会、\n制定数据驱动战略，\n并在全球范围内高效收割高净值客户。" 
+    hero: {
+      title: "雷达全开。\n告别盲猜。",
+      subtitle: "以自研 GoRadar\u00A0AI™ 为核心武器。\n我们为您挖掘隐秘市场机会、\n制定数据驱动战略，\n并在全球范围内高效收割高净值客户。"
     },
     marquee: ["GoRadar AI™", "AI 数据战略", "全球内容工作室", "算力投流中心"],
     services: {
       title: "核心服务：\n三位一体增长引擎",
       desc: "将算力转化为全球市场份额，以下是我们的硬核交付清单。",
-      s1: { 
-        title: "GoRadar AI™ 战情系统", 
+      s1: {
+        title: "GoRadar AI™ 战情系统",
         desc: "我们全域营销策略的底层大脑。\n拒绝盲目试错，用算力锁定胜局。",
         btnOpen: "展开雷达系统 ↘",
         btnClose: "收起雷达面板 ✕",
@@ -253,8 +275,8 @@ const dict = {
           { name: "AI 受众高频模拟器 (AUDIENCE SIMULATOR)", detail: "在花掉您第一分钱预算前，利用 AI 预演各圈层受众的转化概率，确保首战即爆单。" }
         ]
       },
-      s2: { 
-        title: "全球内容工作室", 
+      s2: {
+        title: "全球内容工作室",
         desc: "打破文化壁垒的跨国视觉叙事。\n基于本土洞察，全面主导主流社媒心智。",
         bullets: [
           "爆款短视频策划与海外 UGC 摄制",
@@ -264,8 +286,8 @@ const dict = {
         ],
         kpis: ["KPI: 账号互动率", "KPI: 品牌全域曝光量"]
       },
-      s3: { 
-        title: "算力投流中心", 
+      s3: {
+        title: "算力投流中心",
         desc: "如同管理量化基金般操盘全域广告。\n极速测品、放大预算，对转化漏斗进行极限优化。",
         bullets: [
           "精准收割高意向搜索与企业端线索",
@@ -300,7 +322,7 @@ const dict = {
           title: "打破欧洲本土信任壁垒",
           metric: "380% ROI",
           desc: "为重型压缩沙发搭建从 0 到 1 的高转化独立站基建。彻底扭转海外采购商对'廉价代工厂'的刻板印象，重塑高端供应链定位。",
-          img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80" 
+          img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80"
         },
         {
           tag: "D2C 消费电子 / 北美市场",
@@ -440,17 +462,39 @@ const dict = {
     },
     contact: {
       status: "● 雷达系统：准备就绪",
-      title: "申请免费\n品牌诊断。",
-      subtitle: "停止盲目试错。\n让 GoRadar\u00A0AI™ 深度扫描您的流量盲区。\n留下信息，我们的战略大脑将即刻为您启动诊断。",
+      title: "聊聊您的\n增长目标。",
+      subtitle: "告诉我们您现在在哪里，希望走向哪里。\n没有任何压力，也不绑定任何承诺——\n只是和我们的战略团队一次真诚的对话。",
       form: {
         name: "您的姓名",
-        website: "独立站 / 品牌网址",
+        namePh: "请输入您的姓名",
+        company: "公司 / 品牌名称",
+        companyPh: "请输入您的公司或品牌名",
+        website: "品牌网址（选填）",
+        websitePh: "www.yourbrand.com",
         email: "工作邮箱",
-        social: "WhatsApp / 微信号码",
-        submit: "启动雷达扫描 ↘",
+        emailPh: "hello@brand.com",
+        interestsLabel: "您想了解什么？",
+        interestsRequiredHint: "至少选择 1 项。",
+        interests: [
+          { value: "goradar", label: "想先了解 GoRadar AI" },
+          { value: "global-growth", label: "想让我们帮品牌做海外增长" },
+          { value: "existing-growth", label: "已经在出海，想解决现在的问题" },
+          { value: "not-sure", label: "还不确定，先聊聊" },
+        ],
+        wechat: "微信号（选填）",
+        wechatPh: "请填写您的微信号",
+        whatsapp: "WhatsApp（选填）",
+        whatsappPh: "+86 136 0000 0000",
+        message: "还有什么想告诉我们？（选填）",
+        messagePh: "简单聊聊您当前的目标或困惑……",
+        submit: "开启对话 ↘",
         submitting: "提交中…",
         success: "提交成功，我们已收到您的信息。",
         error: "提交失败，请稍后重试。",
+        errorName: "请填写您的姓名。",
+        errorCompany: "请填写您的公司或品牌名。",
+        errorEmail: "请填写有效的工作邮箱。",
+        errorInterests: "请至少选择 1 项您想了解的内容。",
       }
     },
     footer: { left: "© 2026 BrandGo.Global STUDIO", right: "全球分布式协作。极致精准执行。" },
@@ -458,10 +502,42 @@ const dict = {
   }
 };
 
+// ==========================================
+// 2. 类型 & 常量
+// ==========================================
+
+type SourcePlan = "radar" | "core-engine" | "fractional-cmo" | "direct";
+
+interface FormValues {
+  name: string;
+  company: string;
+  website: string;
+  email: string;
+  interests: string[];
+  wechat: string;
+  whatsapp: string;
+  message: string;
+}
+
+const EMPTY_FORM: FormValues = {
+  name: "",
+  company: "",
+  website: "",
+  email: "",
+  interests: [],
+  wechat: "",
+  whatsapp: "",
+  message: ""
+};
+
 function normalizeWebsiteUrl(value: string): string {
   const trimmed = value.trim();
   return /^https?:\/\//i.test(trimmed) ? trimmed : `https://${trimmed}`;
 }
+
+// ==========================================
+// 3. Page Component
+// ==========================================
 
 export default function Page() {
   const [lang, setLang] = useState<'en' | 'zh'>('zh');
@@ -471,36 +547,120 @@ export default function Page() {
 
   const t = dict[lang];
 
-  // ─── Contact form state ────────────────────────────────────
-  // Kept intentionally local — this form has four fields, no need
-  // for a library. The `companyWebsite2` field is a hidden
-  // honeypot: real users will leave it blank, bots often fill it.
+  // ─── Contact form state ─────────────────────────────────────
+  // Plain React state — this is a low-pressure consultation form.
+  // No external form library or router state required.
   type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
-  const [formValues, setFormValues] = useState({
-    name: '',
-    website: '',
-    email: '',
-    social: '',
-  });
+  const [formValues, setFormValues] = useState<FormValues>(EMPTY_FORM);
   const [honeypot, setHoneypot] = useState('');
   const [formStatus, setFormStatus] = useState<FormStatus>('idle');
   const [errorMessage, setErrorMessage] = useState<string>('');
+  const [validationErrors, setValidationErrors] = useState<{
+    name?: string;
+    company?: string;
+    email?: string;
+    interests?: string;
+  }>({});
+
+  // Hidden sourcePlan — never displayed in the UI, never inferred
+  // back to a "selected package". Pricing CTAs set this, success
+  // resets it to "direct" so the next Direct submission does not
+  // inherit a previous Pricing attribution.
+  const [sourcePlan, setSourcePlan] = useState<SourcePlan>('direct');
+
+  // ─── Direct attribution reset ─────────────────────────────────────
+  // Header Contact (`<a href="#contact">`) changes the URL hash;
+  // Pricing CTAs scroll via JS without touching the hash. So:
+  //   - initial hash === "#contact"  →  sourcePlan = direct
+  //   - hashchange to "#contact"     →  sourcePlan = direct
+  // We deliberately do NOT touch `formValues` here — any interest
+  // chips the user already toggled should stay selected.
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const isContactHash = () => window.location.hash === '#contact';
+
+    const resetIfContact = () => {
+      if (isContactHash()) {
+        setSourcePlan((prev) => (prev === 'direct' ? prev : 'direct'));
+      }
+    };
+
+    // Initial load: if the user lands on /#contact directly,
+    // make sure sourcePlan starts as "direct".
+    resetIfContact();
+
+    window.addEventListener('hashchange', resetIfContact);
+    return () => window.removeEventListener('hashchange', resetIfContact);
+  }, []);
 
   const submitting = formStatus === 'submitting';
 
   const handleFieldChange =
-    (key: keyof typeof formValues) =>
-    (e: React.ChangeEvent<HTMLInputElement>) => {
+    (key: Exclude<keyof FormValues, 'interests'>) =>
+    (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
       setFormValues((prev) => ({ ...prev, [key]: e.target.value }));
+      // Clear the error for this field as the user edits it.
+      if (key === 'name' || key === 'company' || key === 'email') {
+        setValidationErrors((prev) => {
+          if (!prev[key]) return prev;
+          const next = { ...prev };
+          delete next[key];
+          return next;
+        });
+      }
     };
+
+  const toggleInterest = (value: string) => {
+    if (submitting) return;
+    setFormValues((prev) => {
+      const exists = prev.interests.includes(value);
+      const interests = exists
+        ? prev.interests.filter((v) => v !== value)
+        : [...prev.interests, value];
+      return { ...prev, interests };
+    });
+    setValidationErrors((prev) => {
+      if (!prev.interests) return prev;
+      const next = { ...prev };
+      delete next.interests;
+      return next;
+    });
+  };
+
+  const validateBeforeSubmit = (): boolean => {
+    const next: typeof validationErrors = {};
+    if (!formValues.name.trim()) next.name = t.contact.form.errorName;
+    if (!formValues.company.trim()) next.company = t.contact.form.errorCompany;
+    const emailTrim = formValues.email.trim();
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailTrim || !emailRegex.test(emailTrim)) {
+      next.email = t.contact.form.errorEmail;
+    }
+    // At least one interest is required.
+    if (formValues.interests.length === 0) {
+      next.interests = t.contact.form.errorInterests;
+    }
+    setValidationErrors(next);
+    return Object.keys(next).length === 0;
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (submitting) return; // hard double-submit guard
+
+    if (!validateBeforeSubmit()) {
+      setFormStatus('error');
+      setErrorMessage(t.contact.form.error);
+      return;
+    }
+
     setFormStatus('submitting');
     setErrorMessage('');
 
-    const normalizedWebsite = normalizeWebsiteUrl(formValues.website);
+    const normalizedWebsite = formValues.website.trim()
+      ? normalizeWebsiteUrl(formValues.website)
+      : '';
 
     try {
       const res = await fetch('/api/contact', {
@@ -509,6 +669,7 @@ export default function Page() {
         body: JSON.stringify({
           ...formValues,
           website: normalizedWebsite,
+          sourcePlan,
           companyWebsite2: honeypot,
         }),
       });
@@ -517,10 +678,14 @@ export default function Page() {
         setErrorMessage(t.contact.form.error);
         return;
       }
-      // Success: clear fields and lock the form visually via state.
+      // Success: clear fields and reset sourcePlan to 'direct'
+      // so the next direct submission does not inherit a
+      // previous Pricing attribution.
       setFormStatus('success');
-      setFormValues({ name: '', website: '', email: '', social: '' });
+      setFormValues(EMPTY_FORM);
       setHoneypot('');
+      setValidationErrors({});
+      setSourcePlan('direct');
     } catch {
       setFormStatus('error');
       setErrorMessage(t.contact.form.error);
@@ -531,6 +696,35 @@ export default function Page() {
     setFormStatus('idle');
     setErrorMessage('');
   };
+
+  // ─── Pricing CTA handler ─────────────────────────────────────
+  // 1. update sourcePlan
+  // 2. ensure the matching interest is selected (without removing
+  //    any interest the user may have already picked).
+  // 3. smooth scroll to #contact.
+  //
+  // We do NOT show plan name, price, or any "selected" confirmation —
+  // this is a low-pressure consultation form, not a checkout.
+  const handlePricingClick = useCallback(
+    (plan: SourcePlan, interest: string) => {
+      setSourcePlan(plan);
+      setFormValues((prev) => {
+        if (prev.interests.includes(interest)) return prev;
+        return { ...prev, interests: [...prev.interests, interest] };
+      });
+      // Defer scroll to next frame so React can flush state
+      // (and so the chip becomes visibly selected as we scroll).
+      if (typeof window !== 'undefined') {
+        window.requestAnimationFrame(() => {
+          const el = document.getElementById('contact');
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      }
+    },
+    [],
+  );
 
   return (
     <main className="bg-[#0A0A0A] min-h-screen text-white font-sans selection:bg-[#E5FF00] selection:text-black">
@@ -562,7 +756,7 @@ export default function Page() {
             />
           </Link>
         </nav>
-        
+
         <div className="flex-1 flex flex-col md:flex-row items-start md:items-end justify-between gap-8 mt-24 md:mt-32 pt-10">
           <div className="md:w-[70%] pb-4 md:pb-8">
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter leading-[0.9] whitespace-pre-line">
@@ -575,7 +769,7 @@ export default function Page() {
             </p>
           </div>
         </div>
-        
+
         <div className="flex justify-end mt-12">
           <button className="bg-black text-[#E5FF00] rounded-full size-20 md:size-24 flex items-center justify-center text-3xl md:text-4xl hover:bg-zinc-800 hover:scale-105 transition-all">
             ↘
@@ -620,9 +814,9 @@ export default function Page() {
             </p>
           </div>
         </div>
-        
+
         <div className="lg:w-[65%] flex flex-col">
-          
+
           <div className="border-b border-white/20 py-16 first:pt-0 flex flex-col gap-6">
             <div className="flex items-center gap-6 mb-2">
               <span className="text-2xl font-black text-[#E5FF00] tracking-tighter">[ 01 ]</span>
@@ -633,8 +827,8 @@ export default function Page() {
             <p className="text-base md:text-lg text-gray-400 font-medium leading-relaxed max-w-2xl mb-2 whitespace-pre-line">
               {t.services.s1.desc}
             </p>
-            
-            <button 
+
+            <button
               onClick={() => setRadarExpanded(!radarExpanded)}
               className="self-start text-[#E5FF00] border border-[#E5FF00] px-4 py-2 text-sm font-black tracking-tight hover:bg-[#E5FF00] hover:text-black transition-colors"
             >
@@ -665,11 +859,11 @@ export default function Page() {
                   {s.title}
                 </h3>
               </div>
-              
+
               <p className="text-base md:text-lg text-gray-400 font-medium leading-relaxed max-w-2xl mb-2 whitespace-pre-line">
                 {s.desc}
               </p>
-              
+
               <ul className="flex flex-col gap-4 mb-4">
                 {s.bullets?.map((bullet, i) => (
                   <li key={i} className="flex items-start gap-4">
@@ -680,7 +874,7 @@ export default function Page() {
                   </li>
                 ))}
               </ul>
-              
+
               <div className="flex flex-wrap items-center gap-3 mt-4 text-[#E5FF00] font-black text-sm md:text-base tracking-tight">
                 {s.kpis?.map((kpi, i) => (
                   <React.Fragment key={i}>
@@ -701,7 +895,7 @@ export default function Page() {
           <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-16">
             {t.protocol.title}
           </h2>
-          
+
           {/* Intro / Benefits Grid */}
           <div className="mb-24">
             <h3 className="text-2xl md:text-3xl font-black tracking-tight mb-8 text-[#E5FF00]">
@@ -819,7 +1013,7 @@ export default function Page() {
 
       {/* ==================== 7. PRICING 订阅价格区 (带卡片内无限拉长对比) ==================== */}
       <section id="pricing" data-section-theme="dark" className="bg-[#0A0A0A] px-6 md:px-8 py-32 border-t border-white/20">
-        
+
         {/* 标题与季付提示 */}
         <div className="flex flex-col items-center justify-center text-center mb-16">
           <h2 className="text-5xl md:text-7xl font-black tracking-tighter text-[#E5FF00] mb-4">
@@ -835,106 +1029,123 @@ export default function Page() {
 
         {/* 价格卡片网格 */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-stretch mb-12">
-          {t.pricing.tiers.map((tier, idx) => (
-            <div 
-              key={idx} 
-              className={`p-8 md:p-10 flex flex-col border-2 transition-colors duration-300 ${
-                tier.highlight 
-                  ? 'bg-[#E5FF00] border-[#E5FF00] text-black shadow-2xl' 
-                  : 'bg-[#0A0A0A] border-white/20 text-white hover:border-white/50'
-              }`}
-            >
-              <div className="mb-6">
-                <h3 className="text-3xl font-black tracking-tight">
-                  {tier.name}
-                </h3>
-              </div>
-              
-              {/* 划线价在上，当前价在下，完美对齐 */}
-              <div className="mb-6 border-b-2 border-current pb-6 flex flex-col items-start">
-                <span className={`text-xl font-black line-through mb-1 ${tier.highlight ? 'text-black/50' : 'text-gray-600'}`}>
-                  {tier.oldPrice}
-                </span>
-                <div className="flex items-baseline gap-1">
-                  <span className="text-6xl lg:text-[4rem] font-black tracking-tighter leading-none">{tier.price}</span>
-                  <span className={`text-xl font-bold ${tier.highlight ? 'text-black/70' : 'text-gray-500'}`}>{tier.period}</span>
-                </div>
-              </div>
+          {t.pricing.tiers.map((tier, idx) => {
+            // Pricing-tier → sourcePlan + auto-interest mapping.
+            // We intentionally keep this mapping local to the
+            // Pricing section so the Contact form has no idea
+            // which plan the user clicked.
+            let onCta: () => void = () => {};
+            if (idx === 0) {
+              onCta = () => handlePricingClick('radar', 'goradar');
+            } else if (idx === 1) {
+              onCta = () => handlePricingClick('core-engine', 'global-growth');
+            } else if (idx === 2) {
+              onCta = () => handlePricingClick('fractional-cmo', 'global-growth');
+            }
 
-              <div className="mb-8">
-                <p className={`text-sm font-bold leading-relaxed ${tier.highlight ? 'text-black/80' : 'text-gray-300'}`}>
-                  {tier.desc}
-                </p>
-              </div>
-
-              {/* 默认的简要特征列表 */}
-              <ul className="mb-8 flex-1 space-y-5">
-                {tier.features.map((feat, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <span className="mt-0.5 font-black text-lg leading-none">✳</span>
-                    <p className={`text-sm font-bold ${tier.highlight ? 'text-black/90' : 'text-white'}`}>
-                      {feat}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-              
-              <div className="h-6 mb-6 flex items-center justify-center">
-                {tier.addon && (
-                  <span className={`text-xs font-black tracking-wider uppercase px-3 py-1 rounded border ${tier.highlight ? 'border-black/30 text-black/70' : 'border-white/20 text-gray-400'}`}>
-                    {tier.addon}
-                  </span>
-                )}
-              </div>
-
-              <button 
-                className={`w-full py-5 text-lg font-black tracking-tight rounded-full transition-colors ${
-                  tier.highlight 
-                    ? 'bg-black text-[#E5FF00] hover:bg-zinc-800' 
-                    : 'bg-white text-black hover:bg-[#E5FF00]'
+            return (
+              <div
+                key={idx}
+                className={`p-8 md:p-10 flex flex-col border-2 transition-colors duration-300 ${
+                  tier.highlight
+                    ? 'bg-[#E5FF00] border-[#E5FF00] text-black shadow-2xl'
+                    : 'bg-[#0A0A0A] border-white/20 text-white hover:border-white/50'
                 }`}
               >
-                {tier.btn}
-              </button>
-
-              {/* ================= 卡片内无限拉长对比区 (In-Card Accordion) ================= */}
-              <div className={`transition-all duration-700 ease-in-out overflow-hidden ${showSla ? 'max-h-[3000px] opacity-100 mt-12' : 'max-h-0 opacity-0 mt-0'}`}>
-                <div className={`border-t-2 ${tier.highlight ? 'border-black/20' : 'border-white/20'} pt-8 flex flex-col gap-8`}>
-                  {t.pricing.comparisonDetails.map((cat, catIdx) => (
-                    <div key={catIdx}>
-                      <div className={`text-xs font-black uppercase tracking-widest mb-5 px-3 py-1.5 inline-block ${tier.highlight ? 'bg-black text-[#E5FF00]' : 'bg-[#1A1A1A] text-[#E5FF00]'}`}>
-                        {cat.category}
-                      </div>
-                      <ul className="space-y-0">
-                        {cat.items.map((item, itemIdx) => {
-                          const val = idx === 0 ? item.t1 : idx === 1 ? item.t2 : item.t3;
-                          const hasFeature = val !== '✘';
-                          
-                          return (
-                            <li key={itemIdx} className={`flex flex-col gap-1.5 py-4 border-b ${tier.highlight ? 'border-black/10' : 'border-white/10'} last:border-0 last:pb-0`}>
-                              <span className={`text-xs font-bold ${tier.highlight ? 'text-black/60' : 'text-gray-400'}`}>
-                                {item.name}
-                              </span>
-                              <span className={`text-sm md:text-base font-black ${hasFeature ? (tier.highlight ? 'text-black' : 'text-white') : (tier.highlight ? 'text-black/30' : 'text-gray-600')}`}>
-                                {val === '✔' ? t.pricing.includedText : val === '✘' ? '—' : val}
-                              </span>
-                            </li>
-                          )
-                        })}
-                      </ul>
-                    </div>
-                  ))}
+                <div className="mb-6">
+                  <h3 className="text-3xl font-black tracking-tight">
+                    {tier.name}
+                  </h3>
                 </div>
+
+                {/* 划线价在上，当前价在下，完美对齐 */}
+                <div className="mb-6 border-b-2 border-current pb-6 flex flex-col items-start">
+                  <span className={`text-xl font-black line-through mb-1 ${tier.highlight ? 'text-black/50' : 'text-gray-600'}`}>
+                    {tier.oldPrice}
+                  </span>
+                  <div className="flex items-baseline gap-1">
+                    <span className="text-6xl lg:text-[4rem] font-black tracking-tighter leading-none">{tier.price}</span>
+                    <span className={`text-xl font-bold ${tier.highlight ? 'text-black/70' : 'text-gray-500'}`}>{tier.period}</span>
+                  </div>
+                </div>
+
+                <div className="mb-8">
+                  <p className={`text-sm font-bold leading-relaxed ${tier.highlight ? 'text-black/80' : 'text-gray-300'}`}>
+                    {tier.desc}
+                  </p>
+                </div>
+
+                {/* 默认的简要特征列表 */}
+                <ul className="mb-8 flex-1 space-y-5">
+                  {tier.features.map((feat, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="mt-0.5 font-black text-lg leading-none">✳</span>
+                      <p className={`text-sm font-bold ${tier.highlight ? 'text-black/90' : 'text-white'}`}>
+                        {feat}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="h-6 mb-6 flex items-center justify-center">
+                  {tier.addon && (
+                    <span className={`text-xs font-black tracking-wider uppercase px-3 py-1 rounded border ${tier.highlight ? 'border-black/30 text-black/70' : 'border-white/20 text-gray-400'}`}>
+                      {tier.addon}
+                    </span>
+                  )}
+                </div>
+
+                <button
+                  type="button"
+                  onClick={onCta}
+                  className={`w-full py-5 text-lg font-black tracking-tight rounded-full transition-colors ${
+                    tier.highlight
+                      ? 'bg-black text-[#E5FF00] hover:bg-zinc-800'
+                      : 'bg-white text-black hover:bg-[#E5FF00]'
+                  }`}
+                >
+                  {tier.btn}
+                </button>
+
+                {/* ================= 卡片内无限拉长对比区 (In-Card Accordion) ================= */}
+                <div className={`transition-all duration-700 ease-in-out overflow-hidden ${showSla ? 'max-h-[3000px] opacity-100 mt-12' : 'max-h-0 opacity-0 mt-0'}`}>
+                  <div className={`border-t-2 ${tier.highlight ? 'border-black/20' : 'border-white/20'} pt-8 flex flex-col gap-8`}>
+                    {t.pricing.comparisonDetails.map((cat, catIdx) => (
+                      <div key={catIdx}>
+                        <div className={`text-xs font-black uppercase tracking-widest mb-5 px-3 py-1.5 inline-block ${tier.highlight ? 'bg-black text-[#E5FF00]' : 'bg-[#1A1A1A] text-[#E5FF00]'}`}>
+                          {cat.category}
+                        </div>
+                        <ul className="space-y-0">
+                          {cat.items.map((item, itemIdx) => {
+                            const val = idx === 0 ? item.t1 : idx === 1 ? item.t2 : item.t3;
+                            const hasFeature = val !== '✘';
+
+                            return (
+                              <li key={itemIdx} className={`flex flex-col gap-1.5 py-4 border-b ${tier.highlight ? 'border-black/10' : 'border-white/10'} last:border-0 last:pb-0`}>
+                                <span className={`text-xs font-bold ${tier.highlight ? 'text-black/60' : 'text-gray-400'}`}>
+                                  {item.name}
+                                </span>
+                                <span className={`text-sm md:text-base font-black ${hasFeature ? (tier.highlight ? 'text-black' : 'text-white') : (tier.highlight ? 'text-black/30' : 'text-gray-600')}`}>
+                                  {val === '✔' ? t.pricing.includedText : val === '✘' ? '—' : val}
+                                </span>
+                              </li>
+                            )
+                          })}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                {/* ================= 结束 ================= */}
+
               </div>
-              {/* ================= 结束 ================= */}
-              
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* 统一控制三个卡片同步拉长的全局按钮 */}
         <div className="flex justify-center mt-8">
-          <button 
+          <button
             onClick={() => setShowSla(!showSla)}
             className="border-2 border-[#E5FF00] text-[#E5FF00] px-8 py-4 text-sm font-black uppercase tracking-widest hover:bg-[#E5FF00] hover:text-black transition-colors duration-300"
           >
@@ -950,7 +1161,7 @@ export default function Page() {
         <div className="flex flex-col border-t border-white/20">
           {[t.faq.q1, t.faq.q2, t.faq.q3].map((item, idx) => (
             <div key={idx} className="border-b border-white/20">
-              <button 
+              <button
                 onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                 className="w-full py-8 flex items-start justify-between text-left gap-4 hover:text-[#E5FF00] transition-colors"
               >
@@ -967,11 +1178,11 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ==================== 9. CONTACT / 免费诊断表单 ==================== */}
+      {/* ==================== 9. CONTACT / 免费咨询表单 ==================== */}
       <section id="contact" data-section-theme="yellow" className="bg-[#E5FF00] text-black px-6 md:px-8 py-24 md:py-32 border-t-4 border-black">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
-          
-          {/* 左侧：诱饵文案 */}
+
+          {/* 左侧：对话邀约文案 */}
           <div className="lg:w-[45%] sticky top-32">
             <div className="inline-block border-2 border-black px-4 py-2 font-black uppercase tracking-widest text-xs md:text-sm mb-12 animate-pulse">
               {t.contact.status}
@@ -992,70 +1203,249 @@ export default function Page() {
               noValidate={false}
             >
 
-              {/* 姓名 */}
-              <div className="flex flex-col gap-3">
-                <label className="text-sm font-black uppercase tracking-widest text-black/70">
-                  {t.contact.form.name}
-                </label>
-                <input
-                  type="text"
-                  required
-                  disabled={submitting}
-                  value={formValues.name}
-                  onChange={handleFieldChange('name')}
-                  className="w-full border-4 border-black bg-transparent px-6 py-5 text-2xl font-black focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20 disabled:opacity-60 disabled:cursor-not-allowed"
-                  placeholder="John Doe"
-                />
+              {/* Hidden sourcePlan — never visible, never shown as
+                  a "selected package" badge. Default "direct" means
+                  the user landed on the form via header nav / scroll,
+                  not via a Pricing CTA. */}
+              <input
+                type="hidden"
+                name="sourcePlan"
+                value={sourcePlan}
+                readOnly
+              />
+
+              {/* 姓名 | 公司 / 品牌 (并排) */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="flex flex-col gap-3">
+                  <label
+                    htmlFor="contact-name"
+                    className="text-sm font-black uppercase tracking-widest text-black/70"
+                  >
+                    {t.contact.form.name}
+                  </label>
+                  <input
+                    id="contact-name"
+                    name="name"
+                    type="text"
+                    required
+                    disabled={submitting}
+                    value={formValues.name}
+                    onChange={handleFieldChange('name')}
+                    aria-invalid={Boolean(validationErrors.name)}
+                    aria-describedby={validationErrors.name ? 'contact-name-error' : undefined}
+                    className="w-full border-4 border-black bg-transparent px-6 py-5 text-2xl font-black focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20 disabled:opacity-60 disabled:cursor-not-allowed"
+                    placeholder={t.contact.form.namePh}
+                  />
+                  {validationErrors.name && (
+                    <p
+                      id="contact-name-error"
+                      role="alert"
+                      className="text-sm font-black uppercase tracking-tight text-black"
+                    >
+                      {validationErrors.name}
+                    </p>
+                  )}
+                </div>
+
+                <div className="flex flex-col gap-3">
+                  <label
+                    htmlFor="contact-company"
+                    className="text-sm font-black uppercase tracking-widest text-black/70"
+                    style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}
+                  >
+                    <span>{t.contact.form.company}</span>
+                    <span className="text-xs font-black normal-case tracking-normal text-black/50">
+                      *
+                    </span>
+                  </label>
+                  <input
+                    id="contact-company"
+                    name="company"
+                    type="text"
+                    required
+                    disabled={submitting}
+                    value={formValues.company}
+                    onChange={handleFieldChange('company')}
+                    aria-invalid={Boolean(validationErrors.company)}
+                    aria-describedby={validationErrors.company ? 'contact-company-error' : undefined}
+                    className="w-full border-4 border-black bg-transparent px-6 py-5 text-2xl font-black focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20 disabled:opacity-60 disabled:cursor-not-allowed"
+                    placeholder={t.contact.form.companyPh}
+                  />
+                  {validationErrors.company && (
+                    <p
+                      id="contact-company-error"
+                      role="alert"
+                      className="text-sm font-black uppercase tracking-tight text-black"
+                    >
+                      {validationErrors.company}
+                    </p>
+                  )}
+                </div>
               </div>
 
-              {/* 网址 */}
+              {/* 品牌网址 (选填) — 仍走 normalizeWebsiteUrl */}
               <div className="flex flex-col gap-3">
-                <label className="text-sm font-black uppercase tracking-widest text-black/70">
+                <label
+                  htmlFor="contact-website"
+                  className="text-sm font-black uppercase tracking-widest text-black/70"
+                >
                   {t.contact.form.website}
                 </label>
                 <input
+                  id="contact-website"
+                  name="website"
                   type="text"
                   inputMode="url"
-                  required
                   disabled={submitting}
                   value={formValues.website}
                   onChange={handleFieldChange('website')}
                   className="w-full border-4 border-black bg-transparent px-6 py-5 text-2xl font-black focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20 disabled:opacity-60 disabled:cursor-not-allowed"
-                  placeholder="www.yourbrand.com"
+                  placeholder={t.contact.form.websitePh}
                 />
               </div>
 
-              {/* 邮箱与社交软件 (并排) */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                 <div className="flex flex-col gap-3">
-                   <label className="text-sm font-black uppercase tracking-widest text-black/70">
-                     {t.contact.form.email}
-                   </label>
-                   <input
-                     type="email"
-                     required
-                     disabled={submitting}
-                     value={formValues.email}
-                     onChange={handleFieldChange('email')}
-                     className="w-full border-4 border-black bg-transparent px-6 py-5 text-xl font-black focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20 disabled:opacity-60 disabled:cursor-not-allowed"
-                     placeholder="hello@brand.com"
-                   />
-                 </div>
+              {/* 工作邮箱 (必填) */}
+              <div className="flex flex-col gap-3">
+                <label
+                  htmlFor="contact-email"
+                  className="text-sm font-black uppercase tracking-widest text-black/70"
+                >
+                  {t.contact.form.email}
+                </label>
+                <input
+                  id="contact-email"
+                  name="email"
+                  type="email"
+                  required
+                  disabled={submitting}
+                  value={formValues.email}
+                  onChange={handleFieldChange('email')}
+                  aria-invalid={Boolean(validationErrors.email)}
+                  aria-describedby={validationErrors.email ? 'contact-email-error' : undefined}
+                  className="w-full border-4 border-black bg-transparent px-6 py-5 text-2xl font-black focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20 disabled:opacity-60 disabled:cursor-not-allowed"
+                  placeholder={t.contact.form.emailPh}
+                />
+                {validationErrors.email && (
+                  <p
+                    id="contact-email-error"
+                    role="alert"
+                    className="text-sm font-black uppercase tracking-tight text-black"
+                  >
+                    {validationErrors.email}
+                  </p>
+                )}
+              </div>
 
-                 <div className="flex flex-col gap-3">
-                   <label className="text-sm font-black uppercase tracking-widest text-black/70">
-                     {t.contact.form.social}
-                   </label>
-                   <input
-                     type="text"
-                     required
-                     disabled={submitting}
-                     value={formValues.social}
-                     onChange={handleFieldChange('social')}
-                     className="w-full border-4 border-black bg-transparent px-6 py-5 text-xl font-black focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20 disabled:opacity-60 disabled:cursor-not-allowed"
-                     placeholder="+1 234 567 8900"
-                   />
-                 </div>
+              {/* 您想了解什么？— Multi-select chips, keyboard accessible */}
+              <fieldset
+                className="flex flex-col gap-3"
+                aria-describedby={validationErrors.interests ? 'contact-interests-error' : undefined}
+              >
+                <legend className="text-sm font-black uppercase tracking-widest text-black/70">
+                  {t.contact.form.interestsLabel}
+                  <span className="ml-2 text-xs font-black uppercase tracking-normal text-black/50">
+                    {t.contact.form.interestsRequiredHint}
+                  </span>
+                </legend>
+                <div
+                  role="group"
+                  aria-label={t.contact.form.interestsLabel}
+                  className="flex flex-wrap gap-3"
+                >
+                  {t.contact.form.interests.map((interest) => {
+                    const selected = formValues.interests.includes(interest.value);
+                    return (
+                      <button
+                        key={interest.value}
+                        type="button"
+                        role="checkbox"
+                        aria-checked={selected}
+                        disabled={submitting}
+                        onClick={() => toggleInterest(interest.value)}
+                        className={`px-5 py-3 text-base font-black uppercase tracking-tight border-4 border-black transition-all duration-150 focus:outline-none focus-visible:ring-4 focus-visible:ring-black/40 disabled:opacity-60 disabled:cursor-not-allowed ${
+                          selected
+                            ? 'bg-black text-[#E5FF00]'
+                            : 'bg-transparent text-black hover:bg-black/10'
+                        }`}
+                      >
+                        {interest.label}
+                      </button>
+                    );
+                  })}
+                </div>
+                {validationErrors.interests && (
+                  <p
+                    id="contact-interests-error"
+                    role="alert"
+                    className="text-sm font-black uppercase tracking-tight text-black"
+                  >
+                    {validationErrors.interests}
+                  </p>
+                )}
+              </fieldset>
+
+              {/* 微信号 | WhatsApp (并排, 都可选) */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="flex flex-col gap-3">
+                  <label
+                    htmlFor="contact-wechat"
+                    className="text-sm font-black uppercase tracking-widest text-black/70"
+                  >
+                    {t.contact.form.wechat}
+                  </label>
+                  <input
+                    id="contact-wechat"
+                    name="wechat"
+                    type="text"
+                    autoComplete="off"
+                    disabled={submitting}
+                    value={formValues.wechat}
+                    onChange={handleFieldChange('wechat')}
+                    className="w-full border-4 border-black bg-transparent px-6 py-5 text-xl font-black focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20 disabled:opacity-60 disabled:cursor-not-allowed"
+                    placeholder={t.contact.form.wechatPh}
+                  />
+                </div>
+
+                <div className="flex flex-col gap-3">
+                  <label
+                    htmlFor="contact-whatsapp"
+                    className="text-sm font-black uppercase tracking-widest text-black/70"
+                  >
+                    {t.contact.form.whatsapp}
+                  </label>
+                  <input
+                    id="contact-whatsapp"
+                    name="whatsapp"
+                    type="text"
+                    autoComplete="off"
+                    inputMode="tel"
+                    disabled={submitting}
+                    value={formValues.whatsapp}
+                    onChange={handleFieldChange('whatsapp')}
+                    className="w-full border-4 border-black bg-transparent px-6 py-5 text-xl font-black focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20 disabled:opacity-60 disabled:cursor-not-allowed"
+                    placeholder={t.contact.form.whatsappPh}
+                  />
+                </div>
+              </div>
+
+              {/* 留言 (选填, textarea) */}
+              <div className="flex flex-col gap-3">
+                <label
+                  htmlFor="contact-message"
+                  className="text-sm font-black uppercase tracking-widest text-black/70"
+                >
+                  {t.contact.form.message}
+                </label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  rows={4}
+                  disabled={submitting}
+                  value={formValues.message}
+                  onChange={handleFieldChange('message')}
+                  className="w-full min-h-[7rem] max-h-64 border-4 border-black bg-transparent px-6 py-4 text-lg font-bold leading-relaxed focus:outline-none focus:bg-white transition-colors duration-300 placeholder-black/20 disabled:opacity-60 disabled:cursor-not-allowed resize-y"
+                  placeholder={t.contact.form.messagePh}
+                />
               </div>
 
               {/* Honeypot — visually hidden, accessibility-hidden,
@@ -1126,7 +1516,7 @@ export default function Page() {
 
             </form>
           </div>
-          
+
         </div>
       </section>
 
@@ -1136,7 +1526,7 @@ export default function Page() {
           <span>{t.footer.right}</span>
         </div>
       </footer>
-      
+
     </main>
   );
 }

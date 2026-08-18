@@ -14,16 +14,39 @@ const ALLOWED_SOURCE_PLANS = new Set([
   "direct",
 ]);
 
+/**
+ * Allowed values for the required `interests` array. We keep
+ * this list small and explicit — any other value is rejected so
+ * downstream tooling never has to deal with arbitrary strings.
+ */
+const ALLOWED_INTERESTS = new Set([
+  "goradar",
+  "global-growth",
+  "existing-growth",
+  "not-sure",
+]);
+
 const MAX_NAME = 200;
+const MAX_COMPANY = 200;
 const MAX_WEBSITE = 2048;
 const MAX_EMAIL = 320;
-const MAX_SOCIAL = 200;
+const MAX_WECHAT = 200;
+const MAX_WHATSAPP = 64;
+const MAX_MESSAGE = 2000;
 const MAX_SOURCE = 64;
+const MAX_INTERESTS = 4;
+
+/** Internal enum → human label, used in the email payload. */
+const INTEREST_LABELS: Record<string, string> = {
+  goradar: "GoRadar AI",
+  "global-growth": "Global Growth",
+  "existing-growth": "Improve Existing Growth",
+  "not-sure": "Not Sure Yet",
+};
 
 /** Very small RFC-5322-ish email check — enough for a contact form. */
 function isValidEmail(value: string): boolean {
   if (value.length > MAX_EMAIL) return false;
-  // Simple but effective; matches "local@domain.tld" with a dot in domain.
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 }
 
@@ -62,11 +85,28 @@ function escapeHtml(value: string): string {
     .replace(/'/g, "&#39;");
 }
 
+/** Deduplicate while preserving insertion order. */
+function dedupe(list: string[]): string[] {
+  const seen = new Set<string>();
+  const out: string[] = [];
+  for (const v of list) {
+    if (!seen.has(v)) {
+      seen.add(v);
+      out.push(v);
+    }
+  }
+  return out;
+}
+
 interface ParsedPayload {
   name: string;
+  company: string;
   website: string;
   email: string;
-  social: string;
+  interests: string[];
+  wechat: string;
+  whatsapp: string;
+  message: string;
   sourcePlan: "radar" | "core-engine" | "fractional-cmo" | "direct";
   /** Honeypot — any value means the submission is non-human. */
   honeypot: string;
@@ -83,50 +123,95 @@ function parseAndValidate(body: unknown): ValidationResult {
   const record = body as Record<string, unknown>;
 
   const rawName = typeof record.name === "string" ? record.name.trim() : "";
+  const rawCompany =
+    typeof record.company === "string" ? record.company.trim() : "";
   const rawWebsite =
     typeof record.website === "string" ? record.website.trim() : "";
   const rawEmail = typeof record.email === "string" ? record.email.trim() : "";
-  const rawSocial =
-    typeof record.social === "string" ? record.social.trim() : "";
+
+  const rawInterests = Array.isArray(record.interests)
+    ? record.interests
+    : [];
+  const interestsTrimmed = rawInterests
+    .filter((v): v is string => typeof v === "string")
+    .map((v) => v.trim())
+    .filter((v) => v.length > 0);
+
+  const rawWechat =
+    typeof record.wechat === "string" ? record.wechat.trim() : "";
+  const rawWhatsapp =
+    typeof record.whatsapp === "string" ? record.whatsapp.trim() : "";
+  const rawMessage =
+    typeof record.message === "string" ? record.message.trim() : "";
   const rawSource =
     typeof record.sourcePlan === "string" ? record.sourcePlan.trim() : "";
   // Honeypot is never announced, but a real human will leave it blank.
   const rawHoneypot =
     typeof record.companyWebsite2 === "string" ? record.companyWebsite2 : "";
 
+  // ── name ────────────────────────────────────────────────
   if (!rawName) return { ok: false, error: "MISSING_NAME" };
   if (rawName.length > MAX_NAME) return { ok: false, error: "NAME_TOO_LONG" };
 
-  if (!rawWebsite) return { ok: false, error: "MISSING_WEBSITE" };
-  const normalizedWebsite = normalizeWebsiteUrl(rawWebsite);
-  if (!isValidUrl(normalizedWebsite)) {
-    return { ok: false, error: "INVALID_WEBSITE" };
+  // ── company ─────────────────────────────────────────────
+  if (!rawCompany) return { ok: false, error: "MISSING_COMPANY" };
+  if (rawCompany.length > MAX_COMPANY)
+    return { ok: false, error: "COMPANY_TOO_LONG" };
+
+  // ── website (optional) ──────────────────────────────────
+  let normalizedWebsite = "";
+  if (rawWebsite) {
+    normalizedWebsite = normalizeWebsiteUrl(rawWebsite);
+    if (!isValidUrl(normalizedWebsite)) {
+      return { ok: false, error: "INVALID_WEBSITE" };
+    }
   }
 
+  // ── email ───────────────────────────────────────────────
   if (!rawEmail) return { ok: false, error: "MISSING_EMAIL" };
   if (!isValidEmail(rawEmail)) return { ok: false, error: "INVALID_EMAIL" };
 
-  if (!rawSocial) return { ok: false, error: "MISSING_SOCIAL" };
-  if (rawSocial.length > MAX_SOCIAL) return { ok: false, error: "SOCIAL_TOO_LONG" };
+  // ── interests (required, array, enum, dedupe, capped) ───
+  if (interestsTrimmed.length === 0)
+    return { ok: false, error: "MISSING_INTERESTS" };
+  const dedupedInterests = dedupe(interestsTrimmed);
+  if (dedupedInterests.length > MAX_INTERESTS)
+    return { ok: false, error: "TOO_MANY_INTERESTS" };
+  for (const interest of dedupedInterests) {
+    if (!ALLOWED_INTERESTS.has(interest))
+      return { ok: false, error: "INVALID_INTEREST" };
+  }
 
-  // Normalise sourcePlan; reject unknown values by falling back to "direct".
+  // ── wechat / whatsapp (optional strings, max length) ────
+  if (rawWechat.length > MAX_WECHAT)
+    return { ok: false, error: "WECHAT_TOO_LONG" };
+  if (rawWhatsapp.length > MAX_WHATSAPP)
+    return { ok: false, error: "WHATSAPP_TOO_LONG" };
+
+  // ── message (optional, max length) ──────────────────────
+  if (rawMessage.length > MAX_MESSAGE)
+    return { ok: false, error: "MESSAGE_TOO_LONG" };
+
+  // ── sourcePlan (enum, capped length) ────────────────────
+  if (rawSource.length > MAX_SOURCE)
+    return { ok: false, error: "INVALID_SOURCE_PLAN" };
   const normalisedSourcePlan: ParsedPayload["sourcePlan"] = ALLOWED_SOURCE_PLANS.has(
     rawSource,
   )
     ? (rawSource as ParsedPayload["sourcePlan"])
     : "direct";
-  if (rawSource.length > MAX_SOURCE) {
-    // Defensive: even if someone fuzzes the field with garbage, don't echo.
-    return { ok: false, error: "INVALID_SOURCE_PLAN" };
-  }
 
   return {
     ok: true,
     value: {
       name: rawName,
+      company: rawCompany,
       website: normalizedWebsite,
       email: rawEmail,
-      social: rawSocial,
+      interests: dedupedInterests,
+      wechat: rawWechat,
+      whatsapp: rawWhatsapp,
+      message: rawMessage,
       sourcePlan: normalisedSourcePlan,
       honeypot: rawHoneypot,
     },
@@ -138,6 +223,20 @@ function jsonResponse(
   init: ResponseInit = {},
 ): Response {
   return Response.json(body, init);
+}
+
+/** Render an empty optional field as "—", otherwise the value. */
+function display(value: string): string {
+  const trimmed = value.trim();
+  return trimmed ? trimmed : "—";
+}
+
+/** Human readable interests joined. */
+function formatInterests(interests: string[]): string {
+  if (interests.length === 0) return "—";
+  return interests
+    .map((v) => INTEREST_LABELS[v] ?? v)
+    .join(", ");
 }
 
 /**
@@ -195,7 +294,17 @@ export async function POST(request: Request): Promise<Response> {
     return jsonResponse({ ok: true }, { status: 200 });
   }
 
-  const { name, website, email, social, sourcePlan } = parsed.value;
+  const {
+    name,
+    company,
+    website,
+    email,
+    interests,
+    wechat,
+    whatsapp,
+    message,
+    sourcePlan,
+  } = parsed.value;
   const submittedAt = new Date().toISOString();
 
   const subject =
@@ -203,15 +312,38 @@ export async function POST(request: Request): Promise<Response> {
       ? "[BrandGo.Global Lead] New Website Inquiry"
       : `[BrandGo.Global Lead] ${sourcePlan}`;
 
+  const interestsLine = formatInterests(interests);
+  const websiteLine = display(website);
+  const wechatLine = display(wechat);
+  const whatsappLine = display(whatsapp);
+  const messageLine = display(message);
+
   const textBody =
     `New BrandGo.Global website lead\n` +
     `-----------------------------\n` +
     `Submitted at: ${submittedAt}\n` +
-    `Name:        ${name}\n` +
-    `Website:     ${website}\n` +
-    `Work Email:  ${email}\n` +
-    `WhatsApp / WeChat: ${social}\n` +
-    `Source Plan: ${sourcePlan}\n`;
+    `Name:          ${name}\n` +
+    `Company:       ${company}\n` +
+    `Website:       ${websiteLine}\n` +
+    `Work Email:    ${email}\n` +
+    `Interests:     ${interestsLine}\n` +
+    `WeChat:        ${wechatLine}\n` +
+    `WhatsApp:      ${whatsappLine}\n` +
+    `Message:       ${messageLine}\n` +
+    `Source Plan:   ${sourcePlan}\n`;
+
+  // Each row HTML-escapes every value before it touches the template.
+  const websiteCell = website
+    ? `<a href="${escapeHtml(website)}">${escapeHtml(website)}</a>`
+    : "—";
+  const emailCell = `<a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a>`;
+
+  // Build the interests list with one bullet per value (escaped).
+  const interestsHtmlList = interests.length
+    ? `<ul style="margin:6px 0 0 0;padding-left:20px;">${interests
+        .map((v) => `<li>${escapeHtml(INTEREST_LABELS[v] ?? v)}</li>`)
+        .join("")}</ul>`
+    : "—";
 
   const htmlBody =
     `<div style="font-family:Arial,Helvetica,sans-serif;line-height:1.5;color:#111">` +
@@ -219,9 +351,13 @@ export async function POST(request: Request): Promise<Response> {
     `<table cellpadding="6" cellspacing="0" border="0" style="border-collapse:collapse;">` +
     `<tr><td style="color:#555;">Submitted at</td><td><strong>${escapeHtml(submittedAt)}</strong></td></tr>` +
     `<tr><td style="color:#555;">Name</td><td><strong>${escapeHtml(name)}</strong></td></tr>` +
-    `<tr><td style="color:#555;">Website</td><td><a href="${escapeHtml(website)}">${escapeHtml(website)}</a></td></tr>` +
-    `<tr><td style="color:#555;">Work Email</td><td><a href="mailto:${escapeHtml(email)}">${escapeHtml(email)}</a></td></tr>` +
-    `<tr><td style="color:#555;">WhatsApp / WeChat</td><td><strong>${escapeHtml(social)}</strong></td></tr>` +
+    `<tr><td style="color:#555;">Company / Brand</td><td><strong>${escapeHtml(company)}</strong></td></tr>` +
+    `<tr><td style="color:#555;">Website</td><td>${websiteCell}</td></tr>` +
+    `<tr><td style="color:#555;">Work Email</td><td>${emailCell}</td></tr>` +
+    `<tr><td style="color:#555;">Interests</td><td>${interestsHtmlList}</td></tr>` +
+    `<tr><td style="color:#555;">WeChat</td><td><strong>${escapeHtml(wechatLine)}</strong></td></tr>` +
+    `<tr><td style="color:#555;">WhatsApp</td><td><strong>${escapeHtml(whatsappLine)}</strong></td></tr>` +
+    `<tr><td style="color:#555;">Message</td><td><pre style="font-family:inherit;margin:0;white-space:pre-wrap;">${escapeHtml(messageLine)}</pre></td></tr>` +
     `<tr><td style="color:#555;">Source Plan</td><td><strong>${escapeHtml(sourcePlan)}</strong></td></tr>` +
     `</table></div>`;
 
