@@ -23,33 +23,33 @@ const dict = {
       s1: {
         title: "UNDERSTAND THE MARKET",
         label: "GoRadar AI",
-        desc: "GoRadar AI is our AI market intelligence app. It collects and analyzes market, competitor, customer demand, and trend data to help your team assess opportunities and decide where to go and what to do first.",
+        desc: "GoRadar AI is our AI market intelligence app. It uses continuously updated market, competitor, customer-demand, and trend signals to help your team assess opportunities and decide where to go and what to do first.",
         btnOpen: "EXPLORE THE RADAR",
         btnClose: "CLOSE RADAR DETAILS",
         features: [
           {
             name: "COMPETITOR & SEARCH OPPORTUNITIES",
-            detail: "Tracks overseas competitors and search data to identify underserved needs and keywords for your team to evaluate."
+            detail: "Uses updated overseas competitor and search data to identify underserved needs and keywords for your team to evaluate."
           },
           {
             name: "CUSTOMER DEMAND & SUPPLY CHAIN FIT",
             detail: "Matches overseas search demand with your manufacturing, product, and delivery strengths to help assess which needs fit your business."
           },
           {
-            name: "AI AUDIENCE SIMULATION",
-            detail: "Models potential ad performance across audiences before launch to help prioritize tests. Actual results are validated through live campaigns."
+            name: "AI-ASSISTED AUDIENCE & CAMPAIGN ANALYSIS",
+            detail: "Uses available audience, market, and campaign inputs to support targeting and test-planning decisions."
           }
         ]
       },
       s2: {
         title: "CREATE CONTENT THAT CONNECTS",
         label: "Content & Localization",
-        desc: "Use AI to explore content ideas, angles, and local expressions, then bring them to your overseas social and content channels. Help customers understand your brand, want to engage with it, and learn to trust it.",
+        desc: "Use AI to explore content ideas, angles, and local expressions, then bring them to your overseas social and content channels. Help customers understand your brand, want to engage with it, and learn to trust it. Execution scope is confirmed in the selected plan and content schedule.",
         bullets: [
           "Content Strategy, Topics & Messaging",
           "Short-Form Video & User-Generated Content",
           "Multilingual Content & Cultural Localization",
-          "Social Account & Community Management"
+          "Social Publishing and Community Support"
         ],
         kpis: [
           "FOCUS: ENGAGEMENT",
@@ -59,10 +59,10 @@ const dict = {
       s3: {
         title: "ACQUIRE CUSTOMERS",
         label: "Paid Media & Growth",
-        desc: "Combine ad management, GoRadar AI-assisted analysis, and ongoing optimization. Test audiences, creatives, channels, and landing pages, then use real data to improve how you generate inquiries and acquire customers.",
+        desc: "Combine ad management, GoRadar AI-assisted analysis, and ongoing optimization. Test audiences, creatives, channels, and landing pages, then use real data to build and improve customer-acquisition paths, support inquiries and conversions, and improve acquisition efficiency.",
         bullets: [
           "Ad Analysis & Campaign Recommendations",
-          "Search & Social Ads, B2B Lead Generation",
+          "Search & Social Ads, B2B Lead-Generation Support",
           "Audience, Creative & Channel A/B Testing",
           "Retargeting & Landing Page Optimization"
         ],
@@ -74,12 +74,12 @@ const dict = {
       s4: {
         title: "Build Influence",
         label: "Sponsorships & Creator Marketing",
-        desc: "Build brand visibility and trust through sponsorships, creators, and strategic partnerships across relevant content, sports, and communities.",
+        desc: "Help brands reach relevant overseas audiences and support visibility and trust-building.",
         bullets: [
           "Sponsorship Strategy & Opportunity Assessment",
           "Influencer / Creator Matching & Collaboration Planning",
           "Partnership Content & Local Messaging",
-          "Brand Exposure & Trust Building"
+          "Visibility & Trust-Building Support"
         ],
         kpis: [
           "FOCUS: BRAND FIT",
@@ -166,7 +166,7 @@ const dict = {
       teamTitle: "Founder",
       member1: {
         name: "Yusheng Yang",
-        role: "CO-FOUNDER",
+        role: "Founder",
         bio: [
           "Yusheng studied Finance at Lancaster University and earned a master's in Project Management at the University of Warwick. His career across China and Asia connects brand development, commercial strategy, and cross-border business.",
           "He brings more than a decade of experience in branding, marketing, go-to-market strategy, and global supply chains, including building consumer brands and managing cross-border supply-chain projects. His focus is practical: who to sell to, how to position the offer, and where to invest first.",
@@ -177,10 +177,11 @@ const dict = {
     pricing: {
       kicker: "WAYS TO WORK TOGETHER",
       title: "CHOOSE YOUR\nLEVEL OF SUPPORT",
-      subtitle: "MONTHLY PRICING. QUARTERLY BILLING.",
-      note: "Paid quarterly in advance. A 90-day minimum covers analysis, testing, and optimization.",
+      subtitle: "Monthly pricing. GoRadar AI is available month to month; execution services have a 90-day minimum.",
+      note: "Execution service plans are billed monthly in advance.",
       guidance: "Have an execution team? Start with intelligence. Need delivery? Choose execution. Need ongoing leadership across channels? Choose Fractional CMO.",
-      fees: "Plan prices cover tools and services; media spend is separate. The $5,000 / $30,000 limits are ad spend caps with no additional management fee, not included ad budgets. See the full comparison for extra-platform and overage fees.",
+      fees: "Plan prices cover tools and services. Media spend, sponsorship and media rights, creator fees, production costs, and other third-party costs are billed separately. The $5,000 / $30,000 limits are monthly ad spend caps with no additional management fee, not included ad budgets. See the full comparison for extra-platform and overage fees.",
+      disclaimer: "Final scope, channel coverage, and third-party costs are confirmed before the engagement begins.",
       btnExpand: "↓ VIEW FULL FEATURE COMPARISON",
       btnCollapse: "↑ HIDE FULL COMPARISON",
       includedText: "✓ INCLUDED",
@@ -188,11 +189,12 @@ const dict = {
         {
           name: "GoRadar AI™ TIER",
           price: "$399", oldPrice: "$599", period: "/ MO",
+          billing: "Monthly subscription",
           mode: "INTELLIGENCE & GUIDANCE",
           desc: "For businesses with an execution team that need clearer market insight and priorities. Use GoRadar AI and regular strategy reviews to guide your next actions.",
           features: [
-            "GoRadar AI™ Live Dashboard",
-            "Monthly 1:1 Strategy Review (60m)",
+            "GoRadar AI™ Dashboard",
+            "Monthly Scheduled 1:1 Strategy Review (60m)",
             "Website & Ad Account Audit",
             "Competitor & Keyword Opportunities Report"
           ],
@@ -203,13 +205,14 @@ const dict = {
         {
           name: "CORE ENGINE TIER",
           price: "$999", oldPrice: "$1,499", period: "/ MO",
+          billing: "90-day minimum, billed monthly in advance",
           mode: "CONTENT & AD EXECUTION",
           desc: "For businesses with a product and target market that need hands-on content and advertising support. Get execution, testing, and optimization across priority channels.",
           features: [
             "Everything in GoRadar AI™ Tier",
             "1 Ad + 1 Content Platform Managed",
-            "No Extra Management Fee on Up to $5,000 Ad Spend",
-            "Strategy & Progress Meeting Every Two Weeks"
+            "No Additional Ad Management Fee on Up to $5,000 Monthly Ad Spend",
+            "Scheduled Strategy Review Every Two Weeks"
           ],
           addon: "+$349/mo per extra platform",
           btn: "START CORE ENGINE",
@@ -218,14 +221,15 @@ const dict = {
         {
           name: "FRACTIONAL CMO TIER",
           price: "$2,499+", oldPrice: "$3,999", period: "/ MO",
+          billing: "90-day minimum, billed monthly in advance",
           mode: "ONGOING GROWTH LEADERSHIP",
           desc: "For businesses growing across channels that need ongoing strategic direction and coordination. A fractional CMO connects market insight, content, advertising, and reviews.",
           features: [
             "Everything in Core Engine Tier",
-            "Unlimited Platforms (Google/Meta/TikTok/LinkedIn)",
-            "No Extra Management Fee on Up to $30,000 Ad Spend",
+            "Multi-Channel Coordination (Scope Agreed per Engagement)",
+            "No Additional Ad Management Fee on Up to $30,000 Monthly Ad Spend",
             "Website SEO & Brand Trust Building",
-            "24/7 Dedicated Async Access & Priority Support"
+            "Priority Support with Communication Cadence Agreed at Onboarding"
           ],
           addon: "",
           btn: "HIRE YOUR CMO",
@@ -236,8 +240,8 @@ const dict = {
         {
           category: "GoRadar AI™ Intelligence & Strategy",
           items: [
-            { name: "Competitor & Search Opportunities Report", t1: "1 Report / Mo", t2: "2 Reports / Mo", t3: "Live Monitoring" },
-            { name: "1:1 Strategy & Data Review", t1: "1x (60 mins)", t2: "2x (Every Two Weeks)", t3: "4x (Weekly Deep Dive)" },
+            { name: "Competitor & Search Opportunities Report", t1: "1 Report / Mo", t2: "2 Reports / Mo", t3: "Ongoing Monitoring" },
+            { name: "Scheduled Strategy Review", t1: "Monthly (60 mins)", t2: "About 2x / Mo", t3: "Weekly" },
             { name: "Ad Account & Site Health Audit", t1: "✔", t2: "✔", t3: "✔" },
             { name: "Custom Go-to-Market Strategy (GTM)", t1: "✘", t2: "✔", t3: "✔" }
           ]
@@ -245,7 +249,7 @@ const dict = {
         {
           category: "Brand & Website Foundations",
           items: [
-            { name: "Social Account Setup & Search Optimization (SEO)", t1: "✘", t2: "1-2 Core Platforms", t3: "All-Channel Setup" },
+            { name: "Social Account Setup & Search Optimization (SEO)", t1: "✘", t2: "1-2 Core Platforms", t3: "Multi-Channel Coordination (Scope Agreed per Engagement)" },
             { name: "Website Conversion Review (CRO)", t1: "✘", t2: "✔", t3: "Ongoing Optimization & A/B Testing" }
           ]
         },
@@ -253,9 +257,9 @@ const dict = {
           category: "Content & Localization",
           items: [
             { name: "AI-Assisted Localized Visual Production", t1: "✘", t2: "Defined Sets per Campaign", t3: "Volume Production & In-Depth Localization" },
-            { name: "Social Content Scheduling & Publishing", t1: "✘", t2: "Daily on Core Platforms", t3: "Volume Publishing Across Channels" },
-            { name: "Community Engagement & Lead Routing", t1: "✘", t2: "✔", t3: "24/7 Lead Screening & Follow-Up" },
-            { name: "KOL/UGC Resource Mgmt", t1: "✘", t2: "✘", t3: "Monthly Quota Managed" }
+            { name: "Social Content Scheduling & Publishing", t1: "✘", t2: "Content Execution and Publishing Based on the Agreed Monthly Plan", t3: "Ongoing Multi-Channel Content Coordination and Publishing" },
+            { name: "Community Engagement & Lead Routing", t1: "✘", t2: "✔", t3: "Lead Organization and Conversion-Path Support" },
+            { name: "KOL/UGC Resource Mgmt", t1: "✘", t2: "✘", t3: "Creator Partnership Support (Scope Agreed per Project)" }
           ]
         },
         {
@@ -263,15 +267,15 @@ const dict = {
           items: [
             { name: "Ad Account Setup & Pixel/CAPI Tracking", t1: "✘", t2: "✔", t3: "✔" },
             { name: "Ad Strategy & Target Audiences", t1: "✘", t2: "1 Core Channel", t3: "Coordinated Multi-Channel Campaigns" },
-            { name: "A/B Testing & Ad Return Optimization (ROAS)", t1: "✘", t2: "✔", t3: "Frequent Multivariable Testing" },
-            { name: "Zero-Fee Ad Spend Cap", t1: "✘", t2: "Up to $5,000", t3: "Up to $30,000" },
-            { name: "Overage Management Fee", t1: "✘", t2: "10% Flat", t3: "8-10% Tiered" }
+            { name: "A/B Testing & Ad Return Optimization (ROAS)", t1: "✘", t2: "✔", t3: "Ongoing Testing and Optimization Based on Available Budget, Traffic, and Creative Volume" },
+            { name: "Monthly Ad Spend with No Additional Management Fee", t1: "✘", t2: "Up to $5,000", t3: "Up to $30,000" },
+            { name: "Overage Management Fee", t1: "✘", t2: "10% on Spend Above $5,000", t3: "8–10% on Spend Above $30,000, Based on Scale" }
           ]
         },
         {
           category: "Communication & Support",
           items: [
-            { name: "Response & Troubleshooting", t1: "48h Email", t2: "24h Weekdays", t3: "24/7 Priority" }
+            { name: "Initial Response & Troubleshooting", t1: "Email Response Within 2 Business Days", t2: "Response Within 1 Business Day", t3: "Priority Support; Communication Cadence Agreed at Onboarding" }
           ]
         }
       ]
@@ -309,11 +313,11 @@ const dict = {
         },
         {
           q: "Is the advertising budget included in the service fee?",
-          a: "No: plan prices cover tools and services, while media spend is separate. The $5,000 Core Engine and $30,000 Fractional CMO limits are ad spend caps with no additional management fee, not ad credits. Extra-platform charges and overage management fees are listed in the plan comparison."
+          a: "No: plan prices cover tools and services, while media spend is separate. The $5,000 Core Engine and $30,000 Fractional CMO limits are monthly ad spend caps with no additional management fee, not ad credits. Extra-platform charges and overage management fees are listed in the plan comparison."
         },
         {
-          q: "Why show monthly prices but bill quarterly?",
-          a: "Prices are shown per month, but payment is quarterly in advance with a 90-day minimum engagement. A continuous work cycle gives market analysis, content preparation, testing, and optimization time to inform each other. We confirm the scope and first payment before the engagement starts."
+          q: "How does billing work? Is there a long-term commitment?",
+          a: "GoRadar AI is available for $399 as a monthly subscription. Core Engine and Fractional CMO have a 90-day minimum and are billed monthly in advance. Media spend, sponsorship and media rights, creator fees, production costs, and other third-party costs are billed separately."
         },
         {
           q: "How do we start with Sponsorships & Creator Marketing?",
@@ -348,7 +352,7 @@ const dict = {
         errorEmail: "Please enter a valid work email.",
       }
     },
-    footer: { left: "© 2026 BrandGo.Global STUDIO", right: "GLOBAL TEAM. STRATEGY PUT INTO ACTION." },
+    footer: { left: "© 2026 BrandGo.Global", right: "GLOBAL TEAM. STRATEGY PUT INTO ACTION.", clientLogin: "Client Login" },
     mobile: { openMenu: "Open navigation menu", closeMenu: "Close navigation menu" }
   },
   zh: {
@@ -366,33 +370,33 @@ const dict = {
       s1: {
         title: "看清市场",
         label: "GoRadar AI",
-        desc: "GoRadar AI 是我们的 AI 海外市场情报应用，持续收集和分析市场、竞争对手、客户需求与趋势，帮你的团队判断机会，决定先进入哪里、先做什么。",
+        desc: "GoRadar AI 是我们的 AI 海外市场情报应用，结合定期更新的市场、竞争对手、客户需求与趋势信号，帮你的团队判断机会，决定先进入哪里、先做什么。",
         btnOpen: "展开雷达系统",
         btnClose: "收起雷达面板",
         features: [
           {
             name: "竞争对手与搜索机会",
-            detail: "持续跟踪海外竞争对手和搜索数据，找出尚未被充分覆盖的需求与关键词，供团队评估增长机会。"
+            detail: "持续监测海外竞争对手和搜索数据，找出尚未被充分覆盖的需求与关键词，供团队评估增长机会。"
           },
           {
             name: "客户需求与供应链匹配",
             detail: "将海外客户的搜索需求与你的制造、产品及交付优势进行匹配，帮助判断哪些需求更适合你的业务。"
           },
           {
-            name: "AI 受众模拟",
-            detail: "在正式投放前，模拟不同受众的广告表现，为测试顺序提供参考。实际效果通过真实投放验证。"
+            name: "AI 辅助受众与广告方向分析",
+            detail: "结合已有受众、市场与投放信息，为受众选择和测试方向提供决策支持。"
           }
         ]
       },
       s2: {
         title: "做好内容",
         label: "海外内容与本地化",
-        desc: "用 AI 辅助寻找内容灵感、传播角度和本地表达，再落实到海外社媒与内容渠道，让海外用户看得懂、愿意看，也愿意相信你的品牌。",
+        desc: "用 AI 辅助寻找内容灵感、传播角度和本地表达，再落实到海外社媒与内容渠道，让海外用户看得懂、愿意看，也愿意相信你的品牌。具体执行范围按套餐与内容计划确认。",
         bullets: [
           "内容方向、选题与传播表达",
           "短视频与用户内容（UGC）制作",
           "多语种内容与文化本地化",
-          "社媒账号与社区互动运营"
+          "社媒内容发布与基础互动支持"
         ],
         kpis: [
           "关注：内容互动",
@@ -402,10 +406,10 @@ const dict = {
       s3: {
         title: "获得客户",
         label: "海外广告与增长",
-        desc: "把广告投放、GoRadar AI 辅助分析和持续优化放在一起，测试受众、素材、渠道与落地页，用实际数据判断怎样更有效地获得询盘和客户。",
+        desc: "把广告投放、GoRadar AI 辅助分析和持续优化放在一起，测试受众、素材、渠道与落地页，用实际数据建立和优化获客路径，推动询盘与转化，并提升获客效率。",
         bullets: [
           "广告分析与投放方向建议",
-          "搜索与社交广告、B2B 线索获取",
+          "搜索与社交广告、B2B 线索获取支持",
           "受众、素材与渠道 A/B 测试",
           "再营销与落地页转化优化"
         ],
@@ -417,12 +421,12 @@ const dict = {
       s4: {
         title: "扩大影响",
         label: "品牌赞助与达人营销",
-        desc: "通过品牌赞助、达人与创作者合作，帮助品牌进入更有影响力的内容、体育和社群场景，扩大海外曝光与品牌信任。",
+        desc: "帮助品牌触达更相关的海外受众，并支持品牌认知与信任建设。",
         bullets: [
           "品牌赞助方向与合作机会评估",
           "达人 / 创作者匹配与合作策划",
           "合作内容与本地传播表达",
-          "品牌曝光与信任建设"
+          "品牌认知与信任建设支持"
         ],
         kpis: [
           "关注：品牌匹配度",
@@ -509,7 +513,7 @@ const dict = {
       teamTitle: "创始人",
       member1: {
         name: "Yusheng Yang",
-        role: "联合创始人",
+        role: "创始人",
         bio: [
           "Yusheng Yang（杨雨昇）在 Lancaster University 学习金融，并在 University of Warwick 获得项目管理硕士学位。他的职业经历横跨中国与亚洲市场，连接品牌、商业策略与跨境业务。",
           "拥有十余年品牌、营销、市场进入（GTM）和全球供应链相关经验，参与过消费品牌的建立与发展，以及跨境供应链项目。他关注企业进入海外市场时最实际的问题：卖给谁、如何表达、先把资源投入哪里。",
@@ -520,10 +524,11 @@ const dict = {
     pricing: {
       kicker: "WAYS TO WORK TOGETHER",
       title: "选择适合你的\n合作方式",
-      subtitle: "按月报价，按季度结算",
-      note: "按季度预付，最低合作 90 天，用于完成分析、测试和优化。",
+      subtitle: "按月报价。GoRadar AI 可按月订阅；执行型服务最低合作 90 天。",
+      note: "服务型合作按月预付。",
       guidance: "团队能执行，先选工具；需要有人落地，选执行；需要跨渠道持续推进，选长期统筹。",
-      fees: "套餐价格为工具与服务费，广告媒体预算另计。$5,000 / $30,000 指不加收广告管理费的投放额度上限，不是包含的广告预算；额外平台及超额费用见完整对比。",
+      fees: "套餐价格为工具与服务费。广告媒体预算、赞助与媒体权益费、达人合作费、制作成本及其他第三方费用另计。$5,000 / $30,000 指每月不另收广告管理费的投放额度上限，不是包含的广告预算；额外平台及超额费用见完整对比。",
+      disclaimer: "具体交付范围、渠道数量和第三方费用将在合作开始前确认。",
       btnExpand: "↓ 展开完整服务细节对比",
       btnCollapse: "↑ 收起服务细节对比",
       includedText: "✓ 包含",
@@ -531,11 +536,12 @@ const dict = {
         {
           name: "GoRadar AI™ 战术版",
           price: "$399", oldPrice: "$599", period: "/ 月",
+          billing: "按月订阅，可按月续订",
           mode: "工具与策略支持",
           desc: "适合已有执行团队，需要看清市场、比较机会、确定优先级的企业。用 GoRadar AI 与定期策略复盘，为团队行动提供依据。",
           features: [
-            "GoRadar AI™ 实时数据看板",
-            "每月 1 次主理人 1V1 策略诊断",
+            "GoRadar AI™ 市场情报看板",
+            "每月 1 次定期策略复盘（60 分钟）",
             "现有独立站/广告账户检查",
             "竞争对手与潜在关键词报告"
           ],
@@ -546,13 +552,14 @@ const dict = {
         {
           name: "核心引擎版",
           price: "$999", oldPrice: "$1,499", period: "/ 月",
+          billing: "最低合作 90 天，按月预付",
           mode: "内容与广告执行",
           desc: "适合已有产品和目标市场，需要有人把内容与广告做起来的企业。围绕重点渠道执行、测试与优化，补上日常落地能力。",
           features: [
             "包含【战术版】所有核心权益",
             "管理 1 个广告 + 1 个内容平台",
-            "$5,000 以内广告消耗免额外管理费",
-            "每两周一次策略与进度会议"
+            "每月广告消耗在 $5,000 以内，不另收广告管理费",
+            "每两周 1 次定期策略复盘"
           ],
           addon: "每增加一个渠道模块 +$349/月",
           btn: "启动核心引擎",
@@ -561,14 +568,15 @@ const dict = {
         {
           name: "全球共享 CMO 版",
           price: "$2,499+", oldPrice: "$3,999", period: "/ 月",
+          billing: "最低合作 90 天，按月预付",
           mode: "长期增长统筹",
           desc: "适合已在多个渠道推进海外业务，需要持续统筹策略与执行的企业。由共享 CMO 协调市场判断、内容、投放与复盘。",
           features: [
             "包含【核心引擎版】所有权益",
-            "多平台管理 (Google/Meta/TikTok/LinkedIn)",
-            "$30,000 以内广告消耗免额外管理费",
+            "多渠道统筹（具体范围按合作方案确认）",
+            "每月广告消耗在 $30,000 以内，不另收广告管理费",
             "独立站 SEO 与品牌信任建设",
-            "24/7 专属沟通与优先支持"
+            "优先支持，具体沟通机制在合作开始时确认"
           ],
           addon: "",
           btn: "雇佣您的 CMO",
@@ -579,8 +587,8 @@ const dict = {
         {
           category: "GoRadar AI™ 市场情报与策略",
           items: [
-            { name: "竞争对手与搜索机会报告", t1: "每月 1 份", t2: "每月 2 份", t3: "实时动态监测" },
-            { name: "1V1 策略与数据复盘会", t1: "1 次 (60分钟)", t2: "2 次 (每两周一次)", t3: "4 次 (每周深度会)" },
+            { name: "竞争对手与搜索机会报告", t1: "每月 1 份", t2: "每月 2 份", t3: "持续监测" },
+            { name: "定期策略复盘", t1: "每月 1 次（60 分钟）", t2: "每月约 2 次", t3: "每周 1 次" },
             { name: "独立站/广告账户检查", t1: "✔", t2: "✔", t3: "✔" },
             { name: "市场进入策略定制 (GTM)", t1: "✘", t2: "✔", t3: "✔" }
           ]
@@ -588,7 +596,7 @@ const dict = {
         {
           category: "品牌与网站基础",
           items: [
-            { name: "社媒账号搭建与搜索优化 (SEO)", t1: "✘", t2: "1-2 个核心平台", t3: "全渠道平台统筹" },
+            { name: "社媒账号搭建与搜索优化 (SEO)", t1: "✘", t2: "1-2 个核心平台", t3: "多渠道统筹（具体范围按合作方案确认）" },
             { name: "独立站转化诊断 (CRO)", t1: "✘", t2: "✔", t3: "持续优化与 A/B 测试" }
           ]
         },
@@ -596,9 +604,9 @@ const dict = {
           category: "海外内容与本地化",
           items: [
             { name: "AI 辅助本地化素材制作", t1: "✘", t2: "按推广活动定量交付", t3: "批量素材制作与深度本地化" },
-            { name: "社媒内容排期与发布", t1: "✘", t2: "重点平台每日发布", t3: "全渠道批量内容发布" },
-            { name: "粉丝互动与线索引导", t1: "✘", t2: "✔", t3: "全天候线索筛选与跟进" },
-            { name: "本土 KOL/UGC 资源对接", t1: "✘", t2: "✘", t3: "每月定量达人管理" }
+            { name: "社媒内容排期与发布", t1: "✘", t2: "按月内容计划执行与发布", t3: "多渠道内容统筹与持续发布" },
+            { name: "粉丝互动与线索引导", t1: "✘", t2: "✔", t3: "线索整理与转化路径支持" },
+            { name: "本土 KOL/UGC 资源对接", t1: "✘", t2: "✘", t3: "达人 / 创作者合作支持（按项目与范围确认）" }
           ]
         },
         {
@@ -606,15 +614,15 @@ const dict = {
           items: [
             { name: "开户、像素/CAPI 数据追踪", t1: "✘", t2: "✔", t3: "✔" },
             { name: "广告策略与目标受众", t1: "✘", t2: "单一核心渠道", t3: "多渠道联合投放" },
-            { name: "A/B 测试与广告回报优化 (ROAS)", t1: "✘", t2: "✔", t3: "高频多变量测试" },
-            { name: "不加收管理费的广告投放额度", t1: "✘", t2: "最高涵盖 $5,000", t3: "最高涵盖 $30,000" },
-            { name: "超额广告消耗管理费", t1: "✘", t2: "超出部分收 10%", t3: "超出部分收 8%-10%" }
+            { name: "A/B 测试与广告回报优化 (ROAS)", t1: "✘", t2: "✔", t3: "根据预算、流量和素材条件持续进行测试与优化" },
+            { name: "不另收管理费的每月广告消耗额度", t1: "✘", t2: "最高 $5,000", t3: "最高 $30,000" },
+            { name: "超额广告消耗管理费", t1: "✘", t2: "超过 $5,000 的部分按 10% 收取", t3: "超过 $30,000 的部分根据投放规模按 8–10% 收取" }
           ]
         },
         {
           category: "沟通与支持",
           items: [
-            { name: "问题响应与答疑", t1: "48小时邮件支持", t2: "工作日 24小时响应", t3: "24/7 优先响应" }
+            { name: "首次响应与答疑", t1: "首次邮件回复：2 个工作日内", t2: "首次回复：1 个工作日内", t3: "优先支持，具体沟通机制在合作开始时确认" }
           ]
         }
       ]
@@ -652,11 +660,11 @@ const dict = {
         },
         {
           q: "广告预算包含在服务费里吗？",
-          a: "不包含，套餐价格是工具与服务费用，媒体广告预算另计。核心引擎版的 $5,000 和全球共享 CMO 版的 $30,000，是不加收广告管理费的投放额度上限，不是赠送的广告金额。额外平台和超出额度的管理费可在套餐对比中查看。"
+          a: "不包含，套餐价格是工具与服务费用，媒体广告预算另计。核心引擎版的 $5,000 和全球共享 CMO 版的 $30,000，是每月不加收广告管理费的投放额度上限，不是赠送的广告金额。额外平台和超出额度的管理费可在套餐对比中查看。"
         },
         {
-          q: "页面写的是月价，为什么按季度付款？",
-          a: "页面展示每月价格，实际按季度预付，最低合作周期为 90 天。连续的合作周期便于完成市场分析、内容准备、测试与优化。具体范围和首期应付金额会在合作前确认。"
+          q: "套餐如何收费？需要长期签约吗？",
+          a: "GoRadar AI $399 可按月订阅。核心引擎版和全球共享 CMO 版最低合作 90 天，服务型套餐按月预付。广告媒体预算、赞助与媒体权益费、达人合作费、制作成本及其他第三方费用另计。"
         },
         {
           q: "想做品牌赞助与达人营销，应该怎么开始？",
@@ -691,7 +699,7 @@ const dict = {
         errorEmail: "请填写有效的工作邮箱。",
       }
     },
-    footer: { left: "© 2026 BrandGo.Global STUDIO", right: "全球协作。策略与执行落地。" },
+    footer: { left: "© 2026 BrandGo.Global", right: "全球协作。策略与执行落地。", clientLogin: "客户登录" },
     mobile: { openMenu: "打开导航菜单", closeMenu: "关闭导航菜单" }
   }
 };
@@ -1159,7 +1167,7 @@ export default function Page() {
       {/* ==================== 7. PRICING 订阅价格区 (带卡片内无限拉长对比) ==================== */}
       <section id="pricing" data-section-theme="dark" className="bg-[#0A0A0A] px-6 md:px-8 py-32 border-t border-white/20">
 
-        {/* 标题与季付提示 */}
+        {/* 标题与付款方式提示 */}
         <div className="flex flex-col items-center justify-center text-center mb-16">
           <p className="text-xs font-bold tracking-widest text-[#E5FF00] mb-6" lang="en">{t.pricing.kicker}</p>
           <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-[1.1] whitespace-pre-line text-balance text-[#E5FF00] mb-6">
@@ -1216,6 +1224,9 @@ export default function Page() {
                     <span className="text-6xl lg:text-[4rem] font-black tracking-tighter leading-none">{tier.price}</span>
                     <span className={`text-xl font-bold ${tier.highlight ? 'text-black/70' : 'text-gray-500'}`}>{tier.period}</span>
                   </div>
+                  <p className={`mt-4 text-sm font-black leading-snug ${tier.highlight ? 'text-black/75' : 'text-gray-300'}`}>
+                    {tier.billing}
+                  </p>
                 </div>
 
                 <div className="mb-8">
@@ -1313,6 +1324,10 @@ export default function Page() {
             {showSla ? t.pricing.btnCollapse : t.pricing.btnExpand}
           </button>
         </div>
+
+        <p className="max-w-3xl mx-auto mt-8 text-center text-xs md:text-sm leading-relaxed text-gray-500">
+          {t.pricing.disclaimer}
+        </p>
 
       </section>
 
@@ -1639,9 +1654,28 @@ export default function Page() {
       </section>
 
       <footer data-section-theme="dark" className="bg-[#0A0A0A] text-white px-6 md:px-8 py-8 w-full border-t border-white/20">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-bold uppercase tracking-tight text-gray-500">
-          <span>{t.footer.left}</span>
-          <span>{t.footer.right}</span>
+        <div className="flex flex-col gap-6">
+          <nav aria-label={lang === "zh" ? "页脚导航" : "Footer navigation"} className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm font-bold text-gray-300">
+            {[
+              { label: t.nav.goradar, href: "#goradar" },
+              { label: t.nav.services, href: "#services" },
+              { label: t.nav.cases, href: "#cases" },
+              { label: t.nav.pricing, href: "#pricing" },
+              { label: t.nav.faq, href: "#faq" },
+              { label: t.nav.contact, href: "#contact" },
+            ].map((item) => (
+              <a key={item.href} href={item.href} className="hover:text-[#E5FF00] transition-colors">
+                {item.label}
+              </a>
+            ))}
+            <a href="https://app.brandgo.global/" className="text-[#E5FF00] hover:text-white transition-colors">
+              {t.footer.clientLogin}
+            </a>
+          </nav>
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs font-bold uppercase tracking-tight text-gray-500">
+            <span>{t.footer.left}</span>
+            <span>{t.footer.right}</span>
+          </div>
         </div>
       </footer>
 
