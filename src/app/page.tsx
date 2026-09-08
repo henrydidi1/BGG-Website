@@ -9,113 +9,178 @@ import Header from '@/components/Header';
 // ==========================================
 const dict = {
   en: {
-    nav: { goradar: "GoRadar AI", services: "Services", cases: "Cases", pricing: "Pricing", faq: "FAQ", contact: "Contact", signin: "Sign In", langSwitch: "中" },
+    nav: { goradar: "GoRadar AI", services: "Services", cases: "Use Cases", pricing: "Pricing", faq: "FAQ", contact: "Contact", signin: "Sign In", langSwitch: "中" },
     hero: {
+      eyebrow: "AI-POWERED GLOBAL GROWTH TEAM",
       title: "MARKET RADAR: ON.\nGUESSWORK: OFF.",
-      subtitle: "Powered by our proprietary GoRadar\u00A0AI™.\nWe uncover hidden market opportunities, craft data-driven strategies,\nand acquire high-value clients globally."
+      subtitle: "BrandGo.Global helps Chinese businesses understand overseas markets, find customers, and put growth plans into action.\nWe use GoRadar AI to track markets, competitors, and customer needs, then deliver the strategy, content, and advertising to reach them."
     },
-    marquee: ["GoRadar AI™", "STRATEGY", "CONTENT STUDIO", "PERFORMANCE ADS"],
+    marquee: ["MARKET INTELLIGENCE", "CONTENT & LOCALIZATION", "PAID MEDIA", "SPONSORSHIPS & CREATOR MARKETING"],
     services: {
-      title: "CORE SERVICES:\nTHE 3-ENGINE SYSTEM",
-      desc: "Transforming compute power into global market share. Here is our execution roadmap.",
+      kicker: "WHAT WE HELP YOU DO",
+      title: "FOUR WAYS\nTO GROW OVERSEAS",
+      desc: "Understand the market. Build trust through content. Find customers. Extend your reach.",
       s1: {
-        title: "GoRadar AI™ SYSTEM",
-        desc: "Our proprietary market intelligence engine.\nWe don't guess the market; we compute it.",
+        title: "UNDERSTAND THE MARKET",
+        label: "GoRadar AI",
+        desc: "GoRadar AI is our AI market intelligence app. It collects and analyzes market, competitor, customer demand, and trend data to help your team assess opportunities and decide where to go and what to do first.",
         btnOpen: "EXPLORE THE RADAR",
-        btnClose: "CLOSE TERMINAL",
+        btnClose: "CLOSE RADAR DETAILS",
         features: [
-          { name: "COMPETITOR BLINDSPOT SCANNER", detail: "Real-time tracking of global competitors to identify untargeted, high-margin search keywords." },
-          { name: "CROSS-BORDER DEMAND MATRIX", detail: "Algorithms that match local overseas search intent directly with your supply chain advantages." },
-          { name: "AI AUDIENCE SIMULATOR", detail: "Simulates ad performance across demographics before you spend a single dollar on media buying." }
+          {
+            name: "COMPETITOR & SEARCH OPPORTUNITIES",
+            detail: "Tracks overseas competitors and search data to identify underserved needs and keywords for your team to evaluate."
+          },
+          {
+            name: "CUSTOMER DEMAND & SUPPLY CHAIN FIT",
+            detail: "Matches overseas search demand with your manufacturing, product, and delivery strengths to help assess which needs fit your business."
+          },
+          {
+            name: "AI AUDIENCE SIMULATION",
+            detail: "Models potential ad performance across audiences before launch to help prioritize tests. Actual results are validated through live campaigns."
+          }
         ]
       },
       s2: {
-        title: "GLOBAL CONTENT",
-        desc: "AI-enhanced cultural storytelling that breaks borders.\nDominating TikTok, Instagram, YouTube, and RED.",
+        title: "CREATE CONTENT THAT CONNECTS",
+        label: "Content & Localization",
+        desc: "Use AI to explore content ideas, angles, and local expressions, then bring them to your overseas social and content channels. Help customers understand your brand, want to engage with it, and learn to trust it.",
         bullets: [
-          "Viral Creative & UGC Production",
-          "Cross-Cultural Localization",
-          "Influencer & KOL Partnerships",
-          "Community Management"
+          "Content Strategy, Topics & Messaging",
+          "Short-Form Video & User-Generated Content",
+          "Multilingual Content & Cultural Localization",
+          "Social Account & Community Management"
         ],
-        kpis: ["KPI: ENGAGEMENT RATE", "KPI: BRAND IMPRESSION"]
-      },
-      s3: {
-        title: "PERFORMANCE ADS",
-        desc: "Precision media buying executed like a quantitative portfolio.\nWe ruthlessly scale budgets and optimize conversion funnels.",
-        bullets: [
-          "Search Intent Capture (Google/LinkedIn)",
-          "Social Lead Gen & Sales (Meta/TikTok)",
-          "Retargeting & A/B Testing",
-          "Landing Page CRO Optimization"
-        ],
-        kpis: ["KPI: CPA / CPL", "KPI: TARGET ROAS"]
-      },
-    },
-    protocol: {
-      title: "THE 90-DAY ROADMAP",
-      intro: {
-        title: "WHY DO WE NEED 90 DAYS?",
-        reasons: [
-          { title: "NO FAKE PROMISES", desc: "AI ad models and cross-cultural trust require 30-45 days of data feeding. Anyone promising 'week-one virality' is burning your brand equity." },
-          { title: "ZERO BLACK BOXES", desc: "Our roadmap is precise to the week. From audits to asset launches, you track every hard deliverable. You know exactly where your money goes." },
-          { title: "DATA-BACKED SCALING", desc: "We spend small in the first 30 days on high-frequency A/B testing. We then heavily fund the proven high-ROI models in the next 60 days to minimize risk." }
+        kpis: [
+          "FOCUS: ENGAGEMENT",
+          "FOCUS: BRAND AWARENESS"
         ]
       },
-      p1: { tag: "PHASE 01: WEEK 1", title: "AUDIT & STRATEGY", desc: "Plug into the GoRadar AI™ Dashboard. We audit your past wasted spend, reverse-engineer competitor blindspots, and deliver your GTM Strategy Blueprint." },
-      p2: { tag: "PHASE 02: WEEK 2-3", title: "CREATIVE & TRACKING SETUP", desc: "Deploy pixel-perfect tracking (GA4/Meta CAPI) before spending a dime. We simultaneously deliver 30+ cross-cultural high-converting visual assets." },
-      p3: { tag: "PHASE 03: MONTH 1", title: "LAUNCH & AGGRESSIVE TESTING", desc: "Initiate live campaigns. We high-frequency test audience and creative combinations, forcefully feed the AI algorithms, and lock in your first high-ROI model." },
-      p4: { tag: "PHASE 04: MONTH 2-3+", title: "SCALE & DOMINATE", desc: "Kill underperforming ads. We allocate 80% of the budget to proven winner models, scaling exponentially while strictly capping your CPA redline." }
+      s3: {
+        title: "ACQUIRE CUSTOMERS",
+        label: "Paid Media & Growth",
+        desc: "Combine ad management, GoRadar AI-assisted analysis, and ongoing optimization. Test audiences, creatives, channels, and landing pages, then use real data to improve how you generate inquiries and acquire customers.",
+        bullets: [
+          "Ad Analysis & Campaign Recommendations",
+          "Search & Social Ads, B2B Lead Generation",
+          "Audience, Creative & Channel A/B Testing",
+          "Retargeting & Landing Page Optimization"
+        ],
+        kpis: [
+          "FOCUS: ACQUISITION COST",
+          "FOCUS: LEAD & CONVERSION QUALITY"
+        ]
+      },
+      s4: {
+        title: "Build Influence",
+        label: "Sponsorships & Creator Marketing",
+        desc: "Build brand visibility and trust through sponsorships, creators, and strategic partnerships across relevant content, sports, and communities.",
+        bullets: [
+          "Sponsorship Strategy & Opportunity Assessment",
+          "Influencer / Creator Matching & Collaboration Planning",
+          "Partnership Content & Local Messaging",
+          "Brand Exposure & Trust Building"
+        ],
+        kpis: [
+          "FOCUS: BRAND FIT",
+          "FOCUS: RELEVANT REACH"
+        ]
+      }
+    },
+    protocol: {
+      kicker: "THE FIRST 90 DAYS",
+      title: "HOW WE\nGET STARTED",
+      desc: "Agree on the direction before increasing investment. These are the usual steps for execution engagements; the work and pace depend on your existing setup and chosen plan.",
+      p1: {
+        tag: "UNDERSTAND",
+        title: "CLARIFY THE MARKET & THE PROBLEM",
+        desc: "Start with your products, customers, and goals. Use GoRadar AI to review the market and competition, identify priorities, and agree on what to validate first."
+      },
+      p2: {
+        tag: "PREPARE",
+        title: "PUT THE FOUNDATIONS IN PLACE",
+        desc: "Review your website and accounts, prepare localized content, and check conversion tracking so tests have useful materials and reliable data. Build on what is already working and fill the gaps."
+      },
+      p3: {
+        tag: "TEST",
+        title: "TEST WITH A CONTROLLED BUDGET",
+        desc: "Test priority audiences, content, and channels on a small scale. Review inquiries, conversions, and acquisition costs together to decide what to continue and what to adjust."
+      },
+      p4: {
+        tag: "REFINE",
+        title: "BUILD ON WHAT WORKS",
+        desc: "Improve content and campaigns using test feedback, then gradually direct resources toward effective approaches. Regular reviews make progress, budget use, and next steps clear."
+      }
     },
     cases: {
-      title: "BATTLE-TESTED WINS",
-      desc: "We don't sell theories. We deploy compute to capture market share.",
+      title: "TYPICAL\nUSE CASES",
+      desc: "Recognize a challenge your business is facing? These common needs and ways we can help are a starting point for a conversation.",
       list: [
         {
-          tag: "B2B / HEAVY SUPPLY CHAIN",
-          title: "BREAKING THE EUROPEAN TRUST BARRIER",
-          metric: "380% ROI",
-          desc: "Built a zero-to-one high-converting infrastructure for heavy-duty compressed furniture. Transitioned their global image from 'cheap factory' to 'premium lifestyle choice'.",
-          img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80"
+          tag: "MARKET ENTRY",
+          title: "Not sure which overseas market to enter first",
+          desc: "You are ready to expand but unsure where to invest first. BrandGo.Global uses GoRadar AI to analyze demand, trends, and competition so you can prioritize markets to validate."
         },
         {
-          tag: "D2C / CONSUMER ELECTRONICS",
-          title: "SCALING THE US MARKET WITH AI ADS",
-          metric: "$2.4M ARR",
-          desc: "Deployed aggressive A/B testing on Meta and TikTok. Used GoRadar AI™ to identify untargeted tech-enthusiast demographics, cutting CPA by 42% in 60 days.",
-          img: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+          tag: "EUROPE",
+          title: "Bringing a Chinese supply-chain brand to Europe",
+          desc: "Your products and delivery are competitive, but European customers do not know your brand yet. BrandGo.Global combines market analysis, localized content, and channel testing to shape your market entry."
         },
         {
-          tag: "HIGH-TICKET / SAAS",
-          title: "DOMINATING ENTERPRISE LEAD GEN",
-          metric: "5X INQUIRIES",
-          desc: "Overhauled SEO architecture and executed precision LinkedIn Ads to bypass gatekeepers, connecting directly with C-level executives in Southeast Asia.",
-          img: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
+          tag: "D2C ACQUISITION",
+          title: "North American D2C acquisition is getting expensive",
+          desc: "Ads keep spending and creatives are losing effectiveness, but the cause is unclear. BrandGo.Global tests audiences, creatives, channels, and landing pages to find more effective acquisition combinations."
+        },
+        {
+          tag: "B2B LEADS",
+          title: "Struggling to reach overseas decision-makers",
+          desc: "You know which companies to target but struggle to reach the people who make buying decisions. BrandGo.Global combines market intelligence, search, LinkedIn, and content to build a clearer path to relevant leads."
+        },
+        {
+          tag: "GROWTH REVIEW",
+          title: "Already overseas, but growth has stalled",
+          desc: "Your website, ads, and overseas social channels are active, but growth has slowed. BrandGo.Global reviews markets, competitors, and channel performance to identify opportunities worth testing next."
+        },
+        {
+          tag: "BRAND BUILDING",
+          title: "Export orders are coming in, but a brand is missing",
+          desc: "You are fulfilling export orders, but customers mainly remember your products and prices. BrandGo.Global develops positioning, product messaging, and localized content to turn supply strengths into a recognizable brand."
+        },
+        {
+          tag: "PARTNERSHIPS",
+          title: "Unsure where to start with sponsorships or creators",
+          desc: "You want more exposure but are unsure who to work with, what to create, or how to budget. BrandGo.Global helps define audiences, brand fit, and partnership direction before agreeing on a practical project scope."
+        },
+        {
+          tag: "DIRECT ACQUISITION",
+          title: "Selling through platforms or agents, but wanting direct customers",
+          desc: "Sales are established, but customer relationships and new orders still depend mainly on platforms or agents. BrandGo.Global combines your brand website, content, and ad tests to help build your own customer reach and direct acquisition capability."
         }
       ]
     },
     about: {
-      title: "WE HATE VANITY METRICS.",
-      manifesto: "Too many agencies hide behind 'impressions' and 'likes'.\nYou can't deposit clicks at the bank.\n\nWe act as an extension of your growth team.\nWe speak your language: Supply Chains, Net Margins, CAC, and LTV.",
+      title: "BUSINESS RESULTS\nCOME FIRST.",
+      manifesto: "Impressions and likes are useful signals. Our focus is leads, acquisition costs, conversion rates, and meaningful growth.\n\nAs your overseas growth team, we connect market insight with content and advertising execution, using actual performance to guide the next investment.",
       stat: "10+ YEARS",
-      statDesc: "CROSS-BORDER FRONTLINE EXPERIENCE",
-      teamTitle: "THE MINDS BEHIND THE MACHINE",
-      teamDesc: "Distributed globally, executing precisely. Operating out of core global hubs (Bali, Singapore, Kuala Lumpur, Amsterdam) to stay intimately close to enterprise supply chains and global markets.",
+      statDesc: "IN CROSS-BORDER BUSINESS & SUPPLY CHAINS",
+      teamTitle: "Founder",
       member1: {
-        name: "YUSHENG YANG",
+        name: "Yusheng Yang",
         role: "CO-FOUNDER",
-        desc: "Holding a BSc in Accounting & Finance from Lancaster University and a Master's from the University of Warwick, Yusheng brings over a decade of frontline experience scaling B2B/D2C cross-border supply chains. As a GTM strategist and the architect behind GoRadar AI™, he bridges European business acumen with Asian manufacturing power. Outside the war room, he is a competitive ultra-trail runner, applying the discipline of endurance sports to long-term business growth."
-      },
-      member2: {
-        name: "WARREN GOLDSMITH",
-        role: "HEAD OF DIGITAL",
-        desc: "A British native with a BSc from UCL and an MSc from Imperial College Business School, Warren brings 8 years of hardcore digital performance expertise. He is the mastermind behind our precision media buying and AI-driven conversion funnels. Treating ad spend like a quantitative hedge fund, he leverages his rigorous financial background to ruthlessly optimize for maximum ROI."
+        bio: [
+          "Yusheng studied Finance at Lancaster University and earned a master's in Project Management at the University of Warwick. His career across China and Asia connects brand development, commercial strategy, and cross-border business.",
+          "He brings more than a decade of experience in branding, marketing, go-to-market strategy, and global supply chains, including building consumer brands and managing cross-border supply-chain projects. His focus is practical: who to sell to, how to position the offer, and where to invest first.",
+          "At BrandGo.Global, he leads market entry strategy and GoRadar AI product architecture, connecting market intelligence with content, advertising, and localization to help Chinese businesses turn opportunities into action."
+        ]
       }
     },
     pricing: {
-      title: "PRICING PROTOCOL",
-      subtitle: "TRANSPARENT RETAINERS",
-      note: "Billed quarterly. 90-day minimum commitment for algorithm maturity.",
+      kicker: "WAYS TO WORK TOGETHER",
+      title: "CHOOSE YOUR\nLEVEL OF SUPPORT",
+      subtitle: "MONTHLY PRICING. QUARTERLY BILLING.",
+      note: "Paid quarterly in advance. A 90-day minimum covers analysis, testing, and optimization.",
+      guidance: "Have an execution team? Start with intelligence. Need delivery? Choose execution. Need ongoing leadership across channels? Choose Fractional CMO.",
+      fees: "Plan prices cover tools and services; media spend is separate. The $5,000 / $30,000 limits are ad spend caps with no additional management fee, not included ad budgets. See the full comparison for extra-platform and overage fees.",
       btnExpand: "↓ VIEW FULL FEATURE COMPARISON",
       btnCollapse: "↑ HIDE FULL COMPARISON",
       includedText: "✓ INCLUDED",
@@ -123,12 +188,13 @@ const dict = {
         {
           name: "GoRadar AI™ TIER",
           price: "$399", oldPrice: "$599", period: "/ MO",
-          desc: "Data and direction. For teams needing precise targeting coordinates without full execution.",
+          mode: "INTELLIGENCE & GUIDANCE",
+          desc: "For businesses with an execution team that need clearer market insight and priorities. Use GoRadar AI and regular strategy reviews to guide your next actions.",
           features: [
             "GoRadar AI™ Live Dashboard",
-            "1v1 Monthly Strategy Diagnostic (60m)",
-            "Ad Account Health Audit",
-            "Untapped Keywords Report"
+            "Monthly 1:1 Strategy Review (60m)",
+            "Website & Ad Account Audit",
+            "Competitor & Keyword Opportunities Report"
           ],
           addon: "",
           btn: "GET RADAR ACCESS",
@@ -137,12 +203,13 @@ const dict = {
         {
           name: "CORE ENGINE TIER",
           price: "$999", oldPrice: "$1,499", period: "/ MO",
-          desc: "Your lightweight global growth department. We steer the AI and execute the core campaigns.",
+          mode: "CONTENT & AD EXECUTION",
+          desc: "For businesses with a product and target market that need hands-on content and advertising support. Get execution, testing, and optimization across priority channels.",
           features: [
             "Everything in GoRadar AI™ Tier",
-            "1 Ads + 1 Content Platform Execution",
-            "Up to $5,000 Ad Spend Management",
-            "Bi-weekly War Room Sync"
+            "1 Ad + 1 Content Platform Managed",
+            "No Extra Management Fee on Up to $5,000 Ad Spend",
+            "Strategy & Progress Meeting Every Two Weeks"
           ],
           addon: "+$349/mo per extra platform",
           btn: "START CORE ENGINE",
@@ -151,13 +218,14 @@ const dict = {
         {
           name: "FRACTIONAL CMO TIER",
           price: "$2,499+", oldPrice: "$3,999", period: "/ MO",
-          desc: "Hand over your global growth lifeline. We handle the entire funnel from strategy to execution.",
+          mode: "ONGOING GROWTH LEADERSHIP",
+          desc: "For businesses growing across channels that need ongoing strategic direction and coordination. A fractional CMO connects market insight, content, advertising, and reviews.",
           features: [
             "Everything in Core Engine Tier",
-            "Unlimited Platforms (Meta/Google/TikTok)",
-            "Up to $30,000 Ad Spend Management",
-            "SEO & B2B Trust Infrastructure",
-            "24/7 Async War Room Access"
+            "Unlimited Platforms (Google/Meta/TikTok/LinkedIn)",
+            "No Extra Management Fee on Up to $30,000 Ad Spend",
+            "Website SEO & Brand Trust Building",
+            "24/7 Dedicated Async Access & Priority Support"
           ],
           addon: "",
           btn: "HIRE YOUR CMO",
@@ -166,42 +234,42 @@ const dict = {
       ],
       comparisonDetails: [
         {
-          category: "GoRadar AI™ Strategy",
+          category: "GoRadar AI™ Intelligence & Strategy",
           items: [
-            { name: "Competitor Blindspot Scanner", t1: "1 Report / Mo", t2: "2 Reports / Mo", t3: "Live Monitoring" },
-            { name: "1v1 Strategy & Data Sync", t1: "1x (60 mins)", t2: "2x (Bi-weekly)", t3: "4x (Weekly Deep Dive)" },
+            { name: "Competitor & Search Opportunities Report", t1: "1 Report / Mo", t2: "2 Reports / Mo", t3: "Live Monitoring" },
+            { name: "1:1 Strategy & Data Review", t1: "1x (60 mins)", t2: "2x (Every Two Weeks)", t3: "4x (Weekly Deep Dive)" },
             { name: "Ad Account & Site Health Audit", t1: "✔", t2: "✔", t3: "✔" },
-            { name: "GTM Strategy Customization", t1: "✘", t2: "✔", t3: "✔" }
+            { name: "Custom Go-to-Market Strategy (GTM)", t1: "✘", t2: "✔", t3: "✔" }
           ]
         },
         {
-          category: "Infrastructure",
+          category: "Brand & Website Foundations",
           items: [
-            { name: "Social Matrix Setup & SEO", t1: "✘", t2: "1-2 Core Platforms", t3: "Omnichannel Setup" },
-            { name: "Landing Page CRO Diagnostics", t1: "✘", t2: "✔", t3: "Extreme A/B Testing" }
+            { name: "Social Account Setup & Search Optimization (SEO)", t1: "✘", t2: "1-2 Core Platforms", t3: "All-Channel Setup" },
+            { name: "Website Conversion Review (CRO)", t1: "✘", t2: "✔", t3: "Ongoing Optimization & A/B Testing" }
           ]
         },
         {
-          category: "Global Content Studio",
+          category: "Content & Localization",
           items: [
-            { name: "AI Visual Assets Production", t1: "✘", t2: "Core Campaign Sets", t3: "Saturated + Localized" },
-            { name: "Social Distribution Scheduling", t1: "✘", t2: "Daily on Core Platforms", t3: "Omnichannel Saturated" },
-            { name: "Engagement & Lead Routing", t1: "✘", t2: "✔", t3: "24/7 Deep Nurturing" },
+            { name: "AI-Assisted Localized Visual Production", t1: "✘", t2: "Defined Sets per Campaign", t3: "Volume Production & In-Depth Localization" },
+            { name: "Social Content Scheduling & Publishing", t1: "✘", t2: "Daily on Core Platforms", t3: "Volume Publishing Across Channels" },
+            { name: "Community Engagement & Lead Routing", t1: "✘", t2: "✔", t3: "24/7 Lead Screening & Follow-Up" },
             { name: "KOL/UGC Resource Mgmt", t1: "✘", t2: "✘", t3: "Monthly Quota Managed" }
           ]
         },
         {
-          category: "Performance Ads",
+          category: "Ads & Growth",
           items: [
-            { name: "Account Setup & Pixel Tracking", t1: "✘", t2: "✔", t3: "✔" },
-            { name: "Ad Strategy & Audience", t1: "✘", t2: "1 Core Channel", t3: "All-Funnel (Google/Meta/LI)" },
-            { name: "Quant A/B Testing & ROAS", t1: "✘", t2: "✔", t3: "High-Frequency Testing" },
+            { name: "Ad Account Setup & Pixel/CAPI Tracking", t1: "✘", t2: "✔", t3: "✔" },
+            { name: "Ad Strategy & Target Audiences", t1: "✘", t2: "1 Core Channel", t3: "Coordinated Multi-Channel Campaigns" },
+            { name: "A/B Testing & Ad Return Optimization (ROAS)", t1: "✘", t2: "✔", t3: "Frequent Multivariable Testing" },
             { name: "Zero-Fee Ad Spend Cap", t1: "✘", t2: "Up to $5,000", t3: "Up to $30,000" },
             { name: "Overage Management Fee", t1: "✘", t2: "10% Flat", t3: "8-10% Tiered" }
           ]
         },
         {
-          category: "War Room Support",
+          category: "Communication & Support",
           items: [
             { name: "Response & Troubleshooting", t1: "48h Email", t2: "24h Weekdays", t3: "24/7 Priority" }
           ]
@@ -209,10 +277,49 @@ const dict = {
       ]
     },
     faq: {
-      title: "FAQ",
-      q1: { q: "HOW DOES GoRadar AI™ WORK?", a: "It scans global data to find high-margin keywords and competitor blindspots, allowing us to acquire clients efficiently." },
-      q2: { q: "WHAT PLATFORMS DO YOU COVER?", a: "We execute full-funnel campaigns across Google, Meta (FB/IG), TikTok, LinkedIn, YouTube, and Xiaohongshu (RED)." },
-      q3: { q: "WHY DO YOU REQUIRE QUARTERLY BILLING?", a: "AI algorithm maturity and cross-border marketing optimizations take time. The 90-day commitment ensures we build a robust, scalable conversion funnel rather than chasing short-term vanity clicks." }
+      title: "BEFORE\nWE START",
+      items: [
+        {
+          q: "What is GoRadar AI? Can I choose it without execution services?",
+          a: "GoRadar AI is our AI market intelligence and decision support app, available through the GoRadar AI™ Tier without an execution plan. It analyzes markets, competitors, search trends, and customer needs, with the strategy reviews included in your plan to help prioritize action. Decisions still need business context and validation through real execution."
+        },
+        {
+          q: "What services do you provide?",
+          a: "We help with four areas: market understanding, content, customer acquisition, and brand reach. These cover GoRadar AI, overseas content and localization, advertising and optimization, and Sponsorships & Creator Marketing. Deliverables depend on the chosen plan or agreed project scope."
+        },
+        {
+          q: "Who is this for? Can we work together before launching overseas?",
+          a: "We work with Chinese businesses entering or expanding in overseas markets, including B2B companies, D2C businesses, and brands with supply-chain strengths. If you have not launched yet, we can start with market assessment and priorities. Clear product information, goals, and available resources help us agree on a useful starting point."
+        },
+        {
+          q: "How can you work with our existing team or agency?",
+          a: "We can work around the gaps in your current setup. Choose GoRadar AI for intelligence and guidance, Core Engine for content and ad execution, or Fractional CMO for ongoing strategy and coordination across channels. We agree on responsibilities, account access, and communication before starting."
+        },
+        {
+          q: "Which platforms and channels do you cover?",
+          a: "Content and advertising support covers Google, Meta (Facebook / Instagram), TikTok, LinkedIn, YouTube, and Xiaohongshu (RED). The actual channels depend on where your customers are, your goals, and your plan. We start with priority channels and validate them before expanding."
+        },
+        {
+          q: "How do we start, and what should we prepare?",
+          a: "We first align on products, target markets, goals, and your current setup, then agree on responsibilities and the first step. Prepare a product or service overview, website and account links, existing content, and any available ad, sales, or inquiry data. Incomplete data is fine: we identify gaps and prepare content, tracking, and tests as needed."
+        },
+        {
+          q: "How soon will we see a direction or early results?",
+          a: "Market direction usually comes before acquisition results; timing depends on your starting point, budget, and customer buying cycle. We begin with market and problem assessment, then use small tests to look for inquiry and conversion signals. The first 90 days provide a continuous cycle of analysis, testing, and optimization, with no sales or return guarantee."
+        },
+        {
+          q: "Is the advertising budget included in the service fee?",
+          a: "No: plan prices cover tools and services, while media spend is separate. The $5,000 Core Engine and $30,000 Fractional CMO limits are ad spend caps with no additional management fee, not ad credits. Extra-platform charges and overage management fees are listed in the plan comparison."
+        },
+        {
+          q: "Why show monthly prices but bill quarterly?",
+          a: "Prices are shown per month, but payment is quarterly in advance with a 90-day minimum engagement. A continuous work cycle gives market analysis, content preparation, testing, and optimization time to inform each other. We confirm the scope and first payment before the engagement starts."
+        },
+        {
+          q: "How do we start with Sponsorships & Creator Marketing?",
+          a: "Start with who you want to reach and how you want those audiences to understand your brand. We can help assess sponsorship directions, influencer or creator fit, and partnership content for local audiences. Partners, delivery scope, and budget are agreed per project; a full sponsorship or creator campaign is not automatically included in every plan."
+        }
+      ]
     },
     contact: {
       status: "● RADAR SYSTEM: READY",
@@ -241,117 +348,182 @@ const dict = {
         errorEmail: "Please enter a valid work email.",
       }
     },
-    footer: { left: "© 2026 BrandGo.Global STUDIO", right: "DISTRIBUTED GLOBALLY. EXECUTED PRECISELY." },
+    footer: { left: "© 2026 BrandGo.Global STUDIO", right: "GLOBAL TEAM. STRATEGY PUT INTO ACTION." },
     mobile: { openMenu: "Open navigation menu", closeMenu: "Close navigation menu" }
   },
   zh: {
-    nav: { goradar: "GoRadar AI", services: "服务", cases: "案例", pricing: "定价", faq: "常见问题", contact: "联系我们", signin: "登录", langSwitch: "EN" },
+    nav: { goradar: "GoRadar AI", services: "服务", cases: "应用场景", pricing: "定价", faq: "常见问题", contact: "联系我们", signin: "登录", langSwitch: "EN" },
     hero: {
+      eyebrow: "AI 驱动的海外增长团队",
       title: "雷达全开。\n告别盲猜。",
-      subtitle: "以自研 GoRadar\u00A0AI™ 为核心武器。\n我们为您挖掘隐秘市场机会、\n制定数据驱动战略，\n并在全球范围内高效收割高净值客户。"
+      subtitle: "BrandGo.Global 帮中国企业看清海外市场、找到客户，并把增长真正做起来。\n我们用 GoRadar AI 持续监测市场、竞争对手和客户需求，再把策略、内容、广告和获客执行落地。"
     },
-    marquee: ["GoRadar AI™", "AI 数据战略", "全球内容工作室", "算力投流中心"],
+    marquee: ["MARKET INTELLIGENCE", "CONTENT & LOCALIZATION", "PAID MEDIA", "SPONSORSHIPS & CREATOR MARKETING"],
     services: {
-      title: "核心服务：\n三位一体增长引擎",
-      desc: "将算力转化为全球市场份额，以下是我们的硬核交付清单。",
+      kicker: "WHAT WE HELP YOU DO",
+      title: "我们具体帮你\n做四件事",
+      desc: "看清市场，做好内容，获得客户，再扩大品牌影响。",
       s1: {
-        title: "GoRadar AI™ 战情系统",
-        desc: "我们全域营销策略的底层大脑。\n拒绝盲目试错，用算力锁定胜局。",
+        title: "看清市场",
+        label: "GoRadar AI",
+        desc: "GoRadar AI 是我们的 AI 海外市场情报应用，持续收集和分析市场、竞争对手、客户需求与趋势，帮你的团队判断机会，决定先进入哪里、先做什么。",
         btnOpen: "展开雷达系统",
         btnClose: "收起雷达面板",
         features: [
-          { name: "竞品流量盲区扫描 (BLINDSPOT SCANNER)", detail: "全网抓取海外头部竞品数据，精准定位利润极高但被同行忽视的流量空隙与搜索词。" },
-          { name: "跨境供应链需求矩阵 (DEMAND MATRIX)", detail: "将海外本土的真实搜索意图，与中国制造业/重履约产品的核心供应链优势进行算法匹配。" },
-          { name: "AI 受众高频模拟器 (AUDIENCE SIMULATOR)", detail: "在花掉您第一分钱预算前，利用 AI 预演各圈层受众的转化概率，确保首战即爆单。" }
+          {
+            name: "竞争对手与搜索机会",
+            detail: "持续跟踪海外竞争对手和搜索数据，找出尚未被充分覆盖的需求与关键词，供团队评估增长机会。"
+          },
+          {
+            name: "客户需求与供应链匹配",
+            detail: "将海外客户的搜索需求与你的制造、产品及交付优势进行匹配，帮助判断哪些需求更适合你的业务。"
+          },
+          {
+            name: "AI 受众模拟",
+            detail: "在正式投放前，模拟不同受众的广告表现，为测试顺序提供参考。实际效果通过真实投放验证。"
+          }
         ]
       },
       s2: {
-        title: "全球内容工作室",
-        desc: "打破文化壁垒的跨国视觉叙事。\n基于本土洞察，全面主导主流社媒心智。",
+        title: "做好内容",
+        label: "海外内容与本地化",
+        desc: "用 AI 辅助寻找内容灵感、传播角度和本地表达，再落实到海外社媒与内容渠道，让海外用户看得懂、愿意看，也愿意相信你的品牌。",
         bullets: [
-          "爆款短视频策划与海外 UGC 摄制",
-          "多语种跨文化深度本地化包装",
-          "精准达人矩阵建联与带货管理",
-          "社媒资产沉淀与私域活跃度运营"
+          "内容方向、选题与传播表达",
+          "短视频与用户内容（UGC）制作",
+          "多语种内容与文化本地化",
+          "社媒账号与社区互动运营"
         ],
-        kpis: ["KPI: 账号互动率", "KPI: 品牌全域曝光量"]
-      },
-      s3: {
-        title: "算力投流中心",
-        desc: "如同管理量化基金般操盘全域广告。\n极速测品、放大预算，对转化漏斗进行极限优化。",
-        bullets: [
-          "精准收割高意向搜索与企业端线索",
-          "社交媒体信息流爆单与询盘转化",
-          "全漏斗再营销追单与高频创意测试",
-          "着陆页转化率 (CRO) 极限优化"
-        ],
-        kpis: ["KPI: 获客成本 (CPA/CPL)", "KPI: 目标投资回报率 (ROAS)"]
-      },
-    },
-    protocol: {
-      title: "90 天增长路线图",
-      intro: {
-        title: "为什么我们需要 90 天？",
-        reasons: [
-          { title: "拒绝虚假承诺", desc: "海外 AI 广告模型的深度学习与跨文化信任建立，客观上需要 30-45 天的数据喂养。任何承诺'首周爆单'的机构都在透支您的品牌。" },
-          { title: "告别黑盒操作", desc: "我们的路线图精确到周。从战略审计到素材上线，您能实时看到每一个进度节点的硬核交付物，钱花得明明白白。" },
-          { title: "算力测品，利润放大", desc: "前 30 天花小钱进行高频 A/B 测试排除错误选项；后 60 天重仓砸向被验证的高 ROI 模型，将您的风险降到最低。" }
+        kpis: [
+          "关注：内容互动",
+          "关注：品牌认知"
         ]
       },
-      p1: { tag: "第一阶段: 第1周", title: "审计与战略蓝图", desc: "接入 GoRadar AI™ 战情大屏。排查历史浪费漏洞，反向扒取头部竞品流量盲区，输出《全域出海 GTM 战略坐标报告》。" },
-      p2: { tag: "第二阶段: 第2-3周", title: "创意引擎与追踪基建", desc: "在花掉您第一分钱广告费之前，完成全域像素级精准埋点 (GA4/CAPI)。同步交付首批 30+ 组跨文化高转化视觉素材。" },
-      p3: { tag: "第三阶段: 第1个月", title: "启动与极速测品", desc: "启动首轮实弹投放。高频测试受众标签与视觉素材，淘汰劣质模型，强制喂养 AI 算法，跑通首个高 ROI 获客模型。" },
-      p4: { tag: "第四阶段: 第2-3个月+", title: "重仓放大与全局统治", desc: "关停无效消耗，将 80% 的预算重仓砸向被数据验证的'赢家模型'。在严控 CAC（获客成本）红线的前提下，指数级放大预算。" }
+      s3: {
+        title: "获得客户",
+        label: "海外广告与增长",
+        desc: "把广告投放、GoRadar AI 辅助分析和持续优化放在一起，测试受众、素材、渠道与落地页，用实际数据判断怎样更有效地获得询盘和客户。",
+        bullets: [
+          "广告分析与投放方向建议",
+          "搜索与社交广告、B2B 线索获取",
+          "受众、素材与渠道 A/B 测试",
+          "再营销与落地页转化优化"
+        ],
+        kpis: [
+          "关注：获客成本",
+          "关注：线索与转化质量"
+        ]
+      },
+      s4: {
+        title: "扩大影响",
+        label: "品牌赞助与达人营销",
+        desc: "通过品牌赞助、达人与创作者合作，帮助品牌进入更有影响力的内容、体育和社群场景，扩大海外曝光与品牌信任。",
+        bullets: [
+          "品牌赞助方向与合作机会评估",
+          "达人 / 创作者匹配与合作策划",
+          "合作内容与本地传播表达",
+          "品牌曝光与信任建设"
+        ],
+        kpis: [
+          "关注：品牌匹配度",
+          "关注：相关受众触达"
+        ]
+      }
+    },
+    protocol: {
+      kicker: "THE FIRST 90 DAYS",
+      title: "前 90 天，\n这样开始合作",
+      desc: "先确定方向，再逐步投入。下面是执行型合作的常见推进方式；具体工作和节奏，结合你的现有基础与所选套餐确认。",
+      p1: {
+        tag: "了解业务",
+        title: "看清市场和问题",
+        desc: "从你的产品、客户与目标出发，结合 GoRadar AI 梳理市场和竞争，明确优先市场、关键问题，以及接下来要验证的方向。"
+      },
+      p2: {
+        tag: "准备基础",
+        title: "搭好数据、内容与投放基础",
+        desc: "检查网站和账号，准备本地化内容与转化追踪，让后续测试有素材可用、有数据可看。已有基础可以继续使用，缺什么再补什么。"
+      },
+      p3: {
+        tag: "小范围验证",
+        title: "用有限预算测试方向",
+        desc: "从重点受众、内容和渠道开始测试，一起看询盘、转化与获客成本，判断哪些方向值得继续，哪些需要调整。"
+      },
+      p4: {
+        tag: "持续优化",
+        title: "把有效方法逐步放大",
+        desc: "根据测试反馈优化内容与投放，再把资源逐步投入有效方向。定期复盘进展、预算使用和下一步安排，让你清楚合作在往哪里走。"
+      }
     },
     cases: {
-      title: "硬核实战复盘",
-      desc: "我们不卖理论。我们用算力直接收割市场份额。",
+      title: "典型应用场景",
+      desc: "看看这些出海难题，是否也在困扰你。以下是典型需求与支持方式，供你对照自己的业务。",
       list: [
         {
-          tag: "B2B 重履约 / 欧洲市场",
-          title: "打破欧洲本土信任壁垒",
-          metric: "380% ROI",
-          desc: "为重型压缩沙发搭建从 0 到 1 的高转化独立站基建。彻底扭转海外采购商对'廉价代工厂'的刻板印象，重塑高端供应链定位。",
-          img: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80"
+          tag: "MARKET ENTRY",
+          title: "不知道先做哪个海外市场",
+          desc: "准备出海，却拿不准哪个市场值得先投入。BrandGo.Global 用 GoRadar AI 分析需求、趋势与竞争，帮你确定优先验证的市场。"
         },
         {
-          tag: "D2C 消费电子 / 北美市场",
-          title: "AI 算力驱动的规模化爆单",
-          metric: "$2.4M 年营收",
-          desc: "在 Meta 和 TikTok 部署饱和式 A/B 测试。利用 GoRadar AI™ 锁定被忽视的科技发烧友细分受众，60 天内将获客成本 (CPA) 暴降 42%。",
-          img: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+          tag: "EUROPE",
+          title: "有供应链优势，想把品牌带进欧洲",
+          desc: "产品和交付有竞争力，欧洲客户却还不了解你的品牌。BrandGo.Global 结合市场分析、本地化内容与渠道测试，帮助品牌找到进入欧洲的合适表达。"
         },
         {
-          tag: "高客单价出海 / 东南亚大B",
-          title: "精准猎杀企业级决策者",
-          metric: "5倍 询盘增长",
-          desc: "重构全站 SEO 矩阵并执行 LinkedIn 精准 ABM 投放，直接绕过基层采购，精准触达东南亚 C-Level 核心决策层。",
-          img: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
+          tag: "D2C ACQUISITION",
+          title: "北美 D2C 获客越来越贵",
+          desc: "广告持续花钱，素材越来越难跑出效果，却不清楚问题在哪。BrandGo.Global 从受众、素材、渠道和落地页逐项测试，寻找更有效的获客组合。"
+        },
+        {
+          tag: "B2B LEADS",
+          title: "想找海外客户，却接触不到决策者",
+          desc: "知道想卖给哪些企业，却很难找到真正负责采购和拍板的人。BrandGo.Global 结合市场情报、搜索、LinkedIn 与内容，帮助建立通向目标客户的线索路径。"
+        },
+        {
+          tag: "GROWTH REVIEW",
+          title: "已经在出海，但增长开始停滞",
+          desc: "网站、广告和海外社媒都在做，增长却卡住了。BrandGo.Global 重新审视市场、竞争与渠道表现，帮你找出下一步值得测试的机会。"
+        },
+        {
+          tag: "BRAND BUILDING",
+          title: "有外贸订单，还没有自己的海外品牌",
+          desc: "外贸订单在交付，客户记住的却主要是产品和价格。BrandGo.Global 从品牌定位、产品表达与本地化内容入手，把供应能力变成客户能理解和记住的品牌价值。"
+        },
+        {
+          tag: "PARTNERSHIPS",
+          title: "想做赞助或达人合作，不知道从哪开始",
+          desc: "想扩大曝光，却不知道该找谁合作、内容怎么做、预算怎么安排。BrandGo.Global 帮你梳理目标受众、品牌匹配度与合作方向，再确定可执行的项目范围。"
+        },
+        {
+          tag: "DIRECT ACQUISITION",
+          title: "平台或代理能卖货，想建立直接获客能力",
+          desc: "已有销售渠道，但客户关系和新增订单仍主要依赖平台或代理。BrandGo.Global 结合品牌网站、内容与广告测试，帮助你逐步建立自己的客户触达和直接获客能力。"
         }
       ]
     },
     about: {
-      title: "我们鄙视虚荣指标。",
-      manifesto: "太多代运营躲在「曝光量」和「点赞数」背后。\n但您没法把「点击量」存进银行。\n\n我们是您增长团队的算力外脑。\n我们只谈核心商业指标：跨境供应链、净利润率、CAC 与 LTV。",
+      title: "我们更关心\n生意结果。",
+      manifesto: "曝光和点赞可以看，但它们不是最终目标。我们更关心线索、获客成本、转化率和真实增长。\n\n我们作为你的海外增长团队，把市场判断、内容和广告执行连接起来，用实际表现决定下一步投入。",
       stat: "10+ 年",
-      statDesc: "跨境出海与供应链一线操盘经验",
-      teamTitle: "幕后大脑",
-      teamDesc: "全球分布式协作。我们常驻巴厘岛、新加坡、吉隆坡、阿姆斯特丹等核心商业枢纽，保持对跨境出海与全球供应链的绝对敏锐。",
+      statDesc: "跨境业务与供应链经验",
+      teamTitle: "创始人",
       member1: {
-        name: "YUSHENG YANG",
+        name: "Yusheng Yang",
         role: "联合创始人",
-        desc: "拥有兰卡斯特大学会计与金融学士及华威大学硕士学位，积累了十余年亚洲核心供应链与品牌出海操盘经验。作为资深 GTM 战略专家与 GoRadar AI™ 的底层架构师，他深谙中欧商业文化差异。业余时间，他是一名活跃于国际赛事的硬核超马越野跑者，将极限耐力的长期主义完美融入商业增长。"
-      },
-      member2: {
-        name: "WARREN GOLDSMITH",
-        role: "数字营销负责人",
-        desc: "英国籍高管，拥有伦敦大学学院 (UCL) 学士与帝国理工商学院硕士学位。作为拥有 8 年硬核实战经验的数字营销操盘手，Warren 是统筹精准媒介购买与 AI 转化漏斗的幕后大脑。他将严谨的英式金融逻辑带入流量市场，如同管理量化对冲基金般，以极度冷酷的数据算力榨干每一分预算的 ROI。"
+        bio: [
+          "Yusheng Yang（杨雨昇）在 Lancaster University 学习金融，并在 University of Warwick 获得项目管理硕士学位。他的职业经历横跨中国与亚洲市场，连接品牌、商业策略与跨境业务。",
+          "拥有十余年品牌、营销、市场进入（GTM）和全球供应链相关经验，参与过消费品牌的建立与发展，以及跨境供应链项目。他关注企业进入海外市场时最实际的问题：卖给谁、如何表达、先把资源投入哪里。",
+          "在 BrandGo.Global，他负责市场进入策略与 GoRadar AI 产品架构，把市场情报与内容、广告和本地化执行连接起来，帮助中国企业从判断机会走向实际行动。"
+        ]
       }
     },
     pricing: {
-      title: "订阅报价",
-      subtitle: "按月透明计费，无隐形抽成",
-      note: "按季度结算预付。最低签约 90 天，保障跑通高转化模型。",
+      kicker: "WAYS TO WORK TOGETHER",
+      title: "选择适合你的\n合作方式",
+      subtitle: "按月报价，按季度结算",
+      note: "按季度预付，最低合作 90 天，用于完成分析、测试和优化。",
+      guidance: "团队能执行，先选工具；需要有人落地，选执行；需要跨渠道持续推进，选长期统筹。",
+      fees: "套餐价格为工具与服务费，广告媒体预算另计。$5,000 / $30,000 指不加收广告管理费的投放额度上限，不是包含的广告预算；额外平台及超额费用见完整对比。",
       btnExpand: "↓ 展开完整服务细节对比",
       btnCollapse: "↑ 收起服务细节对比",
       includedText: "✓ 包含",
@@ -359,12 +531,13 @@ const dict = {
         {
           name: "GoRadar AI™ 战术版",
           price: "$399", oldPrice: "$599", period: "/ 月",
-          desc: "不提供代运营劳动力，只提供精准的炮火坐标。适合自带执行团队的企业。",
+          mode: "工具与策略支持",
+          desc: "适合已有执行团队，需要看清市场、比较机会、确定优先级的企业。用 GoRadar AI 与定期策略复盘，为团队行动提供依据。",
           features: [
-            "提供实时 GoRadar AI™ 战情大屏",
-            "每月 1 次主理人 1V1 战略诊断",
-            "现有独立站/广告账户健康度体检",
-            "竞品高转化词库全盘扫描"
+            "GoRadar AI™ 实时数据看板",
+            "每月 1 次主理人 1V1 策略诊断",
+            "现有独立站/广告账户检查",
+            "竞争对手与潜在关键词报告"
           ],
           addon: "",
           btn: "获取雷达权限",
@@ -373,12 +546,13 @@ const dict = {
         {
           name: "核心引擎版",
           price: "$999", oldPrice: "$1,499", period: "/ 月",
-          desc: "用算力驱动内容，用数据锁死 ROI。中小出海企业的主力增长引擎。",
+          mode: "内容与广告执行",
+          desc: "适合已有产品和目标市场，需要有人把内容与广告做起来的企业。围绕重点渠道执行、测试与优化，补上日常落地能力。",
           features: [
             "包含【战术版】所有核心权益",
-            "接管 1个广告 + 1个内容平台",
-            "最高免收 $5,000 消耗管理费",
-            "每双周战情室战略同步对焦会议"
+            "管理 1 个广告 + 1 个内容平台",
+            "$5,000 以内广告消耗免额外管理费",
+            "每两周一次策略与进度会议"
           ],
           addon: "每增加一个渠道模块 +$349/月",
           btn: "启动核心引擎",
@@ -387,13 +561,14 @@ const dict = {
         {
           name: "全球共享 CMO 版",
           price: "$2,499+", oldPrice: "$3,999", period: "/ 月",
-          desc: "把海外增长命脉交给我们。您只管接单交付，我们负责全域市场火力攻坚。",
+          mode: "长期增长统筹",
+          desc: "适合已在多个渠道推进海外业务，需要持续统筹策略与执行的企业。由共享 CMO 协调市场判断、内容、投放与复盘。",
           features: [
             "包含【核心引擎版】所有权益",
-            "全域火力覆盖 (Google/Meta/TikTok/LinkedIn)",
-            "最高免收 $30,000 消耗管理费",
-            "独立站 SEO 与海外信任基建重塑",
-            "进入 24/7 专属战情室极速响应"
+            "多平台管理 (Google/Meta/TikTok/LinkedIn)",
+            "$30,000 以内广告消耗免额外管理费",
+            "独立站 SEO 与品牌信任建设",
+            "24/7 专属沟通与优先支持"
           ],
           addon: "",
           btn: "雇佣您的 CMO",
@@ -402,53 +577,92 @@ const dict = {
       ],
       comparisonDetails: [
         {
-          category: "GoRadar AI™ 算力与战略",
+          category: "GoRadar AI™ 市场情报与策略",
           items: [
-            { name: "竞品盲区与搜索雷达报告", t1: "每月 1 份", t2: "每月 2 份", t3: "实时动态监测" },
-            { name: "1V1 战略与数据复盘会", t1: "1 次 (60分钟)", t2: "2 次 (双周对焦)", t3: "4 次 (每周深度会)" },
-            { name: "独立站/广告健康度审计", t1: "✔", t2: "✔", t3: "✔" },
-            { name: "顶层 GTM 战略定制", t1: "✘", t2: "✔", t3: "✔" }
+            { name: "竞争对手与搜索机会报告", t1: "每月 1 份", t2: "每月 2 份", t3: "实时动态监测" },
+            { name: "1V1 策略与数据复盘会", t1: "1 次 (60分钟)", t2: "2 次 (每两周一次)", t3: "4 次 (每周深度会)" },
+            { name: "独立站/广告账户检查", t1: "✔", t2: "✔", t3: "✔" },
+            { name: "市场进入策略定制 (GTM)", t1: "✘", t2: "✔", t3: "✔" }
           ]
         },
         {
-          category: "品牌信任基建",
+          category: "品牌与网站基础",
           items: [
-            { name: "账号矩阵搭建与 SEO 埋词", t1: "✘", t2: "1-2 个核心平台", t3: "全域平台统筹" },
-            { name: "独立站 CRO 转化诊断", t1: "✘", t2: "✔", t3: "极限优化与 A/B 测试" }
+            { name: "社媒账号搭建与搜索优化 (SEO)", t1: "✘", t2: "1-2 个核心平台", t3: "全渠道平台统筹" },
+            { name: "独立站转化诊断 (CRO)", t1: "✘", t2: "✔", t3: "持续优化与 A/B 测试" }
           ]
         },
         {
-          category: "全球内容工作室",
+          category: "海外内容与本地化",
           items: [
-            { name: "AI 跨文化高转化素材产出", t1: "✘", t2: "按战役定量交付", t3: "饱和式素材深度本地化" },
-            { name: "社媒矩阵日程规划与分发", t1: "✘", t2: "重点平台日更分发", t3: "全网矩阵饱和式分发" },
-            { name: "粉丝深度互动与私域引导", t1: "✘", t2: "✔", t3: "全天候线索清洗跟进" },
+            { name: "AI 辅助本地化素材制作", t1: "✘", t2: "按推广活动定量交付", t3: "批量素材制作与深度本地化" },
+            { name: "社媒内容排期与发布", t1: "✘", t2: "重点平台每日发布", t3: "全渠道批量内容发布" },
+            { name: "粉丝互动与线索引导", t1: "✘", t2: "✔", t3: "全天候线索筛选与跟进" },
             { name: "本土 KOL/UGC 资源对接", t1: "✘", t2: "✘", t3: "每月定量达人管理" }
           ]
         },
         {
-          category: "算力投流中心",
+          category: "海外广告与增长",
           items: [
             { name: "开户、像素/CAPI 数据追踪", t1: "✘", t2: "✔", t3: "✔" },
-            { name: "广告投放策略与人群构建", t1: "✘", t2: "单一核心渠道", t3: "全域多渠道联投" },
-            { name: "量化测品与 ROAS 优化", t1: "✘", t2: "✔", t3: "高频高维测试模型" },
-            { name: "免收 15% 管理费广告额度", t1: "✘", t2: "最高涵盖 $5,000", t3: "最高涵盖 $30,000" },
-            { name: "超额广告消耗绩效管理费", t1: "✘", t2: "超出部分收 10%", t3: "超出部分收 8%-10%" }
+            { name: "广告策略与目标受众", t1: "✘", t2: "单一核心渠道", t3: "多渠道联合投放" },
+            { name: "A/B 测试与广告回报优化 (ROAS)", t1: "✘", t2: "✔", t3: "高频多变量测试" },
+            { name: "不加收管理费的广告投放额度", t1: "✘", t2: "最高涵盖 $5,000", t3: "最高涵盖 $30,000" },
+            { name: "超额广告消耗管理费", t1: "✘", t2: "超出部分收 10%", t3: "超出部分收 8%-10%" }
           ]
         },
         {
-          category: "战情室支持",
+          category: "沟通与支持",
           items: [
-            { name: "专属战情室响应与答疑", t1: "48小时邮件支持", t2: "工作日 24小时响应", t3: "24/7 优先极速响应" }
+            { name: "问题响应与答疑", t1: "48小时邮件支持", t2: "工作日 24小时响应", t3: "24/7 优先响应" }
           ]
         }
       ]
     },
     faq: {
-      title: "常见问题",
-      q1: { q: "GoRadar AI™ 如何运作？", a: "它通过扫描全球搜索与社媒数据，找出高利润关键词与竞品流量盲区，帮助我们以极低成本获客。" },
-      q2: { q: "你们覆盖哪些营销平台？", a: "我们提供全漏斗营销执行，深度覆盖 Google, Meta (FB/IG), TikTok, LinkedIn, YouTube 以及小红书。" },
-      q3: { q: "为什么要求按季度结算？", a: "跨国营销模型学习与高价值客户的转化需要客观的数据积累周期。90天的锁定期确保我们能为您跑通高 ROAS 转化闭环，而不是追求短期的虚假流量。" }
+      title: "合作前，\n你可能想问",
+      items: [
+        {
+          q: "GoRadar AI 是什么？可以只用工具吗？",
+          a: "GoRadar AI 是帮助团队看清海外市场的 AI 情报与决策支持应用，可以选择 GoRadar AI™ 战术版，无需购买执行型服务。它分析市场、竞争、搜索趋势与客户需求，并配合套餐中的策略复盘，帮助你决定先做什么。具体判断仍需结合业务情况，并通过实际执行验证。"
+        },
+        {
+          q: "你们具体能帮我做哪些事？",
+          a: "主要是四件事：看清市场、做好内容、获得客户、扩大影响。对应 GoRadar AI、海外内容与本地化、广告投放与优化，以及品牌赞助与达人营销。具体交付按所选套餐或项目范围确认。"
+        },
+        {
+          q: "什么样的企业适合？还没开始出海也可以吗？",
+          a: "适合希望进入或拓展海外市场的中国企业，包括 B2B、D2C 和有供应链基础的品牌。尚未开始出海，也可以先从市场判断与优先级梳理入手。有清楚的产品信息、目标和可投入资源，会更容易确定合适的起点。"
+        },
+        {
+          q: "已经有自己的团队或代理，你们怎么配合？",
+          a: "可以围绕现有团队的缺口配合。如果缺市场情报和判断依据，可以先选 GoRadar AI；需要内容与广告执行，可考虑核心引擎版；需要跨渠道的长期策略统筹，可考虑全球共享 CMO 版。合作前先对齐分工、账号权限与沟通方式。"
+        },
+        {
+          q: "覆盖哪些海外平台和渠道？",
+          a: "内容与广告支持覆盖 Google、Meta（Facebook / Instagram）、TikTok、LinkedIn、YouTube 和小红书等渠道。实际选择取决于客户在哪里、你的业务目标和套餐范围。先集中验证重点渠道，再决定是否扩展。"
+        },
+        {
+          q: "合作怎么开始？我们需要准备什么？",
+          a: "先对齐产品、目标市场、业务目标与现有基础，再确定分工和第一步。请准备产品或服务介绍、网站与账号链接、已有内容，以及可提供的广告、销售或询盘数据。没有完整数据也可以开始，我们会先梳理缺口，再按需要安排内容、追踪和测试。"
+        },
+        {
+          q: "多久能看清方向，或看到初步结果？",
+          a: "市场判断通常先于获客结果，具体速度取决于现有基础、预算和客户决策周期。前期先完成市场与问题梳理，随后通过小范围测试观察询盘和转化信号。前 90 天用于形成分析、测试与优化的连续过程，不能视为销售额或回报保证。"
+        },
+        {
+          q: "广告预算包含在服务费里吗？",
+          a: "不包含，套餐价格是工具与服务费用，媒体广告预算另计。核心引擎版的 $5,000 和全球共享 CMO 版的 $30,000，是不加收广告管理费的投放额度上限，不是赠送的广告金额。额外平台和超出额度的管理费可在套餐对比中查看。"
+        },
+        {
+          q: "页面写的是月价，为什么按季度付款？",
+          a: "页面展示每月价格，实际按季度预付，最低合作周期为 90 天。连续的合作周期便于完成市场分析、内容准备、测试与优化。具体范围和首期应付金额会在合作前确认。"
+        },
+        {
+          q: "想做品牌赞助与达人营销，应该怎么开始？",
+          a: "先明确你想触达谁，以及希望通过合作建立怎样的品牌认知。我们可以协助评估赞助方向、达人或创作者匹配，以及合作内容和本地表达。合作对象、执行范围与预算按项目确认，不代表每个套餐都包含完整的赞助或达人项目。"
+        }
+      ]
     },
     contact: {
       status: "● 雷达系统：准备就绪",
@@ -477,7 +691,7 @@ const dict = {
         errorEmail: "请填写有效的工作邮箱。",
       }
     },
-    footer: { left: "© 2026 BrandGo.Global STUDIO", right: "全球分布式协作。极致精准执行。" },
+    footer: { left: "© 2026 BrandGo.Global STUDIO", right: "全球协作。策略与执行落地。" },
     mobile: { openMenu: "打开导航菜单", closeMenu: "关闭导航菜单" }
   }
 };
@@ -704,13 +918,14 @@ export default function Page() {
           </Link>
         </nav>
 
-        <div className="flex-1 flex flex-col md:flex-row items-start md:items-end justify-between gap-8 mt-24 md:mt-32 pt-10">
-          <div className="md:w-[70%] pb-4 md:pb-8">
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black uppercase tracking-tighter leading-[0.9] whitespace-pre-line">
+        <div className="flex-1 flex flex-col xl:flex-row items-start xl:items-end justify-between gap-8 mt-24 md:mt-32 pt-10">
+          <div className="min-w-0 w-full xl:w-[70%] pb-4 md:pb-8">
+            <p className="text-xs md:text-sm font-bold tracking-widest mb-6">{t.hero.eyebrow}</p>
+            <h1 className={`text-[clamp(2.75rem,13vw,3.75rem)] ${lang === "en" ? "md:text-[clamp(4rem,9.4vw,6rem)] xl:text-[clamp(5rem,6vw,7rem)]" : "md:text-8xl lg:text-9xl"} font-black uppercase tracking-tighter leading-[0.95] whitespace-pre-line`}>
               {t.hero.title}
             </h1>
           </div>
-          <div className="md:w-[40%] md:pb-6">
+          <div className="min-w-0 w-full xl:w-[40%] md:pb-6">
             <p className="text-lg md:text-xl font-bold leading-tight text-black whitespace-pre-line">
               {t.hero.subtitle}
             </p>
@@ -732,38 +947,25 @@ export default function Page() {
       <section id="goradar" data-section-theme="dark" className="bg-[#0A0A0A] text-[#E5FF00] py-6 border-y border-white/20 overflow-hidden">
         <span id="radar" aria-hidden="true" />
         <div className="flex overflow-hidden relative w-full">
-          <div className="flex shrink-0 w-max items-center animate-[marquee_20s_linear_infinite] gap-16 px-8">
-            {t.marquee.map((item, i) => (
-              <React.Fragment key={i}>
-                <span className="text-xl md:text-2xl font-bold tracking-tight whitespace-nowrap">{item}</span>
-                <span className="text-xl md:text-2xl font-bold" aria-hidden="true">
-                  <svg viewBox="0 0 16 16" fill="currentColor" className="w-5 h-5 md:w-6 md:h-6">
-                    <path d="M8 0L10 6H16L11 10L13 16L8 12L3 16L5 10L0 6H6L8 0Z" />
-                  </svg>
-                </span>
-              </React.Fragment>
-            ))}
-          </div>
-          <div className="flex shrink-0 w-max items-center animate-[marquee_20s_linear_infinite] gap-16 px-8">
-            {t.marquee.map((item, i) => (
-              <React.Fragment key={i}>
-                <span className="text-xl md:text-2xl font-bold tracking-tight whitespace-nowrap">{item}</span>
-                <span className="text-xl md:text-2xl font-bold" aria-hidden="true">
-                  <svg viewBox="0 0 16 16" fill="currentColor" className="w-5 h-5 md:w-6 md:h-6">
-                    <path d="M8 0L10 6H16L11 10L13 16L8 12L3 16L5 10L0 6H6L8 0Z" />
-                  </svg>
-                </span>
-              </React.Fragment>
-            ))}
-          </div>
+          {[0, 1].map((repeat) => (
+            <div key={repeat} aria-hidden={repeat === 1 ? true : undefined} className="flex shrink-0 w-max items-center animate-[marquee_28s_linear_infinite] motion-reduce:animate-none gap-10 px-5">
+              {t.marquee.map((item) => (
+                <React.Fragment key={item}>
+                  <span lang="en" className="text-sm md:text-lg font-bold tracking-widest whitespace-nowrap">{item}</span>
+                  <span className="w-px h-5 bg-current -skew-x-12 opacity-60" aria-hidden="true" />
+                </React.Fragment>
+              ))}
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* ==================== 3. 核心三擎服务区 ==================== */}
+      {/* ==================== 3. 四项核心服务 ==================== */}
       <section id="services" data-section-theme="dark" className="bg-[#0A0A0A] text-white px-6 md:px-8 py-32 flex flex-col lg:flex-row gap-16 lg:gap-12">
         <div className="lg:w-[35%]">
           <div className="sticky top-24 h-fit">
-            <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-[0.95] mb-6 whitespace-pre-line">
+            <p className="text-xs font-bold tracking-widest text-[#E5FF00] mb-6" lang="en">{t.services.kicker}</p>
+            <h2 className="text-5xl md:text-7xl lg:text-[clamp(3rem,4.5vw,4.5rem)] font-black tracking-tighter leading-[1.1] mb-6 whitespace-pre-line text-balance">
               {t.services.title}
             </h2>
             <p className="text-lg md:text-xl text-gray-400 font-bold leading-relaxed max-w-sm">
@@ -775,11 +977,12 @@ export default function Page() {
         <div className="lg:w-[65%] flex flex-col">
 
           <div className="border-b border-white/20 py-16 first:pt-0 flex flex-col gap-6">
-            <div className="flex items-center gap-6 mb-2">
-              <span className="text-2xl font-black text-[#E5FF00] tracking-tighter">[ 01 ]</span>
-              <h3 className="text-3xl md:text-4xl font-black tracking-tight text-white">
-                {t.services.s1.title}
-              </h3>
+            <div className="flex items-start gap-4 md:gap-6 mb-2">
+              <span className="shrink-0 text-xl font-black text-[#E5FF00] tracking-tighter">[ 01 ]</span>
+              <div className="min-w-0">
+                <h3 className="text-3xl md:text-4xl font-black tracking-tight text-white text-balance">{t.services.s1.title}</h3>
+                <p className="mt-3 text-base md:text-lg font-bold text-[#E5FF00]">{t.services.s1.label}</p>
+              </div>
             </div>
             <p className="text-base md:text-lg text-gray-400 font-medium leading-relaxed max-w-2xl mb-2 whitespace-pre-line">
               {t.services.s1.desc}
@@ -822,13 +1025,14 @@ export default function Page() {
             )}
           </div>
 
-          {[t.services.s2, t.services.s3].map((s, idx) => (
+          {[t.services.s2, t.services.s3, t.services.s4].map((s, idx) => (
             <div key={idx} className="border-b border-white/20 py-16 flex flex-col gap-6">
-              <div className="flex items-center gap-6 mb-2">
-                <span className="text-2xl font-black text-[#E5FF00] tracking-tighter">[ 0{idx + 2} ]</span>
-                <h3 className="text-3xl md:text-4xl font-black tracking-tight text-white">
-                  {s.title}
-                </h3>
+              <div className="flex items-start gap-4 md:gap-6 mb-2">
+                <span className="shrink-0 text-xl font-black text-[#E5FF00] tracking-tighter">[ 0{idx + 2} ]</span>
+                <div className="min-w-0">
+                  <h3 className="text-3xl md:text-4xl font-black tracking-tight text-white text-balance">{s.title}</h3>
+                  <p className="mt-3 text-base md:text-lg font-bold text-[#E5FF00]">{s.label}</p>
+                </div>
               </div>
 
               <p className="text-base md:text-lg text-gray-400 font-medium leading-relaxed max-w-2xl mb-2 whitespace-pre-line">
@@ -863,36 +1067,22 @@ export default function Page() {
       {/* ==================== 4. THE 90-DAY PROTOCOL (ROADMAP) ==================== */}
       <section id="protocol" data-section-theme="dark" className="bg-[#0A0A0A] text-white px-6 md:px-8 py-32 border-t border-white/20">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter mb-16">
+          <p className="text-xs font-bold tracking-widest text-[#E5FF00] mb-6" lang="en">{t.protocol.kicker}</p>
+          <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[1.1] whitespace-pre-line text-balance mb-8">
             {t.protocol.title}
           </h2>
 
-          {/* Intro / Benefits Grid */}
-          <div className="mb-24">
-            <h3 className="text-2xl md:text-3xl font-black tracking-tight mb-8 text-[#E5FF00]">
-              {t.protocol.intro.title}
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {t.protocol.intro.reasons.map((reason, idx) => (
-                <div key={idx} className="bg-[#111] border-t-4 border-[#E5FF00] p-8">
-                  <h4 className="text-xl font-black mb-4">{reason.title}</h4>
-                  <p className="text-gray-400 text-sm md:text-base font-bold leading-relaxed">
-                    {reason.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
+          <p className="max-w-3xl mb-16 text-gray-400 text-lg font-medium leading-relaxed">{t.protocol.desc}</p>
 
           {/* Timeline */}
           <div className="max-w-4xl ml-2 md:ml-8 border-l-4 border-white/20">
             {[t.protocol.p1, t.protocol.p2, t.protocol.p3, t.protocol.p4].map((phase, idx) => (
-              <div key={idx} className="relative pl-10 md:pl-16 pb-20 last:pb-0">
+              <div key={idx} className="relative pl-8 md:pl-16 pb-12 last:pb-0">
                 <div className="absolute -left-[10px] top-0 size-4 bg-[#E5FF00]"></div>
                 <div className="bg-[#E5FF00] text-black px-3 py-1 text-xs md:text-sm font-bold uppercase inline-block mb-4">
                   {phase.tag}
                 </div>
-                <h3 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-4 text-white">
+                <h3 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-4 text-white text-balance">
                   {phase.title}
                 </h3>
                 <p className="text-gray-400 text-base md:text-lg font-medium leading-relaxed max-w-2xl whitespace-pre-line">
@@ -904,10 +1094,10 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ==================== 5. CASES 实战复盘区 ==================== */}
+      {/* ==================== 5. USE CASES 应用场景区 ==================== */}
       <section id="cases" data-section-theme="yellow" className="bg-[#E5FF00] text-black px-6 md:px-8 py-32 border-t border-black/20">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8">
-          <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[0.95]">
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 gap-8">
+          <h2 className="text-5xl md:text-7xl font-black uppercase tracking-tighter leading-[1.1] whitespace-pre-line text-balance">
             {t.cases.title}
           </h2>
           <p className="text-lg md:text-xl font-bold max-w-md">
@@ -915,40 +1105,29 @@ export default function Page() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {t.cases.list.map((c, idx) => (
-            <div key={idx} className="border border-black p-6 hover:bg-black hover:text-[#E5FF00] transition-all duration-300 group flex flex-col cursor-pointer">
-              <div className="relative w-full aspect-video mb-6 overflow-hidden bg-black">
-                <Image
-                  src={c.img}
-                  alt={c.title}
-                  fill
-                  sizes="(min-width: 768px) 33vw, 100vw"
-                  className="object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500 opacity-90 group-hover:opacity-100"
-                />
+            <article key={c.tag} className="border border-black p-6 md:p-8 flex flex-col">
+              <div className="flex justify-between items-center gap-4 text-xs font-bold tracking-wider mb-6">
+                <span>0{idx + 1}</span>
+                <span className="border border-current px-2 py-1" lang="en">{c.tag}</span>
               </div>
-              <div className="text-xs font-black uppercase border border-current px-2 py-1 self-start mb-6">
-                {c.tag}
-              </div>
-              <h3 className="text-2xl font-black uppercase tracking-tight mb-4">
+              <h3 className="text-2xl font-black tracking-tight leading-snug mb-4 text-balance">
                 {c.title}
               </h3>
-              <div className="text-4xl font-black tracking-tighter mb-4">
-                {c.metric}
-              </div>
-              <p className="font-medium text-sm md:text-base opacity-80 mt-auto">
+              <p className="font-medium text-sm md:text-base leading-relaxed opacity-80">
                 {c.desc}
               </p>
-            </div>
+            </article>
           ))}
         </div>
       </section>
 
-      {/* ==================== 6. ABOUT 宣言与团队区 ==================== */}
+      {/* ==================== 6. ABOUT 宣言与创始人区 ==================== */}
       <section id="about" data-section-theme="dark" className="bg-[#0A0A0A] text-white px-6 md:px-8 py-32 border-t border-white/20">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-12 mb-32 max-w-7xl mx-auto">
           <div className="lg:w-[60%]">
-            <h2 className="text-5xl md:text-7xl font-black tracking-tighter mb-8">{t.about.title}</h2>
+            <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-[1.1] whitespace-pre-line text-balance mb-8">{t.about.title}</h2>
             <p className="text-lg md:text-xl text-gray-400 font-medium leading-relaxed whitespace-pre-line max-w-3xl">
               {t.about.manifesto}
             </p>
@@ -964,20 +1143,15 @@ export default function Page() {
         <div className="max-w-7xl mx-auto">
           <div className="mb-12">
             <h3 className="text-4xl md:text-5xl font-black tracking-tighter mb-4">{t.about.teamTitle}</h3>
-            <p className="text-base md:text-lg text-gray-400 font-medium leading-relaxed max-w-2xl">
-              {t.about.teamDesc}
-            </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[t.about.member1, t.about.member2].map((member, idx) => (
-              <div key={idx} className="border border-white/20 p-8 md:p-10 hover:bg-[#1A1A1A] transition-colors flex flex-col">
-                <div className="text-[#E5FF00] font-black tracking-tighter text-3xl md:text-4xl mb-2">{member.name}</div>
-                <div className="text-sm font-bold tracking-widest text-white/50 mb-6 uppercase">{member.role}</div>
-                <p className="text-base md:text-lg text-gray-400 font-medium leading-relaxed mt-auto">
-                  {member.desc}
-                </p>
+          <div className="grid grid-cols-1 gap-8">
+            <div className="border border-white/20 p-8 md:p-10 hover:bg-[#1A1A1A] transition-colors flex flex-col">
+              <div className="text-[#E5FF00] font-black tracking-tighter text-3xl md:text-4xl mb-2">{t.about.member1.name}</div>
+              <div className="text-sm font-bold tracking-widest text-white/50 mb-6 uppercase">{t.about.member1.role}</div>
+              <div className="space-y-4 max-w-5xl text-base md:text-lg text-gray-400 font-medium leading-relaxed">
+                {t.about.member1.bio.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
@@ -987,15 +1161,18 @@ export default function Page() {
 
         {/* 标题与季付提示 */}
         <div className="flex flex-col items-center justify-center text-center mb-16">
-          <h2 className="text-5xl md:text-7xl font-black tracking-tighter text-[#E5FF00] mb-4">
+          <p className="text-xs font-bold tracking-widest text-[#E5FF00] mb-6" lang="en">{t.pricing.kicker}</p>
+          <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-[1.1] whitespace-pre-line text-balance text-[#E5FF00] mb-6">
             {t.pricing.title}
           </h2>
+          <p className="max-w-3xl text-base md:text-lg leading-relaxed text-gray-300 mb-6">{t.pricing.guidance}</p>
           <p className="text-xl md:text-2xl font-black text-gray-400 tracking-tight mb-4">
             {t.pricing.subtitle}
           </p>
           <div className="inline-block bg-[#1A1A1A] text-gray-300 font-bold px-6 py-2 rounded-full text-sm md:text-base border border-white/10">
             {t.pricing.note}
           </div>
+          <p className="max-w-3xl mt-6 text-sm leading-relaxed text-gray-400">{t.pricing.fees}</p>
         </div>
 
         {/* 价格卡片网格 */}
@@ -1024,6 +1201,7 @@ export default function Page() {
                 }`}
               >
                 <div className="mb-6">
+                  <p className="text-xs font-bold tracking-wider mb-4">0{idx + 1} / {tier.mode}</p>
                   <h3 className="text-3xl font-black tracking-tight">
                     {tier.name}
                   </h3>
@@ -1140,15 +1318,17 @@ export default function Page() {
 
       {/* ==================== 8. FAQ 区 ==================== */}
       <section id="faq" data-section-theme="dark" className="bg-[#0A0A0A] text-white px-6 md:px-8 py-24 md:py-32 border-t border-white/20">
-        <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-16">{t.faq.title}</h2>
+        <h2 className="text-4xl md:text-6xl font-black tracking-tighter leading-[1.1] whitespace-pre-line text-balance mb-16">{t.faq.title}</h2>
         <div className="flex flex-col border-t border-white/20">
-          {[t.faq.q1, t.faq.q2, t.faq.q3].map((item, idx) => (
-            <div key={idx} className="border-b border-white/20">
+          {t.faq.items.map((item, idx) => (
+            <div key={item.q} className="border-b border-white/20">
               <button
                 onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
+                aria-expanded={openFaq === idx}
+                aria-controls={`faq-answer-${idx}`}
                 className="w-full py-8 flex items-start justify-between text-left gap-4 hover:text-[#E5FF00] transition-colors"
               >
-                <span className="text-xl md:text-2xl font-bold tracking-tight flex-1">{item.q}</span>
+                <span className="text-xl md:text-2xl font-bold tracking-tight flex-1 text-balance">{item.q}</span>
                 <span className={`shrink-0 mt-1 w-5 h-5 transition-transform duration-200 ${openFaq === idx ? 'rotate-45' : ''}`}>
                   <svg viewBox="0 0 20 20" fill="currentColor" className="w-full h-full">
                     <path fillRule="evenodd" d="M10 3a1 1 0 011 1v12a1 1 0 11-2 0V4a1 1 0 011-1z" clipRule="evenodd" />
@@ -1157,7 +1337,7 @@ export default function Page() {
                 </span>
               </button>
               {openFaq === idx && (
-                <div className="pb-8 text-gray-400 text-lg pr-12">
+                <div id={`faq-answer-${idx}`} className="pb-8 text-gray-400 text-base md:text-lg leading-relaxed pr-8 md:pr-12 max-w-5xl">
                   {item.a}
                 </div>
               )}
