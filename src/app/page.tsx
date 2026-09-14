@@ -9,13 +9,15 @@ import Header from '@/components/Header';
 // ==========================================
 const dict = {
   en: {
-    nav: { goradar: "GoRadar AI", services: "Services", cases: "Use Cases", pricing: "Pricing", faq: "FAQ", contact: "Contact", signin: "Sign In", langSwitch: "中" },
+    nav: { goradar: "GoRadar AI™", services: "Services", cases: "Use Cases", pricing: "Pricing", faq: "FAQ", contact: "Contact", signin: "Sign In", langSwitch: "中" },
     hero: {
       eyebrow: "GLOBAL MARKET ENTRY & GROWTH PARTNER",
       title: "MARKET RADAR: ON.\nGUESSWORK: OFF.",
-      subtitle: "We help Chinese businesses with established products, supply chains, or export capability identify overseas markets, buyers, customers, and channel opportunities, then turn insight into action.\nGoRadar AI tracks market demand, competitors, buyer signals, and industry shifts to support market entry and growth."
+      who: "For Chinese businesses with established products, supply chains or export foundations.",
+      value: "Use GoRadar AI™ to see overseas markets more clearly, identify buyers, customers and channel opportunities,\nand turn market intelligence into action.",
+      how: "GoRadar AI™ continuously monitors markets, competitors, lead signals and industry changes\nto support market entry and ongoing growth decisions."
     },
-    marquee: ["GORADAR AI INTELLIGENCE", "MARKET ENTRY", "MARKET GROWTH", "EXECUTION CAPABILITIES"],
+    marquee: ["GoRadar AI™ Intelligence", "MARKET ENTRY", "MARKET GROWTH", "BUYER & CHANNEL DEVELOPMENT", "CONTENT & LOCALIZATION", "PAID MEDIA"],
     problems: {
       kicker: "THE CHALLENGE",
       title: "YOU MAY HAVE THE PRODUCT\nAND THE FOUNDATION.\nWHAT YOU NEED IS A CLEARER PATH TO GLOBAL GROWTH.",
@@ -28,14 +30,14 @@ const dict = {
     },
     services: {
       kicker: "HOW WE WORK",
-      title: "INTELLIGENCE.\nENTRY. GROWTH.",
-      desc: "GoRadar AI informs both entry into new markets and growth in markets you already serve. We select execution capabilities around the business goal.",
+      title: "From\nSeeing the Opportunity\nto\nMarket Entry & Growth",
+      desc: "GoRadar AI™ informs both entry into new markets and growth in markets you already serve. We select execution capabilities around the business goal.",
       s1: {
-        title: "GORADAR AI",
-        label: "Market, Competitive & Opportunity Intelligence",
-        desc: "Continuous intelligence for markets, buyers and growth opportunities. GoRadar AI brings together updated signals on demand, competitors, potential buyers, channels, and industry shifts to support decisions for both Market Entry and Market Growth.",
-        btnOpen: "SEE HOW GORADAR FINDS OPPORTUNITIES",
-        btnClose: "CLOSE GORADAR DETAILS",
+        title: "GoRadar AI™ Intelligence Radar",
+        label: "See overseas markets clearly with GoRadar AI™",
+        desc: "Continuous intelligence for markets, buyers and growth opportunities. GoRadar AI™ brings together updated signals on demand, competitors, potential buyers, channels, and industry shifts to support decisions for both Market Entry and Market Growth.",
+        btnOpen: "EXPLORE GoRadar AI™",
+        btnClose: "CLOSE GoRadar AI™ DETAILS",
         features: [
           {
             name: "MARKET INTELLIGENCE",
@@ -62,12 +64,14 @@ const dict = {
       s2: {
         title: "MARKET ENTRY",
         label: "Enter a New Overseas Market",
-        desc: "Which market should you enter, who should you sell to, and how should you get started? From market selection and buyer definition to competitive positioning and the first round of validation, we help build a practical route into a new market.",
+        desc: "We help you prioritize where to enter, who to sell to, and how to reach them, then complete an initial round of market validation.",
         bullets: [
-          "Market and Category Prioritization",
-          "Buyer, Distributor & Channel Research",
-          "Positioning, Offer & Route-to-Market",
-          "First-Round Market Validation"
+          "Market and country prioritization",
+          "Buyer, distributor & channel research",
+          "Positioning, offer & route-to-market",
+          "Website and landing-page audit & recommendations",
+          "Search, content & channel-entry strategy",
+          "Initial market and customer-acquisition validation"
         ],
         kpis: [
           "GOAL: A CLEAR ENTRY PATH",
@@ -77,12 +81,14 @@ const dict = {
       s3: {
         title: "MARKET GROWTH",
         label: "Grow an Existing Overseas Business",
-        desc: "Already selling overseas? We test and improve the ways you reach buyers, generate inquiries, develop channels, and acquire customers. Search, content, website, and advertising work are selected around what your business has already validated.",
+        desc: "For businesses already active overseas, we keep improving customer development, channels and acquisition paths to find the next growth opportunities.",
         bullets: [
-          "Buyer and Customer Development",
-          "Channel and Partner Opportunities",
-          "Search, Content, Website & Paid Tests",
-          "Optimization Based on Market Feedback"
+          "Buyer & customer development",
+          "Website optimization & SEO",
+          "Content localization & social distribution",
+          "Paid media audit, testing & optimization",
+          "Channel & partner development",
+          "Ongoing optimization based on market feedback"
         ],
         kpis: [
           "GOAL: MORE RELEVANT OPPORTUNITIES",
@@ -120,7 +126,7 @@ const dict = {
       p1: {
         tag: "01 / UNDERSTAND",
         title: "READ THE MARKET",
-        desc: "Review demand, competition, potential buyers, and channels with GoRadar AI to identify where an opportunity may exist."
+        desc: "Review demand, competition, potential buyers, and channels with GoRadar AI™ to identify where an opportunity may exist."
       },
       p2: {
         tag: "02 / DEFINE",
@@ -145,7 +151,7 @@ const dict = {
         {
           tag: "MARKET ENTRY",
           title: "Not sure which overseas market to enter first",
-          desc: "A new market looks promising, but the first investment is unclear. BrandGo.Global uses GoRadar AI to compare demand, competition, buyers, and channels so you can choose what to validate."
+          desc: "A new market looks promising, but the first investment is unclear. BrandGo.Global uses GoRadar AI™ to compare demand, competition, buyers, and channels so you can choose what to validate."
         },
         {
           tag: "EXPORT GROWTH",
@@ -196,126 +202,132 @@ const dict = {
         bio: [
           "Yusheng studied Finance at Lancaster University and earned a master's in Project Management at the University of Warwick. His career across China and Asia connects brand development, commercial strategy, and cross-border business.",
           "He brings more than a decade of experience in branding, marketing, go-to-market strategy, and global supply chains, including building consumer brands and managing cross-border supply-chain projects. His focus is practical: who to sell to, how to position the offer, and where to invest first.",
-          "At BrandGo.Global, he leads market entry strategy and GoRadar AI product architecture, connecting market intelligence with content, advertising, and localization to help Chinese businesses turn opportunities into action. He focuses on how companies with product, supply-chain, or export strengths can reach broader overseas markets, customers, and brand growth."
+          "At BrandGo.Global, he leads market entry strategy and GoRadar AI™ product architecture, connecting market intelligence with content, advertising, and localization to help Chinese businesses turn opportunities into action. He focuses on how companies with product, supply-chain, or export strengths can reach broader overseas markets, customers, and brand growth."
         ]
       }
     },
     pricing: {
-      kicker: "WAYS TO WORK TOGETHER",
-      title: "CHOOSE YOUR\nLEVEL OF SUPPORT",
-      subtitle: "Monthly pricing. GoRadar AI is available month to month; execution services have a 90-day minimum.",
-      note: "Execution service plans are billed monthly in advance.",
-      guidance: "Have an execution team? Start with intelligence. Need delivery? Choose execution. Need ongoing leadership across channels? Choose Fractional CMO.",
-      fees: "Plan prices cover tools and services. Media spend, sponsorship and media rights, creator fees, production costs, and other third-party costs are billed separately. The $5,000 / $30,000 limits are monthly ad spend caps with no additional management fee, not included ad budgets. See the full comparison for extra-platform and overage fees.",
-      disclaimer: "Final scope, channel coverage, and third-party costs are confirmed before the engagement begins.",
-      btnExpand: "↓ VIEW FULL FEATURE COMPARISON",
-      btnCollapse: "↑ HIDE FULL COMPARISON",
-      includedText: "✓ INCLUDED",
-      tiers: [
+      kicker: "GROWTH JOURNEY",
+      title: "From Opportunity\nto Market Entry & Growth",
+      subtitle: "Start with the stage your business needs now.",
+      journeyNote: "Explore and Monitor can inform the next move. Enter or Grow based on where your business stands; these are not required steps.",
+      or: "OR",
+      motionLabel: "CORE GROWTH MOTIONS",
+      fees: "Media spend, professional production, creator fees, sponsorship rights, travel and other third-party costs are billed separately.",
+      offers: [
         {
-          name: "GoRadar AI™ TIER",
-          price: "$399", oldPrice: "$599", period: "/ MO",
-          billing: "Monthly subscription",
-          mode: "INTELLIGENCE & GUIDANCE",
-          desc: "For businesses with an execution team that need clearer market insight and priorities. Use GoRadar AI and regular strategy reviews to guide your next actions.",
+          stage: "EXPLORE",
+          name: "Hidden Market Opportunity Scan",
+          price: "US$29",
+          period: "one-time",
+          mode: "ONE-TIME INTELLIGENCE SNAPSHOT",
+          desc: "Identify overlooked overseas opportunities through demand shifts, competitor moves, buyer signals and market gaps.",
           features: [
-            "GoRadar AI™ Dashboard",
-            "Monthly Scheduled 1:1 Strategy Review (60m)",
-            "Website & Ad Account Audit",
-            "Competitor & Keyword Opportunities Report"
+            "Hidden opportunity signals",
+            "Important competitor moves",
+            "Sample buyer / channel opportunities",
+            "Market gaps & key risks",
+            "Evidence-backed findings",
+            "Prioritized next move"
           ],
-          addon: "",
-          btn: "GET RADAR ACCESS",
-          highlight: false
+          terms: "One Opportunity Scan per business.",
+          detail: "Submit your company and product information first. We’ll confirm fit before sending the US$29 payment instructions.",
+          scope: "",
+          credit: "Upgrade within 30 days of completing your Scan to GoRadar AI™, Market Entry or Market Growth Partner and your $29 Scan fee will be credited in full.",
+          motions: [],
+          btn: "Request My Opportunity Scan",
+          source: "scan" as const
         },
         {
-          name: "CORE ENGINE TIER",
-          price: "$999", oldPrice: "$1,499", period: "/ MO",
-          billing: "90-day minimum, billed monthly in advance",
-          mode: "CONTENT & AD EXECUTION",
-          desc: "For businesses with a product and target market that need hands-on content and advertising support. Get execution, testing, and optimization across priority channels.",
+          stage: "MONITOR",
+          name: "GoRadar AI™",
+          price: "US$399",
+          period: "/ month",
+          mode: "CONTINUOUS INTELLIGENCE PRODUCT",
+          desc: "Keep track of market shifts, competitor moves, buyer opportunities and what to prioritize next.",
           features: [
-            "Everything in GoRadar AI™ Tier",
-            "1 Ad + 1 Content Platform Managed",
-            "No Additional Ad Management Fee on Up to $5,000 Monthly Ad Spend",
-            "Scheduled Strategy Review Every Two Weeks"
+            "Full GoRadar AI™ workspace and product access",
+            "Continuous market and industry monitoring",
+            "Competitor, buyer & account intelligence",
+            "Opportunity discovery and evidence-backed recommendations",
+            "Alerts, watchlists, onboarding & product support"
           ],
-          addon: "+$349/mo per extra platform",
-          btn: "START CORE ENGINE",
-          highlight: true
+          terms: "Monthly subscription.",
+          detail: "60 minutes of Founder Strategy Review each month — book as one 60-minute session or two 30-minute sessions to interpret market intelligence, discuss priorities and decide next actions.",
+          scope: "Product support and intelligence interpretation are included; ongoing execution and new consulting deliverables are separate engagements.",
+          credit: "",
+          motions: [],
+          btn: "Start with GoRadar AI™",
+          source: "goradar" as const
         },
         {
-          name: "FRACTIONAL CMO TIER",
-          price: "$2,499+", oldPrice: "$3,999", period: "/ MO",
-          billing: "90-day minimum, billed monthly in advance",
-          mode: "ONGOING GROWTH LEADERSHIP",
-          desc: "For businesses growing across channels that need ongoing strategic direction and coordination. A fractional CMO connects market insight, content, advertising, and reviews.",
+          stage: "ENTER",
+          name: "Market Entry",
+          price: "From US$3,500",
+          period: "/ project",
+          mode: "SCOPED MARKET-ENTRY ENGAGEMENT",
+          desc: "A scoped engagement that takes one priority market from intelligence to first real-world validation.",
           features: [
-            "Everything in Core Engine Tier",
-            "Multi-Channel Coordination (Scope Agreed per Engagement)",
-            "No Additional Ad Management Fee on Up to $30,000 Monthly Ad Spend",
-            "Website SEO & Brand Trust Building",
-            "Priority Support with Communication Cadence Agreed at Onboarding"
+            "One priority market and one core product line",
+            "One or two primary buyer profiles / ICPs",
+            "Positioning, offer & route-to-market",
+            "Buyer and channel mapping",
+            "One primary validation path and First Validation Cycle",
+            "Initial market feedback and Continue / Adjust / Stop / Scale recommendation"
           ],
-          addon: "",
-          btn: "HIRE YOUR CMO",
-          highlight: false
+          terms: "Typical engagement: 4–8 weeks. Final scope is confirmed before the project starts.",
+          detail: "Ongoing strategic access with unlimited scheduled strategy discussions during the engagement.",
+          scope: "Completion means the agreed First Validation Cycle and initial market feedback, not guaranteed sales. Additional markets, product lines and out-of-scope work are quoted separately.",
+          credit: "",
+          motions: [],
+          btn: "Discuss Market Entry",
+          source: "market-entry" as const
+        },
+        {
+          stage: "GROW",
+          name: "Market Growth Partner",
+          price: "From US$2,499",
+          period: "/ month",
+          mode: "ONGOING INTELLIGENCE + FOCUSED EXECUTION",
+          desc: "Ongoing intelligence, strategy and focused execution for businesses already active in overseas markets.",
+          features: [
+            "Full GoRadar AI™ access and ongoing Growth Plan",
+            "One agreed Core Growth Motion",
+            "Supporting work within the agreed scope",
+            "Reporting and ongoing optimization"
+          ],
+          terms: "Minimum 3 months; then month-to-month.",
+          detail: "Ongoing strategic access with unlimited scheduled strategy discussions and growth reviews.",
+          scope: "Execution scope is built around the highest-priority commercial motion in your Growth Plan. Supporting work required to make it effective is included within the agreed scope. Additional growth motions can be scoped separately.",
+          credit: "",
+          motions: ["Buyer & Channel Development", "Website & Search Growth", "Paid Acquisition", "Content & Social Growth", "Partnerships & Influence"],
+          btn: "Discuss Market Growth",
+          source: "market-growth" as const
         }
       ],
-      comparisonDetails: [
-        {
-          category: "GoRadar AI™ Intelligence & Strategy",
-          items: [
-            { name: "Competitor & Search Opportunities Report", t1: "1 Report / Mo", t2: "2 Reports / Mo", t3: "Ongoing Monitoring" },
-            { name: "Scheduled Strategy Review", t1: "Monthly (60 mins)", t2: "About 2x / Mo", t3: "Weekly" },
-            { name: "Ad Account & Site Health Audit", t1: "✔", t2: "✔", t3: "✔" },
-            { name: "Custom Go-to-Market Strategy (GTM)", t1: "✘", t2: "✔", t3: "✔" }
-          ]
-        },
-        {
-          category: "Brand & Website Foundations",
-          items: [
-            { name: "Social Account Setup & Search Optimization (SEO)", t1: "✘", t2: "1-2 Core Platforms", t3: "Multi-Channel Coordination (Scope Agreed per Engagement)" },
-            { name: "Website Conversion Review (CRO)", t1: "✘", t2: "✔", t3: "Ongoing Optimization & A/B Testing" }
-          ]
-        },
-        {
-          category: "Content & Localization",
-          items: [
-            { name: "AI-Assisted Localized Visual Production", t1: "✘", t2: "Defined Sets per Campaign", t3: "Volume Production & In-Depth Localization" },
-            { name: "Social Content Scheduling & Publishing", t1: "✘", t2: "Content Execution and Publishing Based on the Agreed Monthly Plan", t3: "Ongoing Multi-Channel Content Coordination and Publishing" },
-            { name: "Community Engagement & Lead Routing", t1: "✘", t2: "✔", t3: "Lead Organization and Conversion-Path Support" },
-            { name: "KOL/UGC Resource Mgmt", t1: "✘", t2: "✘", t3: "Creator Partnership Support (Scope Agreed per Project)" }
-          ]
-        },
-        {
-          category: "Ads & Growth",
-          items: [
-            { name: "Ad Account Setup & Pixel/CAPI Tracking", t1: "✘", t2: "✔", t3: "✔" },
-            { name: "Ad Strategy & Target Audiences", t1: "✘", t2: "1 Core Channel", t3: "Coordinated Multi-Channel Campaigns" },
-            { name: "A/B Testing & Ad Return Optimization (ROAS)", t1: "✘", t2: "✔", t3: "Ongoing Testing and Optimization Based on Available Budget, Traffic, and Creative Volume" },
-            { name: "Monthly Ad Spend with No Additional Management Fee", t1: "✘", t2: "Up to $5,000", t3: "Up to $30,000" },
-            { name: "Overage Management Fee", t1: "✘", t2: "10% on Spend Above $5,000", t3: "8–10% on Spend Above $30,000, Based on Scale" }
-          ]
-        },
-        {
-          category: "Communication & Support",
-          items: [
-            { name: "Initial Response & Troubleshooting", t1: "Email Response Within 2 Business Days", t2: "Response Within 1 Business Day", t3: "Priority Support; Communication Cadence Agreed at Onboarding" }
-          ]
-        }
-      ]
+      lead: {
+        stage: "LEAD",
+        eyebrow: "NEED BROADER MARKET LEADERSHIP?",
+        name: "Fractional CMO / Multi-Market Growth",
+        price: "Custom",
+        desc: "Senior-level strategy, multi-market coordination, growth planning and ongoing commercial leadership for more complex international expansion.",
+        btn: "Talk to Us"
+      }
     },
     faq: {
       title: "BEFORE\nWE START",
       items: [
         {
-          q: "What is GoRadar AI? Can I choose it without execution services?",
-          a: "GoRadar AI is our market, competitor, buyer, and opportunity intelligence layer for both Market Entry and Market Growth. It is available through the GoRadar AI™ Tier without an execution plan, with the strategy reviews included in your plan. It supports decisions; business context and real-world validation still matter."
+          q: "How do I purchase an Opportunity Scan?",
+          a: "Submit your company and product information first. Once we confirm the Scan is a fit, we’ll send the US$29 payment instructions privately. We start the Scan after receiving payment. One Opportunity Scan per business."
+        },
+        {
+          q: "Does GoRadar AI™ include human strategy support?",
+          a: "US$399 per month includes full GoRadar AI™ product access, onboarding, product support and intelligence interpretation, plus 60 minutes of scheduled Founder Strategy Review each month. Book one 60-minute session or two 30-minute sessions to discuss priorities and next decisions. Ongoing execution, campaign management, website work, outbound work and new consulting deliverables are not included."
         },
         {
           q: "What services do you provide?",
-          a: "GoRadar AI supports market, competitor, buyer, and opportunity decisions. Market Entry helps define and validate a route into a new market; Market Growth improves an existing overseas business. Buyer and channel development, website and SEO, content, paid media, and partnerships are execution capabilities chosen by goal and agreed scope."
+          a: "GoRadar AI™ supports market, competitor, buyer, and opportunity decisions. Market Entry helps define and validate a route into a new market; Market Growth improves an existing overseas business. Buyer and channel development, website and SEO, content, paid media, and partnerships are execution capabilities chosen by goal and agreed scope."
         },
         {
           q: "Who is this for? Can we work together before launching overseas?",
@@ -323,7 +335,7 @@ const dict = {
         },
         {
           q: "How can you work with our existing team or agency?",
-          a: "We can work around the gaps in your current setup. Choose GoRadar AI for intelligence and guidance, Core Engine for content and ad execution, or Fractional CMO for ongoing strategy and coordination across channels. We agree on responsibilities, account access, and communication before starting."
+          a: "We can work around the gaps in your current setup. Choose GoRadar AI™ for intelligence and guidance, Market Entry for a scoped validation project, Market Growth Partner for focused ongoing execution, or Fractional CMO for broader leadership. We agree on responsibilities, account access and communication before starting."
         },
         {
           q: "Which platforms and channels do you cover?",
@@ -338,12 +350,20 @@ const dict = {
           a: "Market direction usually comes before acquisition results; timing depends on your starting point, budget, and customer buying cycle. We begin with market and problem assessment, then use small tests to look for inquiry and conversion signals. The first 90 days provide a continuous cycle of analysis, testing, and optimization, with no sales or return guarantee."
         },
         {
-          q: "Is the advertising budget included in the service fee?",
-          a: "No: plan prices cover tools and services, while media spend is separate. The $5,000 Core Engine and $30,000 Fractional CMO limits are monthly ad spend caps with no additional management fee, not ad credits. Extra-platform charges and overage management fees are listed in the plan comparison."
+          q: "When does a Market Entry project finish?",
+          a: "Market Entry is a scoped project, typically 4–8 weeks, completed when the agreed First Validation Cycle and initial real-world market feedback are delivered with a Continue, Adjust, Stop or Scale recommendation—not when sales are guaranteed. Strategy discussions can be scheduled throughout the engagement, but execution deliverables follow the agreed scope. A full website build, long-term ad management or outreach, unlimited content, and additional markets or product lines are quoted separately if needed."
         },
         {
-          q: "How does billing work? Is there a long-term commitment?",
-          a: "GoRadar AI is available for $399 as a monthly subscription. Core Engine and Fractional CMO have a 90-day minimum and are billed monthly in advance. Media spend, sponsorship and media rights, creator fees, production costs, and other third-party costs are billed separately."
+          q: "Does Market Growth Partner include every growth service?",
+          a: "No. From US$2,499 per month, the Growth Plan selects one core commercial motion and the supporting work needed within the agreed scope. It does not include all five growth motions or unlimited deliverables. Additional motions can be scoped separately. Strategy discussions are unlimited when scheduled during the engagement."
+        },
+        {
+          q: "Are media spend and other third-party costs included?",
+          a: "No. Media spend, professional production, creator fees, sponsorship rights, travel, external tools and databases are separate. We confirm scope and any third-party costs before work starts."
+        },
+        {
+          q: "How does pricing and the initial term work?",
+          a: "The Scan is US$29 once per business; GoRadar AI™ is US$399 per month. Market Entry starts from US$3,500 per scoped project. Market Growth Partner starts from US$2,499 per month with a 3-month initial term, then continues month to month. Fractional CMO / Multi-Market Growth is custom scoped. These are starting points, not a required purchase sequence."
         },
         {
           q: "How do we start with Sponsorships & Creator Marketing?",
@@ -382,13 +402,15 @@ const dict = {
     mobile: { openMenu: "Open navigation menu", closeMenu: "Close navigation menu" }
   },
   zh: {
-    nav: { goradar: "GoRadar AI", services: "服务", cases: "应用场景", pricing: "定价", faq: "常见问题", contact: "联系我们", signin: "登录", langSwitch: "EN" },
+    nav: { goradar: "GoRadar AI™", services: "服务", cases: "应用场景", pricing: "定价", faq: "常见问题", contact: "联系我们", signin: "登录", langSwitch: "EN" },
     hero: {
       eyebrow: "全球市场进入与增长伙伴",
       title: "雷达全开。\n告别盲猜。",
-      subtitle: "帮助有成熟产品、供应链或出口基础的中国企业看清海外市场，找到买家、客户与渠道机会，并把市场判断转化为实际行动。\nGoRadar AI 持续监测市场、竞争对手、客户线索和行业变化，为市场进入与持续增长提供判断依据。"
+      who: "帮助有成熟产品、供应链或出口基础的中国企业",
+      value: "通过 GoRadar AI™\n看清海外市场，\n找到买家、客户与渠道机会，\n并把市场判断转化为实际行动。",
+      how: "GoRadar AI™ 持续监测市场、\n竞争对手、客户线索和行业变化，\n为市场进入与持续增长提供判断依据。"
     },
-    marquee: ["GORADAR AI INTELLIGENCE", "MARKET ENTRY", "MARKET GROWTH", "EXECUTION CAPABILITIES"],
+    marquee: ["GoRadar AI™ Intelligence", "MARKET ENTRY", "MARKET GROWTH", "BUYER & CHANNEL DEVELOPMENT", "CONTENT & LOCALIZATION", "PAID MEDIA"],
     problems: {
       kicker: "THE CHALLENGE",
       title: "你可能已经有产品和市场基础。\n缺的是更清晰的海外增长路径。",
@@ -401,14 +423,14 @@ const dict = {
     },
     services: {
       kicker: "HOW WE WORK",
-      title: "从看清机会\n到进入与增长",
-      desc: "GoRadar AI 同时支持新市场进入与已有市场增长。围绕具体业务目标，选择合适的增长执行能力。",
+      title: "从\n看清机会\n到\n市场进入与增长",
+      desc: "GoRadar AI™ 同时支持新市场进入与已有市场增长。围绕具体业务目标，选择合适的增长执行能力。",
       s1: {
-        title: "GoRadar AI",
-        label: "市场、竞争与机会情报",
-        desc: "持续发现市场、客户与增长机会。GoRadar AI 汇集持续更新的需求、竞争对手、潜在买家、渠道与行业变化信号，为全球市场进入和海外市场增长提供情报与决策支持。",
-        btnOpen: "看看 GoRadar 如何发现机会",
-        btnClose: "收起 GoRadar 详情",
+        title: "GoRadar AI™ 情报雷达",
+        label: "通过 GoRadar AI™ 看清海外市场",
+        desc: "持续发现市场、客户与增长机会。GoRadar AI™ 汇集持续更新的需求、竞争对手、潜在买家、渠道与行业变化信号，为全球市场进入和海外市场增长提供情报与决策支持。",
+        btnOpen: "了解 GoRadar AI™ 的机会发现方式",
+        btnClose: "收起 GoRadar AI™ 详情",
         features: [
           {
             name: "市场情报",
@@ -435,12 +457,14 @@ const dict = {
       s2: {
         title: "全球市场进入",
         label: "Market Entry",
-        desc: "想进入新的海外市场，应该去哪、卖给谁、怎么进去？从市场选择、买家与客户定义、竞争定位到第一轮市场验证，帮助企业建立清晰、可执行的市场进入路径。",
+        desc: "帮助你判断先做哪里、卖给谁、怎么进入，并完成第一轮市场验证。",
         bullets: [
-          "市场与品类机会排序",
+          "市场与国家优先级判断",
           "买家、经销商与渠道研究",
-          "定位、产品主张与进入路径",
-          "第一轮市场验证"
+          "定位、产品主张与进入路径梳理",
+          "官网审计、落地页与建站建议",
+          "搜索、内容与渠道进入策略",
+          "第一轮市场与获客验证"
         ],
         kpis: [
           "目标：清晰的进入路径",
@@ -450,12 +474,14 @@ const dict = {
       s3: {
         title: "海外市场增长",
         label: "Market Growth",
-        desc: "已经有海外业务，如何持续寻找更多线索、客户与渠道机会？围绕买家开发、渠道、搜索、内容、网站和广告进行有选择的测试与优化，把验证有效的方法逐步放大。",
+        desc: "针对已经有海外业务的企业，持续优化客户、渠道与获客路径，找到下一步增长机会。",
         bullets: [
           "买家与客户开发",
-          "渠道与合作伙伴机会",
-          "搜索、内容、网站与广告测试",
-          "根据市场反馈持续优化"
+          "官网优化与 SEO 增长",
+          "内容本地化与社媒传播",
+          "广告投放审计、测试与优化",
+          "渠道与合作伙伴拓展",
+          "基于市场反馈持续优化"
         ],
         kpis: [
           "目标：更多相关机会",
@@ -493,7 +519,7 @@ const dict = {
       p1: {
         tag: "01 / 看清机会",
         title: "看清市场",
-        desc: "结合 GoRadar AI 分析需求、竞争、潜在买家与渠道，判断哪些机会值得优先关注。"
+        desc: "结合 GoRadar AI™ 分析需求、竞争、潜在买家与渠道，判断哪些机会值得优先关注。"
       },
       p2: {
         tag: "02 / 定义路径",
@@ -518,7 +544,7 @@ const dict = {
         {
           tag: "MARKET ENTRY",
           title: "不知道先做哪个海外市场",
-          desc: "新市场看起来有机会，却不知道先把资源投向哪里。BrandGo.Global 用 GoRadar AI 对比需求、竞争、买家与渠道，帮助确定优先验证的方向。"
+          desc: "新市场看起来有机会，却不知道先把资源投向哪里。BrandGo.Global 用 GoRadar AI™ 对比需求、竞争、买家与渠道，帮助确定优先验证的方向。"
         },
         {
           tag: "EXPORT GROWTH",
@@ -569,126 +595,132 @@ const dict = {
         bio: [
           "Yusheng Yang（杨雨昇）在 Lancaster University 学习金融，并在 University of Warwick 获得项目管理硕士学位。他的职业经历横跨中国与亚洲市场，连接品牌、商业策略与跨境业务。",
           "拥有十余年品牌、营销、市场进入（GTM）和全球供应链相关经验，参与过消费品牌的建立与发展，以及跨境供应链项目。他关注企业进入海外市场时最实际的问题：卖给谁、如何表达、先把资源投入哪里。",
-          "在 BrandGo.Global，他负责市场进入策略与 GoRadar AI 产品架构，把市场情报与内容、广告和本地化执行连接起来，帮助中国企业从判断机会走向实际行动。他长期关注有产品、供应链或出口基础的中国企业，如何走向更广的海外市场、客户与品牌增长。"
+          "在 BrandGo.Global，他负责市场进入策略与 GoRadar AI™ 产品架构，把市场情报与内容、广告和本地化执行连接起来，帮助中国企业从判断机会走向实际行动。他长期关注有产品、供应链或出口基础的中国企业，如何走向更广的海外市场、客户与品牌增长。"
         ]
       }
     },
     pricing: {
-      kicker: "WAYS TO WORK TOGETHER",
-      title: "选择适合你的\n合作方式",
-      subtitle: "按月报价。GoRadar AI 可按月订阅；执行型服务最低合作 90 天。",
-      note: "服务型合作按月预付。",
-      guidance: "团队能执行，先选工具；需要有人落地，选执行；需要跨渠道持续推进，选长期统筹。",
-      fees: "套餐价格为工具与服务费。广告媒体预算、赞助与媒体权益费、达人合作费、制作成本及其他第三方费用另计。$5,000 / $30,000 指每月不另收广告管理费的投放额度上限，不是包含的广告预算；额外平台及超额费用见完整对比。",
-      disclaimer: "具体交付范围、渠道数量和第三方费用将在合作开始前确认。",
-      btnExpand: "↓ 展开完整服务细节对比",
-      btnCollapse: "↑ 收起服务细节对比",
-      includedText: "✓ 包含",
-      tiers: [
+      kicker: "GROWTH JOURNEY",
+      title: "从发现机会，\n到进入市场与持续增长",
+      subtitle: "你现在在哪一步，就从哪一步开始。",
+      journeyNote: "先发现或持续监测机会，再根据企业所处阶段选择进入新市场或增长已有业务；无需依次购买所有方案。",
+      or: "或",
+      motionLabel: "可选择的核心增长方向",
+      fees: "广告媒体预算、专业制作、达人费用、赞助权益、差旅及其他第三方成本另计。",
+      offers: [
         {
-          name: "GoRadar AI™ 战术版",
-          price: "$399", oldPrice: "$599", period: "/ 月",
-          billing: "按月订阅，可按月续订",
-          mode: "工具与策略支持",
-          desc: "适合已有执行团队，需要看清市场、比较机会、确定优先级的企业。用 GoRadar AI 与定期策略复盘，为团队行动提供依据。",
+          stage: "EXPLORE",
+          name: "海外市场隐藏机会诊断",
+          price: "US$29",
+          period: "单次诊断",
+          mode: "一次性市场情报快照",
+          desc: "从需求变化、竞争动作、买家线索和市场空白中，找出几条最值得进一步验证的海外机会。",
           features: [
-            "GoRadar AI™ 市场情报看板",
-            "每月 1 次定期策略复盘（60 分钟）",
-            "现有独立站/广告账户检查",
-            "竞争对手与潜在关键词报告"
+            "隐藏机会信号",
+            "重要竞争动作",
+            "买家 / 渠道机会样本",
+            "市场空白与关键风险",
+            "有证据支持的判断",
+            "下一步优先动作"
           ],
-          addon: "",
-          btn: "获取雷达权限",
-          highlight: false
+          terms: "每个企业仅提供一次 Opportunity Scan。",
+          detail: "提交企业与产品信息后，我们会先确认是否适合进行 Scan。审核通过后，再发送 US$29 付款方式。",
+          scope: "",
+          credit: "Scan 完成后 30 天内升级 GoRadar AI™、Market Entry 或 Market Growth Partner，$29 诊断费用可全额抵扣。",
+          motions: [],
+          btn: "申请我的 Opportunity Scan",
+          source: "scan" as const
         },
         {
-          name: "核心引擎版",
-          price: "$999", oldPrice: "$1,499", period: "/ 月",
-          billing: "最低合作 90 天，按月预付",
-          mode: "内容与广告执行",
-          desc: "适合已有产品和目标市场，需要有人把内容与广告做起来的企业。围绕重点渠道执行、测试与优化，补上日常落地能力。",
+          stage: "MONITOR",
+          name: "GoRadar AI™",
+          price: "US$399",
+          period: "/ 月",
+          mode: "持续市场情报产品",
+          desc: "持续掌握市场变化、竞争动作、买家机会和下一步优先事项。",
           features: [
-            "包含【战术版】所有核心权益",
-            "管理 1 个广告 + 1 个内容平台",
-            "每月广告消耗在 $5,000 以内，不另收广告管理费",
-            "每两周 1 次定期策略复盘"
+            "完整 GoRadar AI™ workspace 与产品权限",
+            "市场与行业持续监测",
+            "竞争对手、买家与目标账户情报",
+            "机会发现与有证据支持的建议",
+            "提醒、关注列表、产品导入与支持"
           ],
-          addon: "每增加一个渠道模块 +$349/月",
-          btn: "启动核心引擎",
-          highlight: true
+          terms: "按月订阅。",
+          detail: "每月包含 60 分钟 Founder Strategy Review。可预约 1 × 60 分钟或 2 × 30 分钟，用于解读市场情报、讨论业务优先级和下一步行动。",
+          scope: "包含产品支持与情报解读；持续执行和新的咨询交付需另行约定。",
+          credit: "",
+          motions: [],
+          btn: "开启我的 GoRadar AI™",
+          source: "goradar" as const
         },
         {
-          name: "全球共享 CMO 版",
-          price: "$2,499+", oldPrice: "$3,999", period: "/ 月",
-          billing: "最低合作 90 天，按月预付",
-          mode: "长期增长统筹",
-          desc: "适合已在多个渠道推进海外业务，需要持续统筹策略与执行的企业。由共享 CMO 协调市场判断、内容、投放与复盘。",
+          stage: "ENTER",
+          name: "全球市场进入",
+          price: "From US$3,500",
+          period: "/ 项目",
+          mode: "按范围确认的市场进入项目",
+          desc: "围绕一个优先市场、一条核心产品线和一个明确进入目标，从市场判断推进到第一轮真实市场验证。",
           features: [
-            "包含【核心引擎版】所有权益",
-            "多渠道统筹（具体范围按合作方案确认）",
-            "每月广告消耗在 $30,000 以内，不另收广告管理费",
-            "独立站 SEO 与品牌信任建设",
-            "优先支持，具体沟通机制在合作开始时确认"
+            "1 个优先市场与 1 条核心产品线",
+            "1–2 个主要买家画像 / ICP",
+            "定位、产品主张与进入路径",
+            "买家与渠道地图",
+            "1 条主要验证路径与 First Validation Cycle",
+            "第一轮真实市场反馈及继续 / 调整 / 停止 / 放大建议"
           ],
-          addon: "",
-          btn: "雇佣您的 CMO",
-          highlight: false
+          terms: "通常合作 4–8 周；最终范围在项目开始前确认。",
+          detail: "合作期间可随时预约策略讨论与项目复盘；策略会议不限次数（需预约）。",
+          scope: "完成双方约定的第一轮验证并获得真实市场反馈，不保证订单。额外市场、产品线及范围外工作另行报价。",
+          credit: "",
+          motions: [],
+          btn: "聊聊市场进入",
+          source: "market-entry" as const
+        },
+        {
+          stage: "GROW",
+          name: "海外市场增长伙伴",
+          price: "From US$2,499",
+          period: "/ 月",
+          mode: "持续情报 + 聚焦执行",
+          desc: "针对已经开始海外业务的企业，持续找到并执行最值得投入的增长机会。",
+          features: [
+            "完整 GoRadar AI™ 权限与持续 Growth Plan",
+            "一项约定的核心增长方向",
+            "约定范围内必需的配套工作",
+            "效果汇报与持续优化"
+          ],
+          terms: "最低合作 3 个月，之后按月续约。",
+          detail: "合作期间可随时预约策略讨论与增长复盘；策略会议不限次数（需预约）。",
+          scope: "具体执行范围围绕 Growth Plan 中最高优先级增长目标确定。为推进核心方向所必需的配套工作，在约定范围内包含；额外增长方向可另行确认范围与报价。",
+          credit: "",
+          motions: ["买家、经销商与渠道开发", "官网与搜索增长", "广告与付费获客", "内容与社媒增长", "渠道合作、品牌赞助与达人增长"],
+          btn: "聊聊市场增长",
+          source: "market-growth" as const
         }
       ],
-      comparisonDetails: [
-        {
-          category: "GoRadar AI™ 市场情报与策略",
-          items: [
-            { name: "竞争对手与搜索机会报告", t1: "每月 1 份", t2: "每月 2 份", t3: "持续监测" },
-            { name: "定期策略复盘", t1: "每月 1 次（60 分钟）", t2: "每月约 2 次", t3: "每周 1 次" },
-            { name: "独立站/广告账户检查", t1: "✔", t2: "✔", t3: "✔" },
-            { name: "市场进入策略定制 (GTM)", t1: "✘", t2: "✔", t3: "✔" }
-          ]
-        },
-        {
-          category: "品牌与网站基础",
-          items: [
-            { name: "社媒账号搭建与搜索优化 (SEO)", t1: "✘", t2: "1-2 个核心平台", t3: "多渠道统筹（具体范围按合作方案确认）" },
-            { name: "独立站转化诊断 (CRO)", t1: "✘", t2: "✔", t3: "持续优化与 A/B 测试" }
-          ]
-        },
-        {
-          category: "海外内容与本地化",
-          items: [
-            { name: "AI 辅助本地化素材制作", t1: "✘", t2: "按推广活动定量交付", t3: "批量素材制作与深度本地化" },
-            { name: "社媒内容排期与发布", t1: "✘", t2: "按月内容计划执行与发布", t3: "多渠道内容统筹与持续发布" },
-            { name: "粉丝互动与线索引导", t1: "✘", t2: "✔", t3: "线索整理与转化路径支持" },
-            { name: "本土 KOL/UGC 资源对接", t1: "✘", t2: "✘", t3: "达人 / 创作者合作支持（按项目与范围确认）" }
-          ]
-        },
-        {
-          category: "海外广告与增长",
-          items: [
-            { name: "开户、像素/CAPI 数据追踪", t1: "✘", t2: "✔", t3: "✔" },
-            { name: "广告策略与目标受众", t1: "✘", t2: "单一核心渠道", t3: "多渠道联合投放" },
-            { name: "A/B 测试与广告回报优化 (ROAS)", t1: "✘", t2: "✔", t3: "根据预算、流量和素材条件持续进行测试与优化" },
-            { name: "不另收管理费的每月广告消耗额度", t1: "✘", t2: "最高 $5,000", t3: "最高 $30,000" },
-            { name: "超额广告消耗管理费", t1: "✘", t2: "超过 $5,000 的部分按 10% 收取", t3: "超过 $30,000 的部分根据投放规模按 8–10% 收取" }
-          ]
-        },
-        {
-          category: "沟通与支持",
-          items: [
-            { name: "首次响应与答疑", t1: "首次邮件回复：2 个工作日内", t2: "首次回复：1 个工作日内", t3: "优先支持，具体沟通机制在合作开始时确认" }
-          ]
-        }
-      ]
+      lead: {
+        stage: "LEAD",
+        eyebrow: "NEED BROADER MARKET LEADERSHIP?",
+        name: "Fractional CMO / Multi-Market Growth",
+        price: "Custom",
+        desc: "适合需要高层市场战略、多市场统筹、增长规划与持续商业决策支持的复杂海外业务。",
+        btn: "聊聊更复杂的海外增长"
+      }
     },
     faq: {
       title: "合作前，\n你可能想问",
       items: [
         {
-          q: "GoRadar AI 是什么？可以只用工具吗？",
-          a: "GoRadar AI 是支持全球市场进入和海外市场增长的市场、竞争、买家与机会情报层。可以单独选择 GoRadar AI™ 战术版，无需购买执行型服务，套餐中的策略复盘也会帮助梳理优先级。它提供决策支持；具体判断仍需结合业务情况并通过实际执行验证。"
+          q: "Opportunity Scan 怎么购买？",
+          a: "先提交企业与产品信息。我们确认适合进行 Scan 后，会私下发送 US$29 付款方式；收到付款后启动诊断。每个企业仅提供一次 Scan。"
+        },
+        {
+          q: "GoRadar AI™ 包含人工策略支持吗？",
+          a: "每月 US$399 包含完整 GoRadar AI™ 产品权限、产品导入、产品支持与情报解读，以及每月 60 分钟需预约的 Founder Strategy Review。可选 1 × 60 分钟或 2 × 30 分钟，用于讨论优先级和下一步判断；不包含持续执行、广告管理、网站工作、主动客户开发或新的咨询交付。"
         },
         {
           q: "你们具体能帮我做哪些事？",
-          a: "GoRadar AI 帮助判断市场、竞争、买家与机会；全球市场进入帮助建立并验证新市场路径；海外市场增长帮助优化已有海外业务。买家和渠道开发、官网与搜索、内容、广告及相关合作是按目标与确认范围选择的执行能力。"
+          a: "GoRadar AI™ 帮助判断市场、竞争、买家与机会；全球市场进入帮助建立并验证新市场路径；海外市场增长帮助优化已有海外业务。买家和渠道开发、官网与搜索、内容、广告及相关合作是按目标与确认范围选择的执行能力。"
         },
         {
           q: "什么样的企业适合？还没开始出海也可以吗？",
@@ -696,7 +728,7 @@ const dict = {
         },
         {
           q: "已经有自己的团队或代理，你们怎么配合？",
-          a: "可以围绕现有团队的缺口配合。如果缺市场情报和判断依据，可以先选 GoRadar AI；需要内容与广告执行，可考虑核心引擎版；需要跨渠道的长期策略统筹，可考虑全球共享 CMO 版。合作前先对齐分工、账号权限与沟通方式。"
+          a: "可以围绕现有团队的缺口配合。需要情报与判断依据可选 GoRadar AI™；新市场验证可选全球市场进入；聚焦持续执行可选海外市场增长伙伴；更复杂的统筹可讨论 Fractional CMO。合作前先对齐分工、账号权限与沟通方式。"
         },
         {
           q: "覆盖哪些海外平台和渠道？",
@@ -711,12 +743,20 @@ const dict = {
           a: "市场判断通常先于获客结果，具体速度取决于现有基础、预算和客户决策周期。前期先完成市场与问题梳理，随后通过小范围测试观察询盘和转化信号。前 90 天用于形成分析、测试与优化的连续过程，不能视为销售额或回报保证。"
         },
         {
-          q: "广告预算包含在服务费里吗？",
-          a: "不包含，套餐价格是工具与服务费用，媒体广告预算另计。核心引擎版的 $5,000 和全球共享 CMO 版的 $30,000，是每月不加收广告管理费的投放额度上限，不是赠送的广告金额。额外平台和超出额度的管理费可在套餐对比中查看。"
+          q: "全球市场进入项目做到什么程度结束？",
+          a: "这是按范围确认的项目，通常为 4–8 周。完成双方约定的 First Validation Cycle、取得第一轮真实市场反馈，并给出继续、调整、停止或放大的建议，即为本轮项目成果；不保证获得订单。合作期间可预约策略讨论，但交付仍以确认的范围为准。完整建站、长期投放或买家开发、无限内容、额外市场与产品线等如需开展，另行报价。"
         },
         {
-          q: "套餐如何收费？需要长期签约吗？",
-          a: "GoRadar AI $399 可按月订阅。核心引擎版和全球共享 CMO 版最低合作 90 天，服务型套餐按月预付。广告媒体预算、赞助与媒体权益费、达人合作费、制作成本及其他第三方费用另计。"
+          q: "海外市场增长伙伴包含所有增长服务吗？",
+          a: "不包含。起价每月 US$2,499，Growth Plan 会确定一项核心增长方向及约定范围内必需的配套工作，并非五类增长手段全部包含，也不代表交付数量不限。额外增长方向可单独确认范围与报价；合作期间策略讨论不限次数，但需预约。"
+        },
+        {
+          q: "广告预算和第三方费用包含吗？",
+          a: "不包含。广告媒体预算、专业制作、达人费用、赞助权益、差旅、外部工具和数据库等费用另计。具体范围及第三方成本会在开始前确认。"
+        },
+        {
+          q: "如何收费？合作期限是多久？",
+          a: "机会诊断每家企业一次，US$29；GoRadar AI™ 每月 US$399。全球市场进入按项目报价，US$3,500 起；海外市场增长伙伴每月 US$2,499 起，初期至少合作 3 个月，之后按月续约。Fractional CMO / Multi-Market Growth 根据范围定制报价。各方案是不同起点，不需要依次购买。"
         },
         {
           q: "想做品牌赞助与达人营销，应该怎么开始？",
@@ -760,7 +800,7 @@ const dict = {
 // 2. 类型 & 常量
 // ==========================================
 
-type SourcePlan = "radar" | "core-engine" | "fractional-cmo" | "direct";
+type SourcePlan = "scan" | "goradar" | "market-entry" | "market-growth" | "fractional-cmo" | "direct";
 
 interface FormValues {
   name: string;
@@ -795,7 +835,6 @@ export default function Page() {
   const [lang, setLang] = useState<'en' | 'zh'>('zh');
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [radarExpanded, setRadarExpanded] = useState(false);
-  const [showSla, setShowSla] = useState(false);
   const [showMoreInfo, setShowMoreInfo] = useState(false);
 
   const t = dict[lang];
@@ -985,10 +1024,10 @@ export default function Page() {
               {t.hero.title}
             </h1>
           </div>
-          <div className="min-w-0 w-full xl:w-[40%] md:pb-6">
-            <p className="text-lg md:text-xl font-bold leading-tight text-black whitespace-pre-line">
-              {t.hero.subtitle}
-            </p>
+          <div className="min-w-0 w-full xl:w-[40%] md:pb-6 flex flex-col gap-4 md:gap-5 text-black">
+            <p className="text-base md:text-lg font-semibold leading-snug text-balance">{t.hero.who}</p>
+            <p className="text-lg md:text-xl font-bold leading-snug whitespace-pre-line md:whitespace-normal text-balance">{t.hero.value}</p>
+            <p className="text-sm md:text-base font-medium leading-relaxed whitespace-pre-line md:whitespace-normal text-black/75 text-balance">{t.hero.how}</p>
           </div>
         </div>
 
@@ -1043,8 +1082,12 @@ export default function Page() {
         <div className="lg:w-[35%]">
           <div className="sticky top-24 h-fit">
             <p className="text-xs font-bold tracking-widest text-[#E5FF00] mb-6" lang="en">{t.services.kicker}</p>
-            <h2 className="text-5xl md:text-7xl lg:text-[clamp(3rem,4.5vw,4.5rem)] font-black tracking-tighter leading-[1.1] mb-6 whitespace-pre-line text-balance">
-              {t.services.title}
+            <h2 className="font-black tracking-tighter leading-[1.08] mb-6 text-balance">
+              {t.services.title.split("\n").map((line, index) => (
+                <span key={`${line}-${index}`} className={`block ${index % 2 === 0 ? "text-2xl md:text-3xl lg:text-3xl text-gray-400" : "text-4xl md:text-6xl lg:text-[clamp(2.4rem,3.5vw,3.5rem)]"}`}>
+                  {line}
+                </span>
+              ))}
             </h2>
             <p className="text-lg md:text-xl text-gray-400 font-bold leading-relaxed max-w-sm">
               {t.services.desc}
@@ -1058,7 +1101,9 @@ export default function Page() {
             <div className="flex items-start gap-4 md:gap-6 mb-2">
               <span className="shrink-0 text-xl font-black text-[#E5FF00] tracking-tighter">[ 01 ]</span>
               <div className="min-w-0">
-                <h3 className="text-3xl md:text-4xl font-black tracking-tight text-white text-balance">{t.services.s1.title}</h3>
+                <h3 className="text-3xl md:text-4xl font-black tracking-tight text-white text-balance">
+                  <span className="whitespace-nowrap">GoRadar AI™</span>{" "}<span className="whitespace-nowrap">{t.services.s1.title.slice("GoRadar AI™".length).trim()}</span>
+                </h3>
                 <p className="mt-3 text-base md:text-lg font-bold text-[#E5FF00]">{t.services.s1.label}</p>
               </div>
             </div>
@@ -1273,171 +1318,93 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ==================== 7. PRICING 订阅价格区 (带卡片内无限拉长对比) ==================== */}
-      <section id="pricing" data-section-theme="dark" className="bg-[#0A0A0A] px-6 md:px-8 py-32 border-t border-white/20">
-
-        {/* 标题与付款方式提示 */}
-        <div className="flex flex-col items-center justify-center text-center mb-16">
-          <p className="text-xs font-bold tracking-widest text-[#E5FF00] mb-6" lang="en">{t.pricing.kicker}</p>
-          <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-[1.1] whitespace-pre-line text-balance text-[#E5FF00] mb-6">
-            {t.pricing.title}
-          </h2>
-          <p className="max-w-3xl text-base md:text-lg leading-relaxed text-gray-300 mb-6">{t.pricing.guidance}</p>
-          <p className="text-xl md:text-2xl font-black text-gray-400 tracking-tight mb-4">
-            {t.pricing.subtitle}
-          </p>
-          <div className="inline-block bg-[#1A1A1A] text-gray-300 font-bold px-6 py-2 rounded-full text-sm md:text-base border border-white/10">
-            {t.pricing.note}
+      {/* ==================== 7. Growth Journey ==================== */}
+      <section id="pricing" data-section-theme="dark" className="bg-[#0A0A0A] text-white px-6 md:px-8 py-24 md:py-32 border-t border-white/20">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-4xl mb-12 md:mb-16">
+            <p className="text-xs font-bold tracking-widest text-[#E5FF00] mb-6" lang="en">{t.pricing.kicker}</p>
+            <h2 className="text-4xl md:text-6xl xl:text-7xl font-black tracking-tighter leading-[1.08] whitespace-pre-line text-balance mb-6">
+              {t.pricing.title}
+            </h2>
+            <p className="text-lg md:text-2xl font-bold mb-3">{t.pricing.subtitle}</p>
+            <p className="text-base md:text-lg text-gray-400 leading-relaxed max-w-3xl">{t.pricing.journeyNote}</p>
           </div>
-          <p className="max-w-3xl mt-6 text-sm leading-relaxed text-gray-400">{t.pricing.fees}</p>
-        </div>
 
-        {/* 价格卡片网格 */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto items-stretch mb-12">
-          {t.pricing.tiers.map((tier, idx) => {
-            // Pricing-tier → sourcePlan + auto-interest mapping.
-            // We intentionally keep this mapping local to the
-            // Pricing section so the Contact form has no idea
-            // which plan the user clicked.
-            let onCta: () => void = () => {};
-            if (idx === 0) {
-              onCta = () => handlePricingClick('radar');
-            } else if (idx === 1) {
-              onCta = () => handlePricingClick('core-engine');
-            } else if (idx === 2) {
-              onCta = () => handlePricingClick('fractional-cmo');
-            }
+          <div className="border-y border-white/20 py-5 mb-8 flex flex-col md:flex-row md:items-center gap-3 md:gap-5 text-sm font-black tracking-wide" lang="en" aria-label="Growth Journey">
+            <span className="text-[#E5FF00]">EXPLORE</span>
+            <span className="text-gray-500" aria-hidden="true"><span className="md:hidden">↓</span><span className="hidden md:inline">→</span></span>
+            <span className="text-[#E5FF00]">MONITOR</span>
+            <span className="text-gray-500" aria-hidden="true"><span className="md:hidden">↓</span><span className="hidden md:inline">→</span></span>
+            <span className="flex items-center gap-3 flex-wrap">
+              <span className="text-[#E5FF00]">ENTER</span>
+              <span className="text-gray-500">{t.pricing.or}</span>
+              <span className="text-[#E5FF00]">GROW</span>
+            </span>
+          </div>
 
-            return (
-              <div
-                key={idx}
-                className={`p-8 md:p-10 flex flex-col border-2 transition-colors duration-300 ${
-                  tier.highlight
-                    ? 'bg-[#E5FF00] border-[#E5FF00] text-black shadow-2xl'
-                    : 'bg-[#0A0A0A] border-white/20 text-white hover:border-white/50'
-                }`}
-              >
-                <div className="mb-6">
-                  <p className="text-xs font-bold tracking-wider mb-4">0{idx + 1} / {tier.mode}</p>
-                  <h3 className="text-3xl font-black tracking-tight">
-                    {tier.name}
-                  </h3>
-                </div>
-
-                {/* 划线价在上，当前价在下，完美对齐 */}
-                <div className="mb-6 border-b-2 border-current pb-6 flex flex-col items-start">
-                  <span className={`text-xl font-black line-through mb-1 ${tier.highlight ? 'text-black/50' : 'text-gray-600'}`}>
-                    {tier.oldPrice}
-                  </span>
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-6xl lg:text-[4rem] font-black tracking-tighter leading-none">{tier.price}</span>
-                    <span className={`text-xl font-bold ${tier.highlight ? 'text-black/70' : 'text-gray-500'}`}>{tier.period}</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 lg:gap-5 items-stretch">
+            {t.pricing.offers.map((offer, idx) => (
+              <article key={offer.stage} className={offer.stage === 'MONITOR' ? 'min-w-0 border-2 border-[#E5FF00] p-6 lg:p-7 flex flex-col' : 'min-w-0 border-2 border-white/20 p-6 lg:p-7 flex flex-col'}>
+                <p className="text-xs font-black tracking-widest text-[#E5FF00] mb-5" lang="en">0{idx + 1} / {offer.stage}</p>
+                <h3 className="text-2xl lg:text-[clamp(1.25rem,1.75vw,1.6rem)] font-black tracking-tight leading-tight text-balance mb-3">{offer.name}</h3>
+                <p className="text-[0.7rem] font-bold tracking-wide text-[#E5FF00] mb-5">{offer.mode}</p>
+                <p className="text-sm text-gray-300 leading-relaxed xl:min-h-28 mb-6">{offer.desc}</p>
+                <div className="border-t border-white/20 pt-5 mb-5">
+                  <div className="flex items-baseline flex-wrap gap-x-2 gap-y-1">
+                    {offer.price.startsWith('From ') ? (
+                      <><span className="text-sm font-bold text-gray-400">From</span><span className="text-3xl lg:text-[clamp(1.7rem,2.4vw,2.3rem)] font-black tracking-tighter whitespace-nowrap">{offer.price.slice(5)}</span></>
+                    ) : (
+                      <span className="text-4xl font-black tracking-tighter whitespace-nowrap">{offer.price}</span>
+                    )}
+                    <span className="text-sm font-bold text-gray-400">{offer.period}</span>
                   </div>
-                  <p className={`mt-4 text-sm font-black leading-snug ${tier.highlight ? 'text-black/75' : 'text-gray-300'}`}>
-                    {tier.billing}
-                  </p>
+                  <p className="text-xs font-bold text-gray-400 leading-snug mt-3">{offer.terms}</p>
                 </div>
 
-                <div className="mb-8">
-                  <p className={`text-sm font-bold leading-relaxed ${tier.highlight ? 'text-black/80' : 'text-gray-300'}`}>
-                    {tier.desc}
-                  </p>
-                </div>
-
-                {/* 默认的简要特征列表 */}
-                <ul className="mb-8 flex-1 space-y-5">
-                  {tier.features.map((feat, i) => (
-                    <li key={i} className="flex items-start gap-3">
-                      <span className="mt-1 w-2 h-2 shrink-0 bg-current" aria-hidden="true" />
-                      <p className={`text-sm font-bold ${tier.highlight ? 'text-black/90' : 'text-white'}`}>
-                        {feat}
-                      </p>
+                <ul className="space-y-3 mb-6">
+                  {offer.features.map((feature) => (
+                    <li key={feature} className="flex gap-2.5 text-sm font-medium leading-snug">
+                      <span className="w-1.5 h-1.5 bg-[#E5FF00] shrink-0 mt-1.5" aria-hidden="true" />
+                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
-
-                <div className="h-6 mb-6 flex items-center justify-center">
-                  {tier.addon && (
-                    <span className={`text-xs font-black tracking-wider uppercase px-3 py-1 rounded border ${tier.highlight ? 'border-black/30 text-black/70' : 'border-white/20 text-gray-400'}`}>
-                      {tier.addon}
-                    </span>
-                  )}
-                </div>
-
+                {offer.motions.length > 0 && (
+                  <div className="border-t border-white/20 pt-4 mb-5">
+                    <p className="text-xs font-black text-[#E5FF00] tracking-wide mb-3">{t.pricing.motionLabel}</p>
+                    <p className="text-xs text-gray-300 leading-relaxed">{offer.motions.join(' · ')}</p>
+                  </div>
+                )}
+                {offer.detail && <p className="text-sm font-semibold leading-relaxed text-[#E5FF00] mb-4">{offer.detail}</p>}
+                {offer.scope && <p className="text-xs text-gray-400 leading-relaxed mb-4">{offer.scope}</p>}
+                {offer.credit && <p className="text-xs font-semibold leading-relaxed border-l-2 border-[#E5FF00] pl-3 mb-5">{offer.credit}</p>}
                 <button
                   type="button"
-                  onClick={onCta}
-                  className={`w-full py-5 text-lg font-black tracking-tight rounded-full transition-colors flex items-center justify-center gap-2 ${
-                    tier.highlight
-                      ? 'bg-black text-[#E5FF00] hover:bg-zinc-800'
-                      : 'bg-white text-black hover:bg-[#E5FF00]'
-                  }`}
+                  data-pricing-source={offer.source}
+                  onClick={() => handlePricingClick(offer.source)}
+                  className="mt-auto w-full bg-[#E5FF00] text-black hover:bg-white transition-colors rounded-full px-4 py-4 text-sm font-black text-center"
                 >
-                  <span>{tier.btn}</span>
-                  <svg
-                    viewBox="0 0 16 16"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="w-4 h-4"
-                    aria-hidden="true"
-                  >
-                    <path d="M3 13L13 3M6 3h7v7" />
-                  </svg>
+                  {offer.btn}
                 </button>
+              </article>
+            ))}
+          </div>
 
-                {/* ================= 卡片内无限拉长对比区 (In-Card Accordion) ================= */}
-                <div className={`transition-all duration-700 ease-in-out overflow-hidden ${showSla ? 'max-h-[3000px] opacity-100 mt-12' : 'max-h-0 opacity-0 mt-0'}`}>
-                  <div className={`border-t-2 ${tier.highlight ? 'border-black/20' : 'border-white/20'} pt-8 flex flex-col gap-8`}>
-                    {t.pricing.comparisonDetails.map((cat, catIdx) => (
-                      <div key={catIdx}>
-                        <div className={`text-xs font-black uppercase tracking-widest mb-5 px-3 py-1.5 inline-block ${tier.highlight ? 'bg-black text-[#E5FF00]' : 'bg-[#1A1A1A] text-[#E5FF00]'}`}>
-                          {cat.category}
-                        </div>
-                        <ul className="space-y-0">
-                          {cat.items.map((item, itemIdx) => {
-                            const val = idx === 0 ? item.t1 : idx === 1 ? item.t2 : item.t3;
-                            const hasFeature = val !== '✘';
-
-                            return (
-                              <li key={itemIdx} className={`flex flex-col gap-1.5 py-4 border-b ${tier.highlight ? 'border-black/10' : 'border-white/10'} last:border-0 last:pb-0`}>
-                                <span className={`text-xs font-bold ${tier.highlight ? 'text-black/60' : 'text-gray-400'}`}>
-                                  {item.name}
-                                </span>
-                                <span className={`text-sm md:text-base font-black ${hasFeature ? (tier.highlight ? 'text-black' : 'text-white') : (tier.highlight ? 'text-black/30' : 'text-gray-600')}`}>
-                                  {val === '✔' ? t.pricing.includedText : val === '✘' ? '—' : val}
-                                </span>
-                              </li>
-                            )
-                          })}
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                {/* ================= 结束 ================= */}
-
-              </div>
-            );
-          })}
+          <div className="mt-8 border-2 border-[#E5FF00] p-6 md:p-8 lg:p-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+            <div className="max-w-3xl">
+              <p className="text-xs font-black tracking-widest text-[#E5FF00] mb-3" lang="en">{t.pricing.lead.stage} / {t.pricing.lead.eyebrow}</p>
+              <h3 className="text-2xl md:text-4xl font-black tracking-tight text-balance mb-3">{t.pricing.lead.name}</h3>
+              <p className="text-base text-gray-300 leading-relaxed">{t.pricing.lead.desc}</p>
+            </div>
+            <div className="shrink-0 lg:w-56">
+              <p className="text-3xl font-black mb-4">{t.pricing.lead.price}</p>
+              <button type="button" data-pricing-source="fractional-cmo" onClick={() => handlePricingClick('fractional-cmo')} className="w-full bg-[#E5FF00] text-black hover:bg-white transition-colors rounded-full px-5 py-4 text-sm font-black">
+                {t.pricing.lead.btn}
+              </button>
+            </div>
+          </div>
+          <p className="max-w-4xl mt-8 text-sm text-gray-400 leading-relaxed">{t.pricing.fees}</p>
         </div>
-
-        {/* 统一控制三个卡片同步拉长的全局按钮 */}
-        <div className="flex justify-center mt-8">
-          <button
-            onClick={() => setShowSla(!showSla)}
-            className="border-2 border-[#E5FF00] text-[#E5FF00] px-8 py-4 text-sm font-black uppercase tracking-widest hover:bg-[#E5FF00] hover:text-black transition-colors duration-300"
-          >
-            {showSla ? t.pricing.btnCollapse : t.pricing.btnExpand}
-          </button>
-        </div>
-
-        <p className="max-w-3xl mx-auto mt-8 text-center text-xs md:text-sm leading-relaxed text-gray-500">
-          {t.pricing.disclaimer}
-        </p>
-
       </section>
 
       {/* ==================== 8. FAQ 区 ==================== */}

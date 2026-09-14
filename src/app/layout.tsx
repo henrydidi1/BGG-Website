@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.brandgo.global"),
   title: "BrandGo.Global | 全球市场进入与增长伙伴",
-  description: "BrandGo.Global 帮助有成熟产品、供应链或出口基础的中国企业寻找海外市场、买家、经销商和增长机会。通过 GoRadar AI、市场进入与增长执行，把市场情报转化为实际行动。",
+  description: "BrandGo.Global 帮助有成熟产品、供应链或出口基础的中国企业寻找海外市场、买家、经销商和增长机会。通过 GoRadar AI™、市场进入与增长执行，把市场情报转化为实际行动。",
   keywords: [
     "企业出海",
     "海外市场进入",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     "出口获客",
     "制造业出海",
     "外贸获客",
-    "GoRadar AI",
+    "GoRadar AI™",
     "B2B lead generation",
     "market entry",
     "global growth",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "BrandGo.Global | 全球市场进入与增长伙伴",
-    description: "BrandGo.Global 帮助有成熟产品、供应链或出口基础的中国企业寻找海外市场、买家、经销商和增长机会。通过 GoRadar AI、市场进入与增长执行，把市场情报转化为实际行动。",
+    description: "BrandGo.Global 帮助有成熟产品、供应链或出口基础的中国企业寻找海外市场、买家、经销商和增长机会。通过 GoRadar AI™、市场进入与增长执行，把市场情报转化为实际行动。",
     type: "website",
     url: "/",
     siteName: "BrandGo.Global",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary",
     title: "BrandGo.Global | 全球市场进入与增长伙伴",
-    description: "BrandGo.Global 帮助有成熟产品、供应链或出口基础的中国企业寻找海外市场、买家、经销商和增长机会。通过 GoRadar AI、市场进入与增长执行，把市场情报转化为实际行动。",
+    description: "BrandGo.Global 帮助有成熟产品、供应链或出口基础的中国企业寻找海外市场、买家、经销商和增长机会。通过 GoRadar AI™、市场进入与增长执行，把市场情报转化为实际行动。",
   },
 };
 

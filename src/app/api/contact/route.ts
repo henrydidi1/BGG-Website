@@ -8,6 +8,11 @@ export const runtime = "nodejs";
  * trusts client input blindly.
  */
 const ALLOWED_SOURCE_PLANS = new Set([
+  "scan",
+  "goradar",
+  "market-entry",
+  "market-growth",
+  // Accept attribution from earlier site versions for old open tabs.
   "radar",
   "core-engine",
   "fractional-cmo",
@@ -72,7 +77,7 @@ interface ParsedPayload {
   wechat: string;
   whatsapp: string;
   message: string;
-  sourcePlan: "radar" | "core-engine" | "fractional-cmo" | "direct";
+  sourcePlan: "scan" | "goradar" | "market-entry" | "market-growth" | "radar" | "core-engine" | "fractional-cmo" | "direct";
   /** Honeypot — any value means the submission is non-human. */
   honeypot: string;
 }
