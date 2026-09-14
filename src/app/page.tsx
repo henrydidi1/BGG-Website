@@ -11,150 +11,176 @@ const dict = {
   en: {
     nav: { goradar: "GoRadar AI", services: "Services", cases: "Use Cases", pricing: "Pricing", faq: "FAQ", contact: "Contact", signin: "Sign In", langSwitch: "中" },
     hero: {
-      eyebrow: "AI-POWERED GLOBAL GROWTH TEAM",
+      eyebrow: "GLOBAL MARKET ENTRY & GROWTH PARTNER",
       title: "MARKET RADAR: ON.\nGUESSWORK: OFF.",
-      subtitle: "BrandGo.Global helps Chinese businesses understand overseas markets, find customers, and put growth plans into action.\nWe use GoRadar AI to track markets, competitors, and customer needs, then deliver the strategy, content, and advertising to reach them."
+      subtitle: "We help Chinese businesses with established products, supply chains, or export capability identify overseas markets, buyers, customers, and channel opportunities, then turn insight into action.\nGoRadar AI tracks market demand, competitors, buyer signals, and industry shifts to support market entry and growth."
     },
-    marquee: ["MARKET INTELLIGENCE", "CONTENT & LOCALIZATION", "PAID MEDIA", "SPONSORSHIPS & CREATOR MARKETING"],
+    marquee: ["GORADAR AI INTELLIGENCE", "MARKET ENTRY", "MARKET GROWTH", "EXECUTION CAPABILITIES"],
+    problems: {
+      kicker: "THE CHALLENGE",
+      title: "YOU MAY HAVE THE PRODUCT\nAND THE FOUNDATION.\nWHAT YOU NEED IS A CLEARER PATH TO GLOBAL GROWTH.",
+      items: [
+        "Established products, but uncertainty about which overseas market to prioritize.",
+        "Trade shows, platforms, and outreach are active, but new customers remain inconsistent.",
+        "Overseas buyers compare on price, making lasting relationships and brand recognition harder to build.",
+        "The ambition to expand is clear, but the path from market insight to customer development is not."
+      ]
+    },
     services: {
-      kicker: "WHAT WE HELP YOU DO",
-      title: "FOUR WAYS\nTO GROW OVERSEAS",
-      desc: "Understand the market. Build trust through content. Find customers. Extend your reach.",
+      kicker: "HOW WE WORK",
+      title: "INTELLIGENCE.\nENTRY. GROWTH.",
+      desc: "GoRadar AI informs both entry into new markets and growth in markets you already serve. We select execution capabilities around the business goal.",
       s1: {
-        title: "UNDERSTAND THE MARKET",
-        label: "GoRadar AI",
-        desc: "GoRadar AI is our AI market intelligence app. It uses continuously updated market, competitor, customer-demand, and trend signals to help your team assess opportunities and decide where to go and what to do first.",
-        btnOpen: "EXPLORE THE RADAR",
-        btnClose: "CLOSE RADAR DETAILS",
+        title: "GORADAR AI",
+        label: "Market, Competitive & Opportunity Intelligence",
+        desc: "Continuous intelligence for markets, buyers and growth opportunities. GoRadar AI brings together updated signals on demand, competitors, potential buyers, channels, and industry shifts to support decisions for both Market Entry and Market Growth.",
+        btnOpen: "SEE HOW GORADAR FINDS OPPORTUNITIES",
+        btnClose: "CLOSE GORADAR DETAILS",
         features: [
           {
-            name: "COMPETITOR & SEARCH OPPORTUNITIES",
-            detail: "Uses updated overseas competitor and search data to identify underserved needs and keywords for your team to evaluate."
+            name: "MARKET INTELLIGENCE",
+            detail: "Review demand, trends, countries, categories, and market opportunities."
           },
           {
-            name: "CUSTOMER DEMAND & SUPPLY CHAIN FIT",
-            detail: "Matches overseas search demand with your manufacturing, product, and delivery strengths to help assess which needs fit your business."
+            name: "COMPETITIVE INTELLIGENCE",
+            detail: "Monitor competitors and track changes in their positioning and activity."
           },
           {
-            name: "AI-ASSISTED AUDIENCE & CAMPAIGN ANALYSIS",
-            detail: "Uses available audience, market, and campaign inputs to support targeting and test-planning decisions."
+            name: "BUYER & LEAD DISCOVERY",
+            detail: "Research potential buyers, distributors, target accounts, and lead opportunities."
+          },
+          {
+            name: "INDUSTRY WATCH",
+            detail: "Follow industry shifts, market developments, and risk signals."
+          },
+          {
+            name: "OPPORTUNITY RADAR",
+            detail: "Spot new markets, channels, customer needs, and potential partnerships to validate next."
           }
         ]
       },
       s2: {
-        title: "CREATE CONTENT THAT CONNECTS",
-        label: "Content & Localization",
-        desc: "Use AI to explore content ideas, angles, and local expressions, then bring them to your overseas social and content channels. Help customers understand your brand, want to engage with it, and learn to trust it. Execution scope is confirmed in the selected plan and content schedule.",
+        title: "MARKET ENTRY",
+        label: "Enter a New Overseas Market",
+        desc: "Which market should you enter, who should you sell to, and how should you get started? From market selection and buyer definition to competitive positioning and the first round of validation, we help build a practical route into a new market.",
         bullets: [
-          "Content Strategy, Topics & Messaging",
-          "Short-Form Video & User-Generated Content",
-          "Multilingual Content & Cultural Localization",
-          "Social Publishing and Community Support"
+          "Market and Category Prioritization",
+          "Buyer, Distributor & Channel Research",
+          "Positioning, Offer & Route-to-Market",
+          "First-Round Market Validation"
         ],
         kpis: [
-          "FOCUS: ENGAGEMENT",
-          "FOCUS: BRAND AWARENESS"
+          "GOAL: A CLEAR ENTRY PATH",
+          "METHOD: TEST BEFORE SCALING"
         ]
       },
       s3: {
-        title: "ACQUIRE CUSTOMERS",
-        label: "Paid Media & Growth",
-        desc: "Combine ad management, GoRadar AI-assisted analysis, and ongoing optimization. Test audiences, creatives, channels, and landing pages, then use real data to build and improve customer-acquisition paths, support inquiries and conversions, and improve acquisition efficiency.",
+        title: "MARKET GROWTH",
+        label: "Grow an Existing Overseas Business",
+        desc: "Already selling overseas? We test and improve the ways you reach buyers, generate inquiries, develop channels, and acquire customers. Search, content, website, and advertising work are selected around what your business has already validated.",
         bullets: [
-          "Ad Analysis & Campaign Recommendations",
-          "Search & Social Ads, B2B Lead-Generation Support",
-          "Audience, Creative & Channel A/B Testing",
-          "Retargeting & Landing Page Optimization"
+          "Buyer and Customer Development",
+          "Channel and Partner Opportunities",
+          "Search, Content, Website & Paid Tests",
+          "Optimization Based on Market Feedback"
         ],
         kpis: [
-          "FOCUS: ACQUISITION COST",
-          "FOCUS: LEAD & CONVERSION QUALITY"
-        ]
-      },
-      s4: {
-        title: "Build Influence",
-        label: "Sponsorships & Creator Marketing",
-        desc: "Help brands reach relevant overseas audiences and support visibility and trust-building.",
-        bullets: [
-          "Sponsorship Strategy & Opportunity Assessment",
-          "Influencer / Creator Matching & Collaboration Planning",
-          "Partnership Content & Local Messaging",
-          "Visibility & Trust-Building Support"
-        ],
-        kpis: [
-          "FOCUS: BRAND FIT",
-          "FOCUS: RELEVANT REACH"
+          "GOAL: MORE RELEVANT OPPORTUNITIES",
+          "METHOD: LEARN AND REFINE"
         ]
       }
     },
+    capabilities: {
+      kicker: "EXECUTION CAPABILITIES",
+      title: "THE RIGHT WORK\nFOR THE GOAL",
+      desc: "These are ways to execute Market Entry or Market Growth, chosen by need and agreed scope—not a fixed bundle for every client.",
+      items: [
+        { title: "BUYER, CHANNEL & LEAD DEVELOPMENT", desc: "Buyer and account research, distributor discovery, outreach, and lead-generation support." },
+        { title: "WEBSITE & SEO", desc: "Website positioning, landing pages, search visibility, and conversion improvements where needed." },
+        { title: "CONTENT & LOCALIZATION", desc: "Content strategy, AI-assisted research, social content, localization, and product or brand messaging." },
+        { title: "PAID MEDIA", desc: "Search and social ads, audience and creative tests, landing-page tests, and optimization." },
+        { title: "CHANNEL & PARTNER DEVELOPMENT", desc: "Research and develop opportunities with distributors, resellers, importers, and local partners." },
+        { title: "SPONSORSHIPS & CREATOR MARKETING", desc: "Assess sponsorship and creator partnerships when they fit the audience, market, and project scope." }
+      ]
+    },
+    audiences: {
+      kicker: "WHO WE HELP",
+      title: "BUILT FOR DIFFERENT\nROUTES OVERSEAS",
+      desc: "We work with Chinese businesses with established products, supply-chain strengths, or export experience, including:",
+      items: [
+        { title: "Manufacturers & Supply-Chain Businesses", desc: "Explore new markets, find buyers and distributors, strengthen export growth, and build a brand beyond the product." },
+        { title: "Exporters & Trading Companies", desc: "Find new markets and buyers, reduce reliance on a few accounts, and build more direct, stable customer relationships." },
+        { title: "DTC & Consumer Brands", desc: "Enter or grow overseas markets through the right mix of search, content, website optimization, paid media, and relevant partnerships." }
+      ]
+    },
     protocol: {
       kicker: "THE FIRST 90 DAYS",
-      title: "HOW WE\nGET STARTED",
-      desc: "Agree on the direction before increasing investment. These are the usual steps for execution engagements; the work and pace depend on your existing setup and chosen plan.",
+      title: "FROM OPPORTUNITY\nTO MARKET VALIDATION",
+      desc: "The first 90 days establish and test an initial market path. The work and pace depend on your starting point, business model, and agreed scope—not a promise of orders within 90 days.",
       p1: {
-        tag: "UNDERSTAND",
-        title: "CLARIFY THE MARKET & THE PROBLEM",
-        desc: "Start with your products, customers, and goals. Use GoRadar AI to review the market and competition, identify priorities, and agree on what to validate first."
+        tag: "01 / UNDERSTAND",
+        title: "READ THE MARKET",
+        desc: "Review demand, competition, potential buyers, and channels with GoRadar AI to identify where an opportunity may exist."
       },
       p2: {
-        tag: "PREPARE",
-        title: "PUT THE FOUNDATIONS IN PLACE",
-        desc: "Review your website and accounts, prepare localized content, and check conversion tracking so tests have useful materials and reliable data. Build on what is already working and fill the gaps."
+        tag: "02 / DEFINE",
+        title: "DEFINE HOW TO SELL",
+        desc: "Clarify the ideal buyer, positioning, offer, and route to market before committing to execution."
       },
       p3: {
-        tag: "TEST",
-        title: "TEST WITH A CONTROLLED BUDGET",
-        desc: "Test priority audiences, content, and channels on a small scale. Review inquiries, conversions, and acquisition costs together to decide what to continue and what to adjust."
+        tag: "03 / VALIDATE",
+        title: "START VALIDATING",
+        desc: "Choose a route suited to the business: buyer or distributor outreach, search, and content for B2B and export teams; search, paid media, content, or creators for DTC brands. We test selected channels rather than all of them at once."
       },
       p4: {
-        tag: "REFINE",
-        title: "BUILD ON WHAT WORKS",
-        desc: "Improve content and campaigns using test feedback, then gradually direct resources toward effective approaches. Regular reviews make progress, budget use, and next steps clear."
+        tag: "04 / DECIDE",
+        title: "SET THE NEXT DIRECTION",
+        desc: "Use market feedback to see which buyers respond, which messages work, and which markets or channels merit more investment. Continue, adjust, or scale based on evidence."
       }
     },
     cases: {
       title: "TYPICAL\nUSE CASES",
-      desc: "Recognize a challenge your business is facing? These common needs and ways we can help are a starting point for a conversation.",
+      desc: "Eight common challenges across manufacturing, export, trading, B2B, and DTC businesses.",
       list: [
         {
           tag: "MARKET ENTRY",
           title: "Not sure which overseas market to enter first",
-          desc: "You are ready to expand but unsure where to invest first. BrandGo.Global uses GoRadar AI to analyze demand, trends, and competition so you can prioritize markets to validate."
+          desc: "A new market looks promising, but the first investment is unclear. BrandGo.Global uses GoRadar AI to compare demand, competition, buyers, and channels so you can choose what to validate."
         },
         {
-          tag: "EUROPE",
-          title: "Bringing a Chinese supply-chain brand to Europe",
-          desc: "Your products and delivery are competitive, but European customers do not know your brand yet. BrandGo.Global combines market analysis, localized content, and channel testing to shape your market entry."
+          tag: "EXPORT GROWTH",
+          title: "Established products or supply chain, but limited overseas customer growth",
+          desc: "Your products and delivery are established, yet overseas customer growth is limited. BrandGo.Global reviews market fit, buyer groups, and routes to market to identify practical tests."
         },
         {
-          tag: "D2C ACQUISITION",
-          title: "North American D2C acquisition is getting expensive",
-          desc: "Ads keep spending and creatives are losing effectiveness, but the cause is unclear. BrandGo.Global tests audiences, creatives, channels, and landing pages to find more effective acquisition combinations."
+          tag: "CUSTOMER PIPELINE",
+          title: "Trade shows, platforms, and outreach are active, but customers remain inconsistent",
+          desc: "You keep prospecting, but new customer flow is uneven. BrandGo.Global combines buyer research, channel tests, and follow-up paths to build a clearer acquisition process."
         },
         {
-          tag: "B2B LEADS",
-          title: "Struggling to reach overseas decision-makers",
-          desc: "You know which companies to target but struggle to reach the people who make buying decisions. BrandGo.Global combines market intelligence, search, LinkedIn, and content to build a clearer path to relevant leads."
+          tag: "BUYER DISCOVERY",
+          title: "Want to reach real overseas buyers, distributors, or decision-makers",
+          desc: "The right accounts and contacts are difficult to identify. BrandGo.Global researches buyer, distributor, and decision-maker opportunities and helps prioritize outreach."
         },
         {
-          tag: "GROWTH REVIEW",
-          title: "Already overseas, but growth has stalled",
-          desc: "Your website, ads, and overseas social channels are active, but growth has slowed. BrandGo.Global reviews markets, competitors, and channel performance to identify opportunities worth testing next."
+          tag: "MARKET DIVERSIFICATION",
+          title: "Already exporting, but too dependent on a few markets or old customers",
+          desc: "Existing export revenue relies on a narrow set of markets or accounts. BrandGo.Global compares adjacent markets, buyer segments, and channel opportunities for measured expansion."
         },
         {
-          tag: "BRAND BUILDING",
-          title: "Export orders are coming in, but a brand is missing",
-          desc: "You are fulfilling export orders, but customers mainly remember your products and prices. BrandGo.Global develops positioning, product messaging, and localized content to turn supply strengths into a recognizable brand."
+          tag: "WEBSITE & TRUST",
+          title: "Website and brand messaging do not yet build overseas customer trust",
+          desc: "Potential customers see the offer but lack a clear reason to choose you beyond price. BrandGo.Global reviews positioning, website content, and local messaging to support credibility."
         },
         {
-          tag: "PARTNERSHIPS",
-          title: "Unsure where to start with sponsorships or creators",
-          desc: "You want more exposure but are unsure who to work with, what to create, or how to budget. BrandGo.Global helps define audiences, brand fit, and partnership direction before agreeing on a practical project scope."
+          tag: "DIRECT RELATIONSHIPS",
+          title: "Want more direct customer relationships beyond trading, agents, or platforms",
+          desc: "Intermediaries generate sales, but you have limited direct access to end customers. BrandGo.Global helps develop positioning, owned channels, and buyer outreach suited to your model."
         },
         {
-          tag: "DIRECT ACQUISITION",
-          title: "Selling through platforms or agents, but wanting direct customers",
-          desc: "Sales are established, but customer relationships and new orders still depend mainly on platforms or agents. BrandGo.Global combines your brand website, content, and ad tests to help build your own customer reach and direct acquisition capability."
+          tag: "DTC ACQUISITION",
+          title: "Overseas customer acquisition costs keep rising for a DTC or consumer brand",
+          desc: "Paid acquisition is getting more expensive and the next improvement is unclear. BrandGo.Global tests audiences, creatives, landing pages, search, and content to find a stronger path."
         }
       ]
     },
@@ -170,7 +196,7 @@ const dict = {
         bio: [
           "Yusheng studied Finance at Lancaster University and earned a master's in Project Management at the University of Warwick. His career across China and Asia connects brand development, commercial strategy, and cross-border business.",
           "He brings more than a decade of experience in branding, marketing, go-to-market strategy, and global supply chains, including building consumer brands and managing cross-border supply-chain projects. His focus is practical: who to sell to, how to position the offer, and where to invest first.",
-          "At BrandGo.Global, he leads market entry strategy and GoRadar AI product architecture, connecting market intelligence with content, advertising, and localization to help Chinese businesses turn opportunities into action."
+          "At BrandGo.Global, he leads market entry strategy and GoRadar AI product architecture, connecting market intelligence with content, advertising, and localization to help Chinese businesses turn opportunities into action. He focuses on how companies with product, supply-chain, or export strengths can reach broader overseas markets, customers, and brand growth."
         ]
       }
     },
@@ -285,15 +311,15 @@ const dict = {
       items: [
         {
           q: "What is GoRadar AI? Can I choose it without execution services?",
-          a: "GoRadar AI is our AI market intelligence and decision support app, available through the GoRadar AI™ Tier without an execution plan. It analyzes markets, competitors, search trends, and customer needs, with the strategy reviews included in your plan to help prioritize action. Decisions still need business context and validation through real execution."
+          a: "GoRadar AI is our market, competitor, buyer, and opportunity intelligence layer for both Market Entry and Market Growth. It is available through the GoRadar AI™ Tier without an execution plan, with the strategy reviews included in your plan. It supports decisions; business context and real-world validation still matter."
         },
         {
           q: "What services do you provide?",
-          a: "We help with four areas: market understanding, content, customer acquisition, and brand reach. These cover GoRadar AI, overseas content and localization, advertising and optimization, and Sponsorships & Creator Marketing. Deliverables depend on the chosen plan or agreed project scope."
+          a: "GoRadar AI supports market, competitor, buyer, and opportunity decisions. Market Entry helps define and validate a route into a new market; Market Growth improves an existing overseas business. Buyer and channel development, website and SEO, content, paid media, and partnerships are execution capabilities chosen by goal and agreed scope."
         },
         {
           q: "Who is this for? Can we work together before launching overseas?",
-          a: "We work with Chinese businesses entering or expanding in overseas markets, including B2B companies, D2C businesses, and brands with supply-chain strengths. If you have not launched yet, we can start with market assessment and priorities. Clear product information, goals, and available resources help us agree on a useful starting point."
+          a: "We work with Chinese businesses with established products, supply-chain strengths, or export experience entering or expanding overseas. That includes manufacturers, exporters, trading companies, B2B businesses, and DTC or consumer brands. If you have not launched yet, we can start with market assessment and priorities."
         },
         {
           q: "How can you work with our existing team or agency?",
@@ -344,7 +370,7 @@ const dict = {
         whatsapp: "WHATSAPP",
         whatsappPh: "+86 136 0000 0000",
         message: "WHAT WOULD YOU LIKE TO TALK ABOUT?",
-        messagePh: "Tell us briefly about your goal or what you're working through",
+        messagePh: "For example: We sell home products, currently export mainly to Southeast Asia, and want to develop distributors and new customers in Europe.",
         submit: "START THE CONVERSATION",
         submitting: "SUBMITTING…",
         success: "Submission received.",
@@ -358,150 +384,176 @@ const dict = {
   zh: {
     nav: { goradar: "GoRadar AI", services: "服务", cases: "应用场景", pricing: "定价", faq: "常见问题", contact: "联系我们", signin: "登录", langSwitch: "EN" },
     hero: {
-      eyebrow: "AI 驱动的海外增长团队",
+      eyebrow: "全球市场进入与增长伙伴",
       title: "雷达全开。\n告别盲猜。",
-      subtitle: "BrandGo.Global 帮中国企业看清海外市场、找到客户，并把增长真正做起来。\n我们用 GoRadar AI 持续监测市场、竞争对手和客户需求，再把策略、内容、广告和获客执行落地。"
+      subtitle: "帮助有成熟产品、供应链或出口基础的中国企业看清海外市场，找到买家、客户与渠道机会，并把市场判断转化为实际行动。\nGoRadar AI 持续监测市场、竞争对手、客户线索和行业变化，为市场进入与持续增长提供判断依据。"
     },
-    marquee: ["MARKET INTELLIGENCE", "CONTENT & LOCALIZATION", "PAID MEDIA", "SPONSORSHIPS & CREATOR MARKETING"],
+    marquee: ["GORADAR AI INTELLIGENCE", "MARKET ENTRY", "MARKET GROWTH", "EXECUTION CAPABILITIES"],
+    problems: {
+      kicker: "THE CHALLENGE",
+      title: "你可能已经有产品和市场基础。\n缺的是更清晰的海外增长路径。",
+      items: [
+        "有成熟产品，却不知道哪个海外市场值得先投入。",
+        "展会、平台和业务开发一直在做，但新客户仍然不稳定。",
+        "海外客户很多时候只比较价格，很难形成稳定的客户关系与品牌认知。",
+        "知道要拓展海外，却缺少从市场判断到客户开发的完整方法。"
+      ]
+    },
     services: {
-      kicker: "WHAT WE HELP YOU DO",
-      title: "我们具体帮你\n做四件事",
-      desc: "看清市场，做好内容，获得客户，再扩大品牌影响。",
+      kicker: "HOW WE WORK",
+      title: "从看清机会\n到进入与增长",
+      desc: "GoRadar AI 同时支持新市场进入与已有市场增长。围绕具体业务目标，选择合适的增长执行能力。",
       s1: {
-        title: "看清市场",
-        label: "GoRadar AI",
-        desc: "GoRadar AI 是我们的 AI 海外市场情报应用，结合定期更新的市场、竞争对手、客户需求与趋势信号，帮你的团队判断机会，决定先进入哪里、先做什么。",
-        btnOpen: "展开雷达系统",
-        btnClose: "收起雷达面板",
+        title: "GoRadar AI",
+        label: "市场、竞争与机会情报",
+        desc: "持续发现市场、客户与增长机会。GoRadar AI 汇集持续更新的需求、竞争对手、潜在买家、渠道与行业变化信号，为全球市场进入和海外市场增长提供情报与决策支持。",
+        btnOpen: "看看 GoRadar 如何发现机会",
+        btnClose: "收起 GoRadar 详情",
         features: [
           {
-            name: "竞争对手与搜索机会",
-            detail: "持续监测海外竞争对手和搜索数据，找出尚未被充分覆盖的需求与关键词，供团队评估增长机会。"
+            name: "市场情报",
+            detail: "分析市场需求、趋势、国家、品类与潜在机会。"
           },
           {
-            name: "客户需求与供应链匹配",
-            detail: "将海外客户的搜索需求与你的制造、产品及交付优势进行匹配，帮助判断哪些需求更适合你的业务。"
+            name: "竞争情报",
+            detail: "监听竞争对手，跟踪其定位与市场动作的变化。"
           },
           {
-            name: "AI 辅助受众与广告方向分析",
-            detail: "结合已有受众、市场与投放信息，为受众选择和测试方向提供决策支持。"
+            name: "买家与线索发现",
+            detail: "研究潜在买家、经销商、目标账户和线索机会。"
+          },
+          {
+            name: "行业动态",
+            detail: "关注行业变化、市场动态与风险信号。"
+          },
+          {
+            name: "机会雷达",
+            detail: "发现值得下一步验证的新市场、新渠道、新需求与合作机会。"
           }
         ]
       },
       s2: {
-        title: "做好内容",
-        label: "海外内容与本地化",
-        desc: "用 AI 辅助寻找内容灵感、传播角度和本地表达，再落实到海外社媒与内容渠道，让海外用户看得懂、愿意看，也愿意相信你的品牌。具体执行范围按套餐与内容计划确认。",
+        title: "全球市场进入",
+        label: "Market Entry",
+        desc: "想进入新的海外市场，应该去哪、卖给谁、怎么进去？从市场选择、买家与客户定义、竞争定位到第一轮市场验证，帮助企业建立清晰、可执行的市场进入路径。",
         bullets: [
-          "内容方向、选题与传播表达",
-          "短视频与用户内容（UGC）制作",
-          "多语种内容与文化本地化",
-          "社媒内容发布与基础互动支持"
+          "市场与品类机会排序",
+          "买家、经销商与渠道研究",
+          "定位、产品主张与进入路径",
+          "第一轮市场验证"
         ],
         kpis: [
-          "关注：内容互动",
-          "关注：品牌认知"
+          "目标：清晰的进入路径",
+          "方法：先验证再放大"
         ]
       },
       s3: {
-        title: "获得客户",
-        label: "海外广告与增长",
-        desc: "把广告投放、GoRadar AI 辅助分析和持续优化放在一起，测试受众、素材、渠道与落地页，用实际数据建立和优化获客路径，推动询盘与转化，并提升获客效率。",
+        title: "海外市场增长",
+        label: "Market Growth",
+        desc: "已经有海外业务，如何持续寻找更多线索、客户与渠道机会？围绕买家开发、渠道、搜索、内容、网站和广告进行有选择的测试与优化，把验证有效的方法逐步放大。",
         bullets: [
-          "广告分析与投放方向建议",
-          "搜索与社交广告、B2B 线索获取支持",
-          "受众、素材与渠道 A/B 测试",
-          "再营销与落地页转化优化"
+          "买家与客户开发",
+          "渠道与合作伙伴机会",
+          "搜索、内容、网站与广告测试",
+          "根据市场反馈持续优化"
         ],
         kpis: [
-          "关注：获客成本",
-          "关注：线索与转化质量"
-        ]
-      },
-      s4: {
-        title: "扩大影响",
-        label: "品牌赞助与达人营销",
-        desc: "帮助品牌触达更相关的海外受众，并支持品牌认知与信任建设。",
-        bullets: [
-          "品牌赞助方向与合作机会评估",
-          "达人 / 创作者匹配与合作策划",
-          "合作内容与本地传播表达",
-          "品牌认知与信任建设支持"
-        ],
-        kpis: [
-          "关注：品牌匹配度",
-          "关注：相关受众触达"
+          "目标：更多相关机会",
+          "方法：边验证边优化"
         ]
       }
     },
+    capabilities: {
+      kicker: "EXECUTION CAPABILITIES",
+      title: "按目标选择\n增长执行能力",
+      desc: "这些是支持市场进入和市场增长的执行手段，按业务需要与确认的合作范围组合，不是每家企业都必须购买的固定清单。",
+      items: [
+        { title: "买家、渠道与线索开发", desc: "买家与目标账户研究、经销商发现、主动开发和线索获取支持。" },
+        { title: "官网与搜索增长", desc: "根据需要优化官网定位、落地页、SEO 与转化路径；不默认重做网站。" },
+        { title: "海外内容与本地化", desc: "内容策略、AI 辅助研究、社媒内容、本地化与产品及品牌表达。" },
+        { title: "海外广告与获客", desc: "搜索与社交广告、受众和素材测试、落地页测试与优化。" },
+        { title: "渠道与合作伙伴拓展", desc: "研究并开发经销商、转售商、进口商和本地合作伙伴机会。" },
+        { title: "品牌赞助与达人营销", desc: "在符合市场、受众和项目范围时，评估赞助与创作者合作机会。" }
+      ]
+    },
+    audiences: {
+      kicker: "WHO WE HELP",
+      title: "服务不同起点的\n中国出海企业",
+      desc: "我们服务有成熟产品、供应链或出口基础的中国企业，包括：",
+      items: [
+        { title: "制造商与供应链企业", desc: "寻找新市场、买家和经销商，拓展出口业务，并建立产品之外的品牌认知。" },
+        { title: "出口商与贸易企业", desc: "开发新市场和买家，减少对少数客户的依赖，建立更直接、稳定的客户关系。" },
+        { title: "DTC 与消费品牌", desc: "按实际需要组合搜索、内容、网站优化、广告与相关合作，进入或扩大海外市场。" }
+      ]
+    },
     protocol: {
       kicker: "THE FIRST 90 DAYS",
-      title: "前 90 天，\n这样开始合作",
-      desc: "先确定方向，再逐步投入。下面是执行型合作的常见推进方式；具体工作和节奏，结合你的现有基础与所选套餐确认。",
+      title: "前 90 天，\n从判断机会到验证市场",
+      desc: "前 90 天的目标是建立并验证第一条市场路径。具体工作与节奏按企业起点、业务模式和合作范围确认，不承诺 90 天获得订单。",
       p1: {
-        tag: "了解业务",
-        title: "看清市场和问题",
-        desc: "从你的产品、客户与目标出发，结合 GoRadar AI 梳理市场和竞争，明确优先市场、关键问题，以及接下来要验证的方向。"
+        tag: "01 / 看清机会",
+        title: "看清市场",
+        desc: "结合 GoRadar AI 分析需求、竞争、潜在买家与渠道，判断哪些机会值得优先关注。"
       },
       p2: {
-        tag: "准备基础",
-        title: "搭好数据、内容与投放基础",
-        desc: "检查网站和账号，准备本地化内容与转化追踪，让后续测试有素材可用、有数据可看。已有基础可以继续使用，缺什么再补什么。"
+        tag: "02 / 定义路径",
+        title: "定义怎么卖",
+        desc: "明确目标买家、竞争定位、产品主张与进入路径，再决定需要哪些执行工作。"
       },
       p3: {
-        tag: "小范围验证",
-        title: "用有限预算测试方向",
-        desc: "从重点受众、内容和渠道开始测试，一起看询盘、转化与获客成本，判断哪些方向值得继续，哪些需要调整。"
+        tag: "03 / 开始测试",
+        title: "开始验证",
+        desc: "根据企业类型选择路径：B2B、出口和贸易企业可测试买家或经销商开发、搜索与内容；DTC 品牌可测试搜索、广告、内容或创作者合作。不要求同时执行所有渠道。"
       },
       p4: {
-        tag: "持续优化",
-        title: "把有效方法逐步放大",
-        desc: "根据测试反馈优化内容与投放，再把资源逐步投入有效方向。定期复盘进展、预算使用和下一步安排，让你清楚合作在往哪里走。"
+        tag: "04 / 决定下一步",
+        title: "找到下一步方向",
+        desc: "根据市场反馈看哪类客户有反应、哪些信息有效，以及哪些市场和渠道值得继续投入。决定继续、调整或逐步放大。"
       }
     },
     cases: {
       title: "典型应用场景",
-      desc: "看看这些出海难题，是否也在困扰你。以下是典型需求与支持方式，供你对照自己的业务。",
+      desc: "从制造、出口、贸易、B2B 到 DTC，看看哪一种海外增长难题与你有关。",
       list: [
         {
           tag: "MARKET ENTRY",
           title: "不知道先做哪个海外市场",
-          desc: "准备出海，却拿不准哪个市场值得先投入。BrandGo.Global 用 GoRadar AI 分析需求、趋势与竞争，帮你确定优先验证的市场。"
+          desc: "新市场看起来有机会，却不知道先把资源投向哪里。BrandGo.Global 用 GoRadar AI 对比需求、竞争、买家与渠道，帮助确定优先验证的方向。"
         },
         {
-          tag: "EUROPE",
-          title: "有供应链优势，想把品牌带进欧洲",
-          desc: "产品和交付有竞争力，欧洲客户却还不了解你的品牌。BrandGo.Global 结合市场分析、本地化内容与渠道测试，帮助品牌找到进入欧洲的合适表达。"
+          tag: "EXPORT GROWTH",
+          title: "有成熟产品或供应链，但海外客户增长有限",
+          desc: "产品和交付已较成熟，海外客户增长却有限。BrandGo.Global 梳理市场匹配、买家类型与进入路径，找出值得测试的机会。"
         },
         {
-          tag: "D2C ACQUISITION",
-          title: "北美 D2C 获客越来越贵",
-          desc: "广告持续花钱，素材越来越难跑出效果，却不清楚问题在哪。BrandGo.Global 从受众、素材、渠道和落地页逐项测试，寻找更有效的获客组合。"
+          tag: "CUSTOMER PIPELINE",
+          title: "展会、平台和业务开发都在做，但客户仍不稳定",
+          desc: "业务开发没有停，新客户却时多时少。BrandGo.Global 结合买家研究、渠道测试与跟进路径，帮助建立更清晰的客户开发流程。"
         },
         {
-          tag: "B2B LEADS",
-          title: "想找海外客户，却接触不到决策者",
-          desc: "知道想卖给哪些企业，却很难找到真正负责采购和拍板的人。BrandGo.Global 结合市场情报、搜索、LinkedIn 与内容，帮助建立通向目标客户的线索路径。"
+          tag: "BUYER DISCOVERY",
+          title: "想找到真正的海外买家、经销商或决策者",
+          desc: "目标客户存在，却难以识别合适的企业和联系人。BrandGo.Global 研究买家、经销商与决策者机会，帮助确定开发优先级。"
         },
         {
-          tag: "GROWTH REVIEW",
-          title: "已经在出海，但增长开始停滞",
-          desc: "网站、广告和海外社媒都在做，增长却卡住了。BrandGo.Global 重新审视市场、竞争与渠道表现，帮你找出下一步值得测试的机会。"
+          tag: "MARKET DIVERSIFICATION",
+          title: "已经出口，但太依赖少数市场或老客户",
+          desc: "现有订单过于依赖少数市场或客户。BrandGo.Global 对比相邻市场、买家群体与渠道机会，支持有节奏地拓展。"
         },
         {
-          tag: "BRAND BUILDING",
-          title: "有外贸订单，还没有自己的海外品牌",
-          desc: "外贸订单在交付，客户记住的却主要是产品和价格。BrandGo.Global 从品牌定位、产品表达与本地化内容入手，把供应能力变成客户能理解和记住的品牌价值。"
+          tag: "WEBSITE & TRUST",
+          title: "网站和品牌表达还无法建立海外客户信任",
+          desc: "潜在客户看到了产品，却缺少价格之外的选择理由。BrandGo.Global 检查定位、网站内容和本地化表达，支持建立更清晰的可信度。"
         },
         {
-          tag: "PARTNERSHIPS",
-          title: "想做赞助或达人合作，不知道从哪开始",
-          desc: "想扩大曝光，却不知道该找谁合作、内容怎么做、预算怎么安排。BrandGo.Global 帮你梳理目标受众、品牌匹配度与合作方向，再确定可执行的项目范围。"
+          tag: "DIRECT RELATIONSHIPS",
+          title: "想从贸易、代理或平台模式建立更直接的客户关系",
+          desc: "现有渠道能带来销售，却难以直接了解最终客户。BrandGo.Global 按业务模式梳理定位、自有渠道和买家开发路径。"
         },
         {
-          tag: "DIRECT ACQUISITION",
-          title: "平台或代理能卖货，想建立直接获客能力",
-          desc: "已有销售渠道，但客户关系和新增订单仍主要依赖平台或代理。BrandGo.Global 结合品牌网站、内容与广告测试，帮助你逐步建立自己的客户触达和直接获客能力。"
+          tag: "DTC ACQUISITION",
+          title: "DTC 或消费品牌的海外获客成本持续上升",
+          desc: "广告越来越贵，下一步该改哪里却不清楚。BrandGo.Global 测试受众、素材、落地页、搜索与内容，寻找更合适的获客路径。"
         }
       ]
     },
@@ -517,7 +569,7 @@ const dict = {
         bio: [
           "Yusheng Yang（杨雨昇）在 Lancaster University 学习金融，并在 University of Warwick 获得项目管理硕士学位。他的职业经历横跨中国与亚洲市场，连接品牌、商业策略与跨境业务。",
           "拥有十余年品牌、营销、市场进入（GTM）和全球供应链相关经验，参与过消费品牌的建立与发展，以及跨境供应链项目。他关注企业进入海外市场时最实际的问题：卖给谁、如何表达、先把资源投入哪里。",
-          "在 BrandGo.Global，他负责市场进入策略与 GoRadar AI 产品架构，把市场情报与内容、广告和本地化执行连接起来，帮助中国企业从判断机会走向实际行动。"
+          "在 BrandGo.Global，他负责市场进入策略与 GoRadar AI 产品架构，把市场情报与内容、广告和本地化执行连接起来，帮助中国企业从判断机会走向实际行动。他长期关注有产品、供应链或出口基础的中国企业，如何走向更广的海外市场、客户与品牌增长。"
         ]
       }
     },
@@ -632,15 +684,15 @@ const dict = {
       items: [
         {
           q: "GoRadar AI 是什么？可以只用工具吗？",
-          a: "GoRadar AI 是帮助团队看清海外市场的 AI 情报与决策支持应用，可以选择 GoRadar AI™ 战术版，无需购买执行型服务。它分析市场、竞争、搜索趋势与客户需求，并配合套餐中的策略复盘，帮助你决定先做什么。具体判断仍需结合业务情况，并通过实际执行验证。"
+          a: "GoRadar AI 是支持全球市场进入和海外市场增长的市场、竞争、买家与机会情报层。可以单独选择 GoRadar AI™ 战术版，无需购买执行型服务，套餐中的策略复盘也会帮助梳理优先级。它提供决策支持；具体判断仍需结合业务情况并通过实际执行验证。"
         },
         {
           q: "你们具体能帮我做哪些事？",
-          a: "主要是四件事：看清市场、做好内容、获得客户、扩大影响。对应 GoRadar AI、海外内容与本地化、广告投放与优化，以及品牌赞助与达人营销。具体交付按所选套餐或项目范围确认。"
+          a: "GoRadar AI 帮助判断市场、竞争、买家与机会；全球市场进入帮助建立并验证新市场路径；海外市场增长帮助优化已有海外业务。买家和渠道开发、官网与搜索、内容、广告及相关合作是按目标与确认范围选择的执行能力。"
         },
         {
           q: "什么样的企业适合？还没开始出海也可以吗？",
-          a: "适合希望进入或拓展海外市场的中国企业，包括 B2B、D2C 和有供应链基础的品牌。尚未开始出海，也可以先从市场判断与优先级梳理入手。有清楚的产品信息、目标和可投入资源，会更容易确定合适的起点。"
+          a: "适合有成熟产品、供应链或出口基础，希望进入或扩大海外市场的中国企业，包括制造商、出口商、贸易企业、B2B 企业及 DTC 与消费品牌。尚未开始出海，也可以先从市场判断与优先级梳理入手。"
         },
         {
           q: "已经有自己的团队或代理，你们怎么配合？",
@@ -691,7 +743,7 @@ const dict = {
         whatsapp: "WhatsApp",
         whatsappPh: "+86 136 0000 0000",
         message: "想和我们聊什么？",
-        messagePh: "简单告诉我们您的目标或目前遇到的问题",
+        messagePh: "例如：我们主营家居产品，目前主要出口东南亚，希望开发欧洲经销商和新客户。",
         submit: "开启对话",
         submitting: "提交中…",
         success: "提交成功，我们已收到您的信息。",
@@ -968,7 +1020,25 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ==================== 3. 四项核心服务 ==================== */}
+      {/* ==================== 3. 客户问题 ==================== */}
+      <section data-section-theme="dark" className="bg-[#0A0A0A] text-white px-6 md:px-8 py-24 border-b border-white/20">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-xs font-bold tracking-widest text-[#E5FF00] mb-6" lang="en">{t.problems.kicker}</p>
+          <h2 className="max-w-5xl text-4xl md:text-6xl font-black tracking-tighter leading-[1.1] whitespace-pre-line text-balance mb-14">
+            {t.problems.title}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12">
+            {t.problems.items.map((problem, idx) => (
+              <div key={problem} className="flex gap-5 py-6 border-t border-white/20">
+                <span className="shrink-0 text-[#E5FF00] font-black">0{idx + 1}</span>
+                <p className="text-lg md:text-xl font-bold leading-snug text-gray-300">{problem}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== 4. GoRadar、市场进入与市场增长 ==================== */}
       <section id="services" data-section-theme="dark" className="bg-[#0A0A0A] text-white px-6 md:px-8 py-32 flex flex-col lg:flex-row gap-16 lg:gap-12">
         <div className="lg:w-[35%]">
           <div className="sticky top-24 h-fit">
@@ -998,6 +1068,7 @@ export default function Page() {
 
             <button
               onClick={() => setRadarExpanded(!radarExpanded)}
+              aria-expanded={radarExpanded}
               className="self-start text-[#E5FF00] border border-[#E5FF00] px-4 py-2 text-sm font-black tracking-tight hover:bg-[#E5FF00] hover:text-black transition-colors inline-flex items-center gap-2"
             >
               <span>{radarExpanded ? t.services.s1.btnClose : t.services.s1.btnOpen}</span>
@@ -1033,7 +1104,7 @@ export default function Page() {
             )}
           </div>
 
-          {[t.services.s2, t.services.s3, t.services.s4].map((s, idx) => (
+          {[t.services.s2, t.services.s3].map((s, idx) => (
             <div key={idx} className="border-b border-white/20 py-16 flex flex-col gap-6">
               <div className="flex items-start gap-4 md:gap-6 mb-2">
                 <span className="shrink-0 text-xl font-black text-[#E5FF00] tracking-tighter">[ 0{idx + 2} ]</span>
@@ -1072,7 +1143,45 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ==================== 4. THE 90-DAY PROTOCOL (ROADMAP) ==================== */}
+      {/* ==================== 5. 增长执行能力 ==================== */}
+      <section data-section-theme="dark" className="bg-[#111111] text-white px-6 md:px-8 py-24 border-t border-white/20">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-xs font-bold tracking-widest text-[#E5FF00] mb-6" lang="en">{t.capabilities.kicker}</p>
+          <div className="flex flex-col lg:flex-row justify-between gap-8 mb-14">
+            <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-[1.1] whitespace-pre-line text-balance">{t.capabilities.title}</h2>
+            <p className="max-w-md text-lg md:text-xl text-gray-400 font-medium leading-relaxed">{t.capabilities.desc}</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {t.capabilities.items.map((item, idx) => (
+              <article key={item.title} className="min-w-0 border border-white/20 p-6 md:p-8">
+                <span className="text-sm font-black text-[#E5FF00]">0{idx + 1}</span>
+                <h3 className="text-xl md:text-2xl font-black tracking-tight mt-8 mb-4 text-balance">{item.title}</h3>
+                <p className="text-gray-400 font-medium leading-relaxed">{item.desc}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== 6. 服务对象 ==================== */}
+      <section data-section-theme="dark" className="bg-[#0A0A0A] text-white px-6 md:px-8 py-24 border-t border-white/20">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-xs font-bold tracking-widest text-[#E5FF00] mb-6" lang="en">{t.audiences.kicker}</p>
+          <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-[1.1] whitespace-pre-line text-balance mb-6">{t.audiences.title}</h2>
+          <p className="text-lg md:text-xl text-gray-400 font-medium max-w-3xl mb-14">{t.audiences.desc}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+            {t.audiences.items.map((item, idx) => (
+              <article key={item.title} className="min-w-0 border-t-2 border-[#E5FF00] bg-[#1A1A1A] p-6 md:p-8">
+                <span className="text-sm font-black text-[#E5FF00]">0{idx + 1}</span>
+                <h3 className="text-2xl md:text-3xl font-black tracking-tight mt-8 mb-5 text-balance">{item.title}</h3>
+                <p className="text-gray-400 font-medium leading-relaxed">{item.desc}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ==================== 7. THE 90-DAY PROTOCOL (ROADMAP) ==================== */}
       <section id="protocol" data-section-theme="dark" className="bg-[#0A0A0A] text-white px-6 md:px-8 py-32 border-t border-white/20">
         <div className="max-w-7xl mx-auto">
           <p className="text-xs font-bold tracking-widest text-[#E5FF00] mb-6" lang="en">{t.protocol.kicker}</p>
